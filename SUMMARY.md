@@ -2,7 +2,7 @@
 
 * [Zeyu's CTF Writeups](README.md)
 
-## picoCTF
+## 2021
 
-* [Untitled](picoctf/untitled.md)
+* [picoCTF](2021/picoctf.md)
 
