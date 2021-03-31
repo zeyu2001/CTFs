@@ -4,5 +4,22 @@
 
 ## 2021
 
-* [picoCTF](2021/picoctf.md)
+* [picoCTF](2021/picoctf/README.md)
+  * [It Is My Birthday \(100\)](2021/picoctf/it-is-my-birthday-100.md)
+  * [Super Serial \(130\)](2021/picoctf/super-serial-130.md)
+  * [Most Cookies \(150\)](2021/picoctf/most-cookies-150.md)
+  * [Startup Company \(180\)](2021/picoctf/startup-company-180.md)
+  * [X marks the spot \(250\)](2021/picoctf/x-marks-the-spot-250.md)
+  * [Web Gauntlet \(170 + 300\)](2021/picoctf/web-gauntlet-170-+-300.md)
+  * [Easy Peasy \(40\)](2021/picoctf/easy-peasy-40.md)
+  * [Mini RSA \(70\)](2021/picoctf/mini-rsa-70.md)
+  * [Dachshund Attacks \(80\)](2021/picoctf/dachshund-attacks-80.md)
+  * [No Padding, No Problem \(90\)](2021/picoctf/no-padding-no-problem-90.md)
+  * [Trivial Flag Transfer Protocol \(90\)](2021/picoctf/trivial-flag-transfer-protocol-90.md)
+  * [Wireshark twoo twooo two twoo... \(100\)](2021/picoctf/wireshark-twoo-twooo-two-twoo...-100.md)
+  * [Disk, Disk, Sleuth! \(110 + 130\)](2021/picoctf/disk-disk-sleuth-110-+-130.md)
+  * [Stonks \(20\)](2021/picoctf/stonks-20.md)
+* [DSO-NUS CTF](2021/dso-nus-ctf/README.md)
+  * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
+  * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
 
