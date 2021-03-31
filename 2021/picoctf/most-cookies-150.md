@@ -14,11 +14,11 @@ Alright, enough of using my own encryption. Flask session cookies should be plen
 
 From the source code, things to note:
 
-1. The /display page checks the session cookie. We need to change the `very_auth` session variable to `admin` somehow.
+1\) The /display page checks the session cookie. We need to change the `very_auth` session variable to `admin` somehow.
 
 ![](../../.gitbook/assets/93b4e2f47ebf4169b2951b4ea172732e.png)
 
-1. The Flask session secret key is hardcoded into the source code!
+2\) The Flask session secret key is hardcoded into the source code!
 
 ```python
 cookie_names = ["snickerdoodle", "chocolate chip", "oatmeal raisin", "gingersnap", "shortbread", "peanut butter", "whoopie pie", "sugar", "molasses", "kiss", "biscotti", "butter", "spritz", "snowball", "drop", "thumbprint", "pinwheel", "wafer", "macaroon", "fortune", "crinkle", "icebox", "gingerbread", "tassie", "lebkuchen", "macaron", "black and white", "white chocolate macadamia"]
@@ -27,12 +27,13 @@ app.secret_key = random.choice(cookie_names)
 
 We can decode the Flask session cookie like this:
 
-1. Take the part before the period \(`.`\)
+1\) Take the part before the period \(`.`\)
 
 ![](../../.gitbook/assets/ef9046c48d2a4f77bbbda919dcc567e4.png)
 
-1. Append the `==` padding
-2. Base64 decode:
+2\) Append the `==` padding
+
+3\) Base64 decode:
 
 ```python
 >>> base64.urlsafe_b64decode('eyJ2ZXJ5X2F1dGgiOiJzbmlja2VyZG9vZGxlIn0==')

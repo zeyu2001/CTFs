@@ -128,19 +128,19 @@ conn.close()
 print("Done")
 ```
 
-c1 = flag XOR key = 5b1e564b6e415c0e394e0401384b08553a4e5c597b6d4a5c5a684d50013d6e4b
+1\) c1 = flag XOR key = 5b1e564b6e415c0e394e0401384b08553a4e5c597b6d4a5c5a684d50013d6e4b
 
 ![](../../.gitbook/assets/244ab5a9a9af4cb8ba35e7754c61853b.png)
 
-c2 = custom payload \(`'b' * 32`\) XOR key = 0045041e3e1a075a3e1a00543e1a53003e1a5b5a293e1a065a3e1a03543c3e1a
+2\) c2 = custom payload \(`'b' * 32`\) XOR key = 0045041e3e1a075a3e1a00543e1a53003e1a5b5a293e1a065a3e1a03543c3e1a
 
 ![](../../.gitbook/assets/007f045defe546b6bbf0ab4a7aa2e2aa.png)
 
-m1 XOR m2 = c1 XOR c2 = 5b5b5255505b5b540754045506515b55045407035253505a0056575355015051
+3\) m1 XOR m2 = c1 XOR c2 = 5b5b5255505b5b540754045506515b55045407035253505a0056575355015051
 
 ![](../../.gitbook/assets/fe7fa572bdbb4c54a47e6cbf11d454df.png)
 
-1. m1 XOR m2 XOR m2 = m1 = 99072996e6f7d397f6ea0128b4517c23
+4\) m1 XOR m2 XOR m2 = m1 = 99072996e6f7d397f6ea0128b4517c23
 
 This is the flag!
 
