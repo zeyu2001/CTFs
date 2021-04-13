@@ -1,3 +1,7 @@
+---
+description: PHP object injection (deserialization vulnerability)
+---
+
 # Corporate MFA
 
 ## Problem
