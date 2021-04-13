@@ -4,6 +4,10 @@
 
 ## 2021
 
+* [Midnight Sun CTF](2021/midnight-sun-ctf/README.md)
+  * [Corporate MFA](2021/midnight-sun-ctf/corporate-mfa.md)
+  * [Gurkburk](2021/midnight-sun-ctf/gurkburk.md)
+  * [Backups](2021/midnight-sun-ctf/backups.md)
 * [picoCTF](2021/picoctf/README.md)
   * [It Is My Birthday \(100\)](2021/picoctf/it-is-my-birthday-100.md)
   * [Super Serial \(130\)](2021/picoctf/super-serial-130.md)
