@@ -4,6 +4,8 @@
 
 This may seem like a regular substitution cipher, but it doesn't seem to work with a regular alphabet. \(Hint: what non-alphabetic characters does the ciphertext have?\)
 
+The ciphertext is `W74 5o06 8v XP32W5-{qdw_0_vepsog_vx1vwewxwedq_w7ev_wepg}`
+
 ## Solution
 
 We can analyse the ciphertext and try to draw conclusions. We know that the flag begins with UMDCTF. By analysing the word lengths, I also knew that the ciphertext started with "The flag is...". For instance, the mappings that I saw are commented below.

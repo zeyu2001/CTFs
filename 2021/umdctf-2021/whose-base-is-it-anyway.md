@@ -22,8 +22,6 @@ Base 64 decode the obtained string:
 
 Script:
 
-![](../../.gitbook/assets/9e8a83b2f55a4592b9e8e050101dcb41.png)
-
 ```python
 from Crypto.Util.number import long_to_bytes
 import base64

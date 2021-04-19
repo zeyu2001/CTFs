@@ -1,6 +1,6 @@
 # Pretty Dumb File
 
-Use `pdf-parser.py`
+Use `pdf-parser.py`. There is an EmbeddedFile object in the PDF.
 
 ![](../../.gitbook/assets/cf230a282a604f74ad4b1df7f2d8df14.png)
 
