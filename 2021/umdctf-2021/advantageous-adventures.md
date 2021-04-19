@@ -150,13 +150,13 @@ Open in Wireshark, and we have our flag!
 
 ![](../../.gitbook/assets/c76294961f9e410c9ff3684ad582d550.png)
 
-### AA 3
+## AA 3
 
 In Wireshark, we can decrypt the wireless traffic with the WiFi password found previously. This reveals another flag hidden in the data of the subsequent packets.
 
 ![](../../.gitbook/assets/5c328112b26d47c5a3cc58d54294e497.png)
 
-### AA 4
+## AA 4
 
 Shortly below the above flag, we can see lots of packets with repeated numbers, starting from `0000...`, `1111...`, `2222...`, and so on. The number _itself_ probably doesn't mean much - we're looking for a string. But the length \(i.e. number of repeated numbers\) varies for each packet. This could be one way to encode data.
 
