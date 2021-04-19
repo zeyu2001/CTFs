@@ -65,7 +65,7 @@ print(conn.recv())
 conn.close()
 ```
 
-![](../.gitbook/assets/23e49af887844e7db4d6664e9ff2d60e.png)
+![](../../.gitbook/assets/23e49af887844e7db4d6664e9ff2d60e.png)
 
 ## Jay 2
 
@@ -198,5 +198,5 @@ print(conn.recv())
 conn.close()
 ```
 
-![](../.gitbook/assets/6466e1c68c03457895a44c50905e08a8.png)
+![](../../.gitbook/assets/6466e1c68c03457895a44c50905e08a8.png)
 

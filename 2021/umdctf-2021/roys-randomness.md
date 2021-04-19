@@ -8,13 +8,13 @@ Roy found some suspicious network traffic, wireshark shows so many errors with i
 
 This is a TCP covert channel, using morse code.
 
-![](../.gitbook/assets/b11dac1e3b43460697d0bc221707e639.png)
+![](../../.gitbook/assets/b11dac1e3b43460697d0bc221707e639.png)
 
 The `PSH` packets are sent at regular intervals, serving as delimiters.
 
 On the other hand, the `RST` and `SYN` packets act as '1' and '0' bits in the message. Using the international morse code, `RST -> -` and `SYN -> .`, we can obtain the message.
 
-![](../.gitbook/assets/1b3056c0252746b9ac889e7defbf8823.png)
+![](../../.gitbook/assets/1b3056c0252746b9ac889e7defbf8823.png)
 
 Decoding from hex gives us the flag: UMDCTF-{r0y\_f0und\_m0r53}
 

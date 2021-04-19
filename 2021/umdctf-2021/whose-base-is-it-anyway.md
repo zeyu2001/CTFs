@@ -10,19 +10,19 @@ From first glance, we can see that the cipher is full of `A`s and `B`s. This is 
 
 This continues until base 64, where we are finally able to obtain our flag \(base 64 decode\).
 
-![](../.gitbook/assets/ead96e2eb575434fb0f2f409cebcf89b.png)
+![](../../.gitbook/assets/ead96e2eb575434fb0f2f409cebcf89b.png)
 
 Note that for base 32, we are using a custom alphabet.
 
-![](../.gitbook/assets/1114e811f7954d71ba77dd60b54a4fc9.png)
+![](../../.gitbook/assets/1114e811f7954d71ba77dd60b54a4fc9.png)
 
 Base 64 decode the obtained string:
 
-![](../.gitbook/assets/4a1a2a9ac1ce4ea0add2485d4f87c21a.png)
+![](../../.gitbook/assets/4a1a2a9ac1ce4ea0add2485d4f87c21a.png)
 
 Script:
 
-![](../.gitbook/assets/9e8a83b2f55a4592b9e8e050101dcb41.png)
+![](../../.gitbook/assets/9e8a83b2f55a4592b9e8e050101dcb41.png)
 
 ```python
 from Crypto.Util.number import long_to_bytes

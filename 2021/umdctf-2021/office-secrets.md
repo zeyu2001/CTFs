@@ -8,7 +8,7 @@ David and George have been sharing secrets in the office. They have been using R
 
 Since we know e1 and e2, we can crack the plaintext. The mathematical proof is below:
 
-![](../.gitbook/assets/a8ce83db37bd47e5bd5985e1adde0b4f.png)
+![](../../.gitbook/assets/a8ce83db37bd47e5bd5985e1adde0b4f.png)
 
 Reference: [https://crypto.stackexchange.com/questions/1614/rsa-cracking-the-same-message-is-sent-to-two-different-people-problem](https://crypto.stackexchange.com/questions/1614/rsa-cracking-the-same-message-is-sent-to-two-different-people-problem)
 

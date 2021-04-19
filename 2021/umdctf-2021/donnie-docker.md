@@ -12,13 +12,13 @@ Reference: [https://book.hacktricks.xyz/linux-unix/privilege-escalation/docker-b
 
 The docker socket is mounted inside the docker container. This allows us to run regular docker commands to communicate with the docker daemon, for instance mounting the host disk, and chroot-ing to it.
 
-![](../.gitbook/assets/c7528aa4310c4a93a24f50030a095b99.png)
+![](../../.gitbook/assets/c7528aa4310c4a93a24f50030a095b99.png)
 
 We find the flag.txt here:
 
-![](../.gitbook/assets/e6622d51ec1544c7a0ab64aea01c2e0a.png)
+![](../../.gitbook/assets/e6622d51ec1544c7a0ab64aea01c2e0a.png)
 
 Obtaining our flag:
 
-![](../.gitbook/assets/24414c46e6934d4f809843f527c47d2b.png)
+![](../../.gitbook/assets/24414c46e6934d4f809843f527c47d2b.png)
 

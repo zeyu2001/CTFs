@@ -4,6 +4,21 @@
 
 ## 2021
 
+* [UMDCTF 2021](2021/umdctf-2021/README.md)
+  * [Advantageous Adventures](2021/umdctf-2021/advantageous-adventures.md)
+  * [Roy's Randomness](2021/umdctf-2021/roys-randomness.md)
+  * [Whose Base Is It Anyway](2021/umdctf-2021/whose-base-is-it-anyway.md)
+  * [Cards Galore](2021/umdctf-2021/cards-galore.md)
+  * [Pretty Dumb File](2021/umdctf-2021/pretty-dumb-file.md)
+  * [Minetest](2021/umdctf-2021/minetest.md)
+  * [Donnie Docker](2021/umdctf-2021/donnie-docker.md)
+  * [Subway](2021/umdctf-2021/subway.md)
+  * [Jump Not Easy](2021/umdctf-2021/jump-not-easy.md)
+  * [To Be XOR Not To Be](2021/umdctf-2021/to-be-xor-not-to-be.md)
+  * [Office Secrets](2021/umdctf-2021/office-secrets.md)
+  * [L33t M4th](2021/umdctf-2021/l33t-m4th.md)
+  * [Bomb 2 - Mix Up](2021/umdctf-2021/bomb-2-mix-up.md)
+  * [Jay](2021/umdctf-2021/jay.md)
 * [Midnight Sun CTF](2021/midnight-sun-ctf/README.md)
   * [Corporate MFA](2021/midnight-sun-ctf/corporate-mfa.md)
   * [Gurkburk](2021/midnight-sun-ctf/gurkburk.md)
@@ -26,22 +41,4 @@
 * [DSO-NUS CTF](2021/dso-nus-ctf/README.md)
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
-
----
-
-* [UMDCTF 2021](umdctf-2021/README.md)
-  * [Advantageous Adventures](umdctf-2021/advantageous-adventures.md)
-  * [Roy's Randomness](umdctf-2021/roys-randomness.md)
-  * [Whose Base Is It Anyway](umdctf-2021/whose-base-is-it-anyway.md)
-  * [Cards Galore](umdctf-2021/cards-galore.md)
-  * [Pretty Dumb File](umdctf-2021/pretty-dumb-file.md)
-  * [Minetest](umdctf-2021/minetest.md)
-  * [Donnie Docker](umdctf-2021/donnie-docker.md)
-  * [Subway](umdctf-2021/subway.md)
-  * [Jump Not Easy](umdctf-2021/jump-not-easy.md)
-  * [To Be XOR Not To Be](umdctf-2021/to-be-xor-not-to-be.md)
-  * [Office Secrets](umdctf-2021/office-secrets.md)
-  * [L33t M4th](umdctf-2021/l33t-m4th.md)
-  * [Bomb 2 - Mix Up](umdctf-2021/bomb-2-mix-up.md)
-  * [Jay](umdctf-2021/jay.md)
 

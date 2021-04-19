@@ -2,7 +2,7 @@
 
 Sidenote: It was a really fun challenge!
 
-![](../.gitbook/assets/64cefb1d260b4a058f3325fc85fc969f%20%281%29.png)
+![](../../.gitbook/assets/64cefb1d260b4a058f3325fc85fc969f%20%281%29.png)
 
 ## Part 1
 
@@ -64,7 +64,7 @@ Since a=0 and b=1, and a XOR c, then c=1
 
 Since ~\(e XOR h\) and ~\(g XOR d\), e = h and g = d. a, b, c are fixed, so there are only 4 possible combinations \(e = h = either 0 or 1, g = d = either 0 or 1, f = ~h\)
 
-![](../.gitbook/assets/3abdb76112c54610856c0905b4f21bb9.png)
+![](../../.gitbook/assets/3abdb76112c54610856c0905b4f21bb9.png)
 
 ANSWER: div
 
@@ -74,5 +74,5 @@ From here we can kinda guess the flag: d1g1L0g3k. It worked!
 
 \(I probably didn't get the full solution, but this is good enough I guess...\)
 
-![](../.gitbook/assets/c3cc966f0d7e49eaa0fd8b54c893cc70.png)
+![](../../.gitbook/assets/c3cc966f0d7e49eaa0fd8b54c893cc70.png)
 

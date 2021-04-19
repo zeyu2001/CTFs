@@ -43,15 +43,15 @@ description: >-
 
 8th overall on the final scoreboard!
 
-![](../.gitbook/assets/scoreboard-final.png)
+![](../../.gitbook/assets/scoreboard-final.png)
 
-![](../.gitbook/assets/team-final%20%281%29.png)
+![](../../.gitbook/assets/team-final%20%281%29.png)
 
 Individually, I also won a PWK voucher, for having the 3rd most first bloods!
 
-![](../.gitbook/assets/pwk-winner.png)
+![](../../.gitbook/assets/pwk-winner.png)
 
-![](../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%281%29.png)
 
