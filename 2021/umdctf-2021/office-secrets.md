@@ -49,5 +49,5 @@ print(result)
 print(long_to_bytes(result))
 ```
 
-![Screenshot 2021-04-17 at 4.17.54 PM.png](:/5cefbbd3058c467fbf70ad0dfa584215)
+![](../../.gitbook/assets/5cefbbd3058c467fbf70ad0dfa584215.png)
 
