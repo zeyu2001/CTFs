@@ -145,5 +145,5 @@ while not done:
 conn.close()
 ```
 
-![Screenshot 2021-04-17 at 2.58.23 PM.png](:/3643c7f0c36b435885dadf14a8086849)
+![](../../.gitbook/assets/3643c7f0c36b435885dadf14a8086849.png)
 

@@ -111,5 +111,5 @@ conn.recv()
 print(conn.recv())
 ```
 
-![Screenshot 2021-04-17 at 1.59.03 PM.png](:/62234020fde640da9125067f115a62ec)
+![](../../.gitbook/assets/62234020fde640da9125067f115a62ec.png)
 
