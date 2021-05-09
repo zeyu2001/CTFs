@@ -18,8 +18,8 @@ I enjoyed myself in this one, although there could have been more web exploitati
 
 ### Reversing
 
-1. [Back to the Lab 1](back-to-the-lab-1.md)
-2. [Back to the Lab 3](back-to-the-lab-3.md)
+1. [Back to the Lab 1 \(150\)](back-to-the-lab-1.md)
+2. [Back to the Lab 3 \(350\)](back-to-the-lab-3.md)
 
 ### Crypto
 
