@@ -4,6 +4,22 @@
 
 ## 2021
 
+* [DawgCTF 2021](2021/dawgctf-2021/README.md)
+  * [Bofit](2021/dawgctf-2021/bofit.md)
+  * [Jellyspotters](2021/dawgctf-2021/jellyspotters.md)
+  * [No Step On Snek](2021/dawgctf-2021/no-step-on-snek.md)
+  * [Back to the Lab 2](2021/dawgctf-2021/back-to-the-lab-2.md)
+  * [MDL Considered Harmful](2021/dawgctf-2021/mdl-considered-harmful.md)
+  * [Really Secure Algorithm](2021/dawgctf-2021/really-secure-algorithm.md)
+  * [The Obligatory RSA Challenge](2021/dawgctf-2021/the-obligatory-rsa-challenge.md)
+  * [Trash Chain](2021/dawgctf-2021/trash-chain.md)
+  * [What the Flip?!](2021/dawgctf-2021/what-the-flip.md)
+  * [Back to the Lab 1](2021/dawgctf-2021/back-to-the-lab-1.md)
+  * [Back to the Lab 3](2021/dawgctf-2021/back-to-the-lab-3.md)
+  * [Dr. Hrabowski's Great Adventure](2021/dawgctf-2021/dr.-hrabowskis-great-adventure.md)
+  * [Just a Comment](2021/dawgctf-2021/just-a-comment.md)
+  * [Baby's First Modulation](2021/dawgctf-2021/babys-first-modulation.md)
+  * [Two Truths and a Fib](2021/dawgctf-2021/two-truths-and-a-fib.md)
 * [UMDCTF 2021](2021/umdctf-2021/README.md)
   * [Advantageous Adventures](2021/umdctf-2021/advantageous-adventures.md)
   * [Roy's Randomness](2021/umdctf-2021/roys-randomness.md)
