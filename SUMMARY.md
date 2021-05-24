@@ -4,6 +4,13 @@
 
 ## 2021
 
+* [NorzhCTF 2021](2021/norzhctf-2021/README.md)
+  * [Leet Computer](2021/norzhctf-2021/leet-computer.md)
+  * [Secure Auth v0](2021/norzhctf-2021/secure-auth-v0.md)
+  * [Triskel 3: Dead End](2021/norzhctf-2021/triskel-3-dead-end.md)
+  * [Triskel 2: Going In](2021/norzhctf-2021/triskel-2-going-in.md)
+  * [Triskel 1: First Contact](2021/norzhctf-2021/triskel-1-first-contact.md)
+  * [Discovery](2021/norzhctf-2021/discovery.md)
 * [DawgCTF 2021](2021/dawgctf-2021/README.md)
   * [Bofit](2021/dawgctf-2021/bofit.md)
   * [Jellyspotters](2021/dawgctf-2021/jellyspotters.md)
