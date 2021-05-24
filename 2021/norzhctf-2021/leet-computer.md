@@ -48,7 +48,7 @@ Now, we can make a reverse shell ELF payload with `msfvenom`.
 
 Run a Python HTTP server, and use curl on the victim machine to download the ELF payload.
 
-![](../../.gitbook/assets/bb02131dea9e4ee0851b09cec3a96cbc.png)
+![](../../.gitbook/assets/bc20ad7ad5a848e280ec4e076a67cfb0.png)
 
 Then, execute the payload.
 
