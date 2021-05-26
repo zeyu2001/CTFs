@@ -15,7 +15,7 @@ Author: trashcanna
 Recall that _e_ is chosen such that
 
 $$
-ed=1\pmod{\text{lcm}(p-1, q-1}
+ed=1\pmod{\text{lcm}(p-1, q-1)}
 $$
 
 In this case, _e_ is really large \(only one order of magnitude smaller than _n_\). This suggests that _d_ might be small. When _d_ is small, Wiener's attack would work.

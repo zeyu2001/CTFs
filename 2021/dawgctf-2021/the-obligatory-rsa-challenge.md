@@ -14,7 +14,7 @@ Passing _n_ into factordb, we see that _n_ is a square.
 
 ![](../../.gitbook/assets/427b4116da824f09829a789321815c0c.png)
 
-Decoding is then trivial. Note that since $$n=p^2$$, $$\phi(n)=p(p-1)$$ instead of $$(p-1)^2$$ since $$(p-1)$$ would not be coprime to $$(p-1)$$.
+Decoding is then trivial. Note that since $$n=p^2$$, $$\phi(n)=p(p-1)$$ instead of $$(p-1)^2$$. 
 
 ```python
 from Crypto.Util.number import inverse, long_to_bytes
