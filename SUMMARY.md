@@ -4,6 +4,9 @@
 
 ## 2021
 
+* [Pwn2Win CTF 2021](2021/pwn2win-ctf-2021/README.md)
+  * [C'mon See My Vulns](2021/pwn2win-ctf-2021/cmon-see-my-vulns.md)
+  * [Illusion](2021/pwn2win-ctf-2021/illusion.md)
 * [NorzhCTF 2021](2021/norzhctf-2021/README.md)
   * [Leet Computer](2021/norzhctf-2021/leet-computer.md)
   * [Secure Auth v0](2021/norzhctf-2021/secure-auth-v0.md)
@@ -42,11 +45,11 @@
   * [L33t M4th](2021/umdctf-2021/l33t-m4th.md)
   * [Bomb 2 - Mix Up](2021/umdctf-2021/bomb-2-mix-up.md)
   * [Jay](2021/umdctf-2021/jay.md)
-* [Midnight Sun CTF](2021/midnight-sun-ctf/README.md)
+* [Midnight Sun CTF 2021](2021/midnight-sun-ctf/README.md)
   * [Corporate MFA](2021/midnight-sun-ctf/corporate-mfa.md)
   * [Gurkburk](2021/midnight-sun-ctf/gurkburk.md)
   * [Backups](2021/midnight-sun-ctf/backups.md)
-* [picoCTF](2021/picoctf/README.md)
+* [picoCTF 2021](2021/picoctf/README.md)
   * [It Is My Birthday \(100\)](2021/picoctf/it-is-my-birthday-100.md)
   * [Super Serial \(130\)](2021/picoctf/super-serial-130.md)
   * [Most Cookies \(150\)](2021/picoctf/most-cookies-150.md)
@@ -61,7 +64,7 @@
   * [Wireshark twoo twooo two twoo... \(100\)](2021/picoctf/wireshark-twoo-twooo-two-twoo...-100.md)
   * [Disk, Disk, Sleuth! \(110 + 130\)](2021/picoctf/disk-disk-sleuth-110-+-130.md)
   * [Stonks \(20\)](2021/picoctf/stonks-20.md)
-* [DSO-NUS CTF](2021/dso-nus-ctf/README.md)
+* [DSO-NUS CTF 2021](2021/dso-nus-ctf/README.md)
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
 

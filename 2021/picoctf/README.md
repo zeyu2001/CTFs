@@ -4,7 +4,7 @@ description: >-
   particular. Here are some of the more interesting challenges I solved.
 ---
 
-# picoCTF
+# picoCTF 2021
 
 ## Web Exploitation
 

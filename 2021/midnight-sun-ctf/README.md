@@ -1,4 +1,4 @@
-# Midnight Sun CTF
+# Midnight Sun CTF 2021
 
 ## Web
 
