@@ -99,5 +99,5 @@ recover_string(25977495199845200181935389149727440287807670673732106338434418929
 
 Here's the output. This probably wasn't the intended solution, since the flag talks about a bijection from  $$\mathbb{N^k}$$ to $$\mathbb{N}$$.
 
-![](../.gitbook/assets/screenshot-2021-06-07-at-3.15.32-am.png)
+![](../../.gitbook/assets/screenshot-2021-06-07-at-3.15.32-am.png)
 

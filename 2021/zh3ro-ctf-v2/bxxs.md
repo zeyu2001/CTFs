@@ -12,7 +12,7 @@ We've made some new epic updates to our website. Could you send us some feedback
 
 We are given an endpoint that allows us to "Send a feedback to admin". I tried submitting URLs but these had no effect.
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 Later, I found that we could submit arbitrary HTML that would be rendered by the admin's browser. This could be verified by submitting the following and catching the HTTP request:
 
@@ -40,13 +40,13 @@ From the output, it appeared that:
 
 My teammate rainbowpigeon then visited the `/Secret_admin_cookie_panel` endpoint and found that this page returned a `Set-Cookie` header for a new cookie with the HttpOnly flag set. This was the "admin cookie" we needed.
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 My teammate lim\_yj found that there is a `/flag` endpoint, previously inaccessible without the appropriate cookie.
 
 Visiting the page again with the admin cookie set gives us the flag.
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
 
 

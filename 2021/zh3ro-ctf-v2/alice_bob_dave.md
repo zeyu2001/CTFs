@@ -158,5 +158,5 @@ for i in range(2, 100000):
 
 Here's the output:
 
-![](../.gitbook/assets/screenshot-2021-06-07-at-2.36.33-am.png)
+![](../../.gitbook/assets/screenshot-2021-06-07-at-2.36.33-am.png)
 

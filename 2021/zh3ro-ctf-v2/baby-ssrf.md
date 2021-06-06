@@ -28,11 +28,11 @@ Otherwise, the HTTP response headers are returned.
 
 My teammate rainbowpigeon found that the server was using Python's requests library to issue GET requests to the submitted URL, and returning `r.headers`.
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 I found that we could bypass the localhost blacklist using something like `url=http://0177.0.0.1:9006/&sub=sub`. In most cases, `0177.0.0.1` will resolve to `127.0.0.1`. We can even see this behaviour in Chrome:
 
-![](../.gitbook/assets/screenshot-2021-06-07-at-1.17.16-am.png)
+![](../../.gitbook/assets/screenshot-2021-06-07-at-1.17.16-am.png)
 
 Once we bypass this filter, we could perform an internal port scan by e.g. writing a simple Python script or using Burp Intruder. From the hint, we know that we are looking for a port between 5000 and 10000.
 
@@ -42,7 +42,7 @@ Since we only get the headers in the response, we don't have much to go off on e
 
 For localhost:8080, we find the `/request` endpoint. This means that the page at port 8080 is the same as the public challenge site.
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 The only remaining port would be 9006. Directly accessing it through `http://0177.0.0.1:9006/` did not give us anything meaningful, but a redirection through our PHP server revealed the flag in one of the headers.
 
@@ -56,7 +56,7 @@ Since the Python requests library follows redirections, our PHP server hosts the
 
 This reveals the flag:
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 
 

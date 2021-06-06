@@ -4,6 +4,14 @@
 
 ## 2021
 
+* [Zh3ro CTF V2](2021/zh3ro-ctf-v2/README.md)
+  * [Chaos](2021/zh3ro-ctf-v2/chaos.md)
+  * [Twist and Shout](2021/zh3ro-ctf-v2/twist-and-shout.md)
+  * [1n\_jection](2021/zh3ro-ctf-v2/1n_jection.md)
+  * [alice\_bob\_dave](2021/zh3ro-ctf-v2/alice_bob_dave.md)
+  * [Baby SSRF](2021/zh3ro-ctf-v2/baby-ssrf.md)
+  * [bxxs](2021/zh3ro-ctf-v2/bxxs.md)
+  * [Sparta](2021/zh3ro-ctf-v2/sparta.md)
 * [Pwn2Win CTF 2021](2021/pwn2win-ctf-2021/README.md)
   * [C'mon See My Vulns](2021/pwn2win-ctf-2021/cmon-see-my-vulns.md)
   * [Illusion](2021/pwn2win-ctf-2021/illusion.md)
@@ -67,15 +75,4 @@
 * [DSO-NUS CTF 2021](2021/dso-nus-ctf/README.md)
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
-
----
-
-* [Zh3ro CTF V2](zh3ro-ctf-v2/README.md)
-  * [Chaos](zh3ro-ctf-v2/chaos.md)
-  * [Twist and Shout](zh3ro-ctf-v2/twist-and-shout.md)
-  * [1n\_jection](zh3ro-ctf-v2/1n_jection.md)
-  * [alice\_bob\_dave](zh3ro-ctf-v2/alice_bob_dave.md)
-  * [Baby SSRF](zh3ro-ctf-v2/baby-ssrf.md)
-  * [bxxs](zh3ro-ctf-v2/bxxs.md)
-  * [Sparta](zh3ro-ctf-v2/sparta.md)
 
