@@ -68,3 +68,14 @@
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
 
+---
+
+* [Zh3ro CTF V2](zh3ro-ctf-v2/README.md)
+  * [Chaos](zh3ro-ctf-v2/chaos.md)
+  * [Twist and Shout](zh3ro-ctf-v2/twist-and-shout.md)
+  * [1n\_jection](zh3ro-ctf-v2/1n_jection.md)
+  * [alice\_bob\_dave](zh3ro-ctf-v2/alice_bob_dave.md)
+  * [Baby SSRF](zh3ro-ctf-v2/baby-ssrf.md)
+  * [bxxs](zh3ro-ctf-v2/bxxs.md)
+  * [Sparta](zh3ro-ctf-v2/sparta.md)
+
