@@ -18,6 +18,7 @@ In case you don't know what are CTFs, here's a nice definition:
 
 | CTF Name | Date | Type | Position |
 | :--- | :--- | :--- | :--- |
+| [Zh3ro CTF V2](2021/zh3ro-ctf-v2/) | 4 June | Jeopardy | 37th |
 | [Pwn2Win CTF](2021/pwn2win-ctf-2021/) | 28 May | Jeopardy | 62nd |
 | [NorzhCTF](2021/norzhctf-2021/) | 22 May | Hack Quest | 29th |
 | [DawgCTF](2021/dawgctf-2021/) | 8 May | Jeopardy | 13th |

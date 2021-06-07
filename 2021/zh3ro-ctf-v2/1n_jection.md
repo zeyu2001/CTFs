@@ -82,7 +82,7 @@ def get_i_j(nk):
     return i, j
 ```
 
-Then, since i and j are essentially the outputs of the "previous" layer, we can create a recursive function that terminates at the base case where we have reduced the output to its original ASCII characters.
+Then, since $$i$$ and $$j$$ are essentially the outputs of the "previous" layer, we can create a recursive function that terminates at the base case where we have reduced the output to its original ASCII characters.
 
 ```python
 def recover_string(nk):
