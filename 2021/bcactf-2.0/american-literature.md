@@ -1,5 +1,5 @@
 ---
-description: String format vulnerability.
+description: Format string vulnerability.
 ---
 
 # American Literature
@@ -42,7 +42,7 @@ printf(essay);
 ...
 ```
 
-This is a typical string format vulnerability, where the user input is passed into `printf()` as a format string. Hence, we can use `%<position>$llx` to view the stack values.
+This is a typical format string vulnerability, where the user input is passed into `printf()` as a format string. Hence, we can use `%<position>$llx` to view the stack values.
 
 Since the `example_essay` buffer also resides on the stack, we can leak the flag.
 
