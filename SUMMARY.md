@@ -4,6 +4,15 @@
 
 ## 2021
 
+* [BCACTF 2.0](2021/bcactf-2.0/README.md)
+  * [L10N Poll](2021/bcactf-2.0/l10n-poll.md)
+  * [Challenge Checker](2021/bcactf-2.0/challenge-checker.md)
+  * [Discrete Mathematics](2021/bcactf-2.0/discrete-mathematics.md)
+  * [Advanced Math Analysis](2021/bcactf-2.0/advanced-math-analysis.md)
+  * [Math Analysis](2021/bcactf-2.0/math-analysis.md)
+  * [American Literature](2021/bcactf-2.0/american-literature.md)
+  * [More Than Meets the Eye](2021/bcactf-2.0/more-than-meets-the-eye.md)
+  * [􃗁􌲔􇺟􊸉􁫞􄺷􄧻􃄏􊸉](2021/bcactf-2.0/undefined.md)
 * [Zh3ro CTF V2](2021/zh3ro-ctf-v2/README.md)
   * [Chaos](2021/zh3ro-ctf-v2/chaos.md)
   * [Twist and Shout](2021/zh3ro-ctf-v2/twist-and-shout.md)
