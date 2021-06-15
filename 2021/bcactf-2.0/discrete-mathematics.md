@@ -118,8 +118,6 @@ Now, we get an interactive connection where we will first jump to `logic()`, the
 
 We just have to figure out the appropriate values to pass the checks.
 
-
-
 ```c
 void logic() {
     int p, q, r, s;
