@@ -12,12 +12,15 @@ In case you don't know what are CTFs, here's a nice definition:
 
 ## ~\# groups
 
+Social Engineering Experts is a small team founded by a group of friends.
+
 {% embed url="https://ctftime.org/team/154571" %}
 
 ## ~\# ls -la 2021
 
 | CTF Name | Date | Type | Position |
 | :--- | :--- | :--- | :--- |
+| [BCACTF 2.0](2021/bcactf-2.0/) | 11 June | Jeopardy | 43rd |
 | [Zh3ro CTF V2](2021/zh3ro-ctf-v2/) | 4 June | Jeopardy | 37th |
 | [Pwn2Win CTF](2021/pwn2win-ctf-2021/) | 28 May | Jeopardy | 62nd |
 | [NorzhCTF](2021/norzhctf-2021/) | 22 May | Hack Quest | 29th |
