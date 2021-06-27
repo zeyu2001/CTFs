@@ -4,6 +4,13 @@
 
 ## 2021
 
+* [DSTA BrainHack CDDC21](2021/dsta-brainhack-cddc21/README.md)
+  * [File It Away \(Pwn\)](2021/dsta-brainhack-cddc21/file-it-away-pwn.md)
+  * [Linux Rules the World! \(Linux\)](2021/dsta-brainhack-cddc21/linux-rules-the-world-linux.md)
+  * [Going Active \(Reconnaissance\)](2021/dsta-brainhack-cddc21/going-active-reconnaissance.md)
+  * [Behind the Mask \(Windows\)](2021/dsta-brainhack-cddc21/behind-the-mask-windows.md)
+  * [Web Takedown Episode 2 \(Web\)](2021/dsta-brainhack-cddc21/web-takedown-episode-2-web.md)
+  * [Break it Down \(Crypto\)](2021/dsta-brainhack-cddc21/break-it-down-crypto.md)
 * [BCACTF 2.0](2021/bcactf-2.0/README.md)
   * [L10N Poll](2021/bcactf-2.0/l10n-poll.md)
   * [Challenge Checker](2021/bcactf-2.0/challenge-checker.md)

@@ -20,6 +20,7 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 | CTF Name | Date | Type | Position |
 | :--- | :--- | :--- | :--- |
+| [DSTA BrainHack CDDC21](2021/dsta-brainhack-cddc21/) | 24 June | Jeopardy | 3rd |
 | [BCACTF 2.0](2021/bcactf-2.0/) | 11 June | Jeopardy | 43rd |
 | [Zh3ro CTF V2](2021/zh3ro-ctf-v2/) | 4 June | Jeopardy | 37th |
 | [Pwn2Win CTF](2021/pwn2win-ctf-2021/) | 28 May | Jeopardy | 62nd |
