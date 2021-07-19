@@ -4,6 +4,9 @@
 
 ## 2021
 
+* [Google CTF 2021](2021/google-ctf-2021/README.md)
+  * [CPP](2021/google-ctf-2021/cpp.md)
+  * [Filestore](2021/google-ctf-2021/filestore.md)
 * [TyphoonCon CTF 2021](2021/typhooncon-ctf-2021/README.md)
   * [Clubmouse](2021/typhooncon-ctf-2021/clubmouse.md)
   * [Impasse](2021/typhooncon-ctf-2021/impasse.md)
