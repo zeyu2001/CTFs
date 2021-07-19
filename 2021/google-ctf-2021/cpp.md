@@ -6,6 +6,10 @@ description: >-
 
 # CPP
 
+We are provided with the following 6234-line source code:
+
+{% file src="../../.gitbook/assets/cpp.c" caption="cpp.c" %}
+
 Essentially, the flag is checked through a bunch of `#define` and `#ifdef` statements in the source code. Compiling the code gives the following output:
 
 ![](../../.gitbook/assets/screenshot-2021-07-18-at-10.55.48-pm.png)
