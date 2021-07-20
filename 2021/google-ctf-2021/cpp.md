@@ -77,7 +77,7 @@ Looking through the code, here are some findings. First, the `ROM_x_y` macros re
 Next,  
 
 * `LD(x, y)` means `ROM_ ## x ## _ ## y` \(concatenate\)
-* `l` --&gt; `l7 ## l6 ## l5 ## l4 ## l3 ## l2 ## l1 ## l0` \(concatenate\)
+* `l` means `l7 ## l6 ## l5 ## l4 ## l3 ## l2 ## l1 ## l0` \(concatenate\)
 
 ```c
 #define _LD(x, y) ROM_ ## x ## _ ## y
