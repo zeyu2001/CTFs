@@ -2,6 +2,18 @@
 
 * [Zeyu's CTF Writeups](README.md)
 
+## My Challenges
+
+* [STANDCON CTF 2021](my-challenges/standcon-ctf-2021/README.md)
+  * [Space Station](my-challenges/standcon-ctf-2021/space-station.md)
+  * [Star Cereal](my-challenges/standcon-ctf-2021/star-cereal.md)
+  * [Star Cereal 2](my-challenges/standcon-ctf-2021/star-cereal-2.md)
+  * [Mission Control](my-challenges/standcon-ctf-2021/mission-control.md)
+  * [Rocket Science](my-challenges/standcon-ctf-2021/rocket-science.md)
+  * [Space University of Interior Design](my-challenges/standcon-ctf-2021/space-university-of-interior-design.md)
+  * [Rocket Ship Academy](my-challenges/standcon-ctf-2021/rocket-ship-academy.md)
+  * [Space Noise](my-challenges/standcon-ctf-2021/space-noise.md)
+
 ## 2021
 
 * [Google CTF 2021](2021/google-ctf-2021/README.md)
