@@ -6,7 +6,7 @@ description: JavaScript Prototype Injection
 
 ## Problem
 
-Laura just found a website used for monitoring security mechanisms on Rhiza's state and is planning to hack into it to forge the status of these security services. After that she will desactivate these security resources without alerting government agents. Your goal is to get into the server to change the monitoring service behavior.
+Laura just found a website used for monitoring security mechanisms on Rhiza's state and is planning to hack into it to forge the status of these security services. After that she will deactivate these security resources without alerting government agents. Your goal is to get into the server to change the monitoring service behaviour.
 
 {% file src="../../.gitbook/assets/illusion.tar.gz" caption="Illusion" %}
 
@@ -120,7 +120,7 @@ This executes `whoami >> src/static/style.css`. We can see that in the `style.cs
 
 ![](../../.gitbook/assets/4f7c707532584a42a7f9976744fdfc56.png)
 
-Then I ran the docker image. Note that we are provided with a `readflag` binary. We can run. this binary and obtain the flag from the output.
+Then I ran the docker image. Note that we are provided with a `readflag` binary. We can run this binary and obtain the flag from the output.
 
 Since we're a guest user, we don't have permissions to write the output to a readable file. We can try to use a bind shell instead. The following will execute `nc -lvp 4444 -e /bin/sh`, opening up a bind shell on port 4444. 
 
@@ -134,7 +134,7 @@ Since we're a guest user, we don't have permissions to write the output to a rea
 }
 ```
 
-When we connect to the bind shell, we can then run. the `readflag` binary.
+When we connect to the bind shell, we can then run the `readflag` binary.
 
 ![](../../.gitbook/assets/4a7887f7a3cf414983b2a57bfbf15f3c.png)
 
