@@ -16,6 +16,9 @@
 
 ## 2021
 
+* [UIUCTF 2021](2021/uiuctf-2021/README.md)
+  * [ponydb](2021/uiuctf-2021/ponydb.md)
+  * [back\_to\_basics](2021/uiuctf-2021/back_to_basics.md)
 * [Google CTF 2021](2021/google-ctf-2021/README.md)
   * [CPP](2021/google-ctf-2021/cpp.md)
   * [Filestore](2021/google-ctf-2021/filestore.md)
