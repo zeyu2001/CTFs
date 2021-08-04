@@ -22,7 +22,7 @@ It was a tough 48 hours, but the satisfaction from solving each challenge was de
 
 ![](../../.gitbook/assets/score-over-time.png)
 
-I also won a $100 bounty for the first blood on Pwnies Please, a machine learning challenge that required solvers to generate adversarial examples to fool an image classification model.
+I also won a $100 bounty for the first blood on [Pwnies Please](pwnies_please.md), a machine learning challenge that required solvers to generate adversarial examples to fool an image classification model.
 
 ![](../../.gitbook/assets/screenshot-2021-08-03-at-12.10.01-pm.png)
 
