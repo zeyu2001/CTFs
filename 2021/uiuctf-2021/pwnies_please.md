@@ -141,7 +141,7 @@ To understand the attack, we need a bit of machine learning theory. Neural netwo
 
 Nodes at each layer connect to nodes at the next layer. Each node represents some function $$f(x, w)$$ , where $$x$$ represents the input features and $$w$$ represents the **weight** of a node connection.
 
-The "learning" takes place when the weights are updated, thus placing different priorities on different connections. Intuitively, is what determines how much influence a particular input feature has on the final output.
+The "learning" takes place when the weights are updated, thus placing different priorities on different connections. Intuitively, these weights are what determines how much influence a particular input feature has on the final output.
 
 When neural networks make a prediction, a **forward pass** is performed. This simply means calculating the output, $$y=f(x,w)$$ of each node. At the end of the forward pass, a **loss function** $$J$$ calculates the error between our predicted output and the actual output.
 
