@@ -250,9 +250,9 @@ In brief, a new "Network Isolation Key" was added, which contains both the top-l
 
 ![](../../.gitbook/assets/screenshot-2021-08-04-at-1.29.04-am.png)
 
-The initial fetching of the image should have resulted in a cache key of \(`attacker-site`, `notes-app-site`, `image-url`\)
+The initial fetching of the image through the notes application iframe should have resulted in a cache key of \(`attacker-site`, `notes-app-site`, `image-url`\)
 
-The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes applicaiton site, and would intead be \(`attacker-site`, `attacker-site`,`image-url`\). 
+The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes application site, and would instead be \(`attacker-site`, `attacker-site`,`image-url`\). 
 
 This should _not_ result in a cache hit, since the two cache keys are different. But it did. After some local testing, I found that **headless chrome simply doesn't perform cache partitioning**.
 
