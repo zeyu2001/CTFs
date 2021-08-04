@@ -6,7 +6,7 @@ description: >-
 
 # UIUCTF 2021
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 This was my first time playing the annual UIUCTF, and I must say it was a really great experience. [Social Engineering Experts](https://ctftime.org/team/154571) ended in 18th place, out of 658 scoring teams.
 
@@ -32,7 +32,7 @@ I also won a $100 bounty for the first blood on Pwnies Please, a machine learnin
 | :--- | :--- |
 | [back\_to\_basics](back_to_basics.md) | crypto |
 | [ponydb](ponydb.md) | web |
-| yana | web |
+| [yana](yana.md) | web |
 | buy\_buy\_buy | misc |
 | pwnies\_please | misc |
 | Q-Rious Transmissions | misc |
