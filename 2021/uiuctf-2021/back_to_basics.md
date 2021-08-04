@@ -1,3 +1,7 @@
+---
+description: Simple beginner challenge about base-n encodings
+---
+
 # back\_to\_basics
 
 ## Description

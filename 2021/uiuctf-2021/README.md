@@ -33,7 +33,7 @@ I also won a $100 bounty for the first blood on Pwnies Please, a machine learnin
 | [back\_to\_basics](back_to_basics.md) | crypto |
 | [ponydb](ponydb.md) | web |
 | [yana](yana.md) | web |
-| buy\_buy\_buy | misc |
+| [buy\_buy\_buy](buy_buy_buy.md) | misc |
 | pwnies\_please | misc |
 | Q-Rious Transmissions | misc |
 | capture the :flag: | forensics |
