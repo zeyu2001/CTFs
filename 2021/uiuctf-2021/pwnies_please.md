@@ -18,7 +18,7 @@ note: first solve gets $100 from ian \(unintended solves don't count\)
 
 ## Preface
 
-Soon after the challenge was released, my teammate [rainbowpigeon](https://rainbowpigeon.netlify.app/posts/) told me to take a look at it since it was an image classification AI challenge \(and I have a fair bit of experience with computer vision tasks\).
+Soon after the challenge was released, my teammate [rainbowpigeon](https://rainbowpigeon.netlify.app/posts/) told me to take a look at it since it was an image classification AI challenge and I have a fair bit of experience with computer vision tasks.
 
 I didn't have any prior experience in attacking AI models, but this turned out to be a really fun task. I ended up getting the $100 bounty for the first solve on this challenge \(thanks Ian!\)
 
