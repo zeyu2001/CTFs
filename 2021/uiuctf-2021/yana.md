@@ -304,10 +304,10 @@ So when the image is requested by `https://chal.yana.wtf/`, only `https://yana.w
 From the `whois` records, we could tell that this was a [GitHub Pages](https://pages.github.com/) site.
 
 ```text
-$ yana host chal.yana.wtf
+$ host chal.yana.wtf
 chal.yana.wtf has address 185.199.108.153
 
-$ yana whois 185.199.108.153
+$ whois 185.199.108.153
 
 ...
 
