@@ -132,7 +132,7 @@ When prompted to add a virtual hard disk, select the decoded VHD file.
 
 ![](../../.gitbook/assets/screenshot-2021-08-05-at-3.10.30-pm.png)
 
-Click on Create, and we have our very own MS-DOS VM! To test our theory, let's navigate to the `C:\SUPER/HOT/SUPER/HOT/SUPER/HOT/SUPER/HOT/SUPER/HOT` folder and run `UNDELETE.EXE`.
+Click on Create, and we have our very own MS-DOS VM! To test our theory, let's navigate to the `C:\SUPER\HOT\SUPER\HOT\SUPER\HOT\SUPER\HOT\SUPER\HOT` folder and run `UNDELETE.EXE`.
 
 This indeed finds a recoverable file, and we are prompted to enter the first character of `?UPERHOT.EXE`. This would obviously be the character `S`.
 
