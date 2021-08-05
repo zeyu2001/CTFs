@@ -138,7 +138,9 @@ This indeed finds a recoverable file, and we are prompted to enter the first cha
 
 ![](../../.gitbook/assets/image%20%2832%29.png)
 
-The file is successfully "undeleted", and we can run `superhot.exe` to get hte flag.
+### SUPER
+
+The file is successfully "undeleted", and we can run `superhot.exe` to get the flag.
 
 ![](../../.gitbook/assets/image%20%2824%29.png)
 
