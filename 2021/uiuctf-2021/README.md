@@ -35,7 +35,7 @@ I also won a $100 bounty for the first blood on [Pwnies Please](pwnies_please.md
 | [yana](yana.md) | web |
 | [buy\_buy\_buy](buy_buy_buy.md) | misc |
 | [pwnies\_please](pwnies_please.md) | misc |
-| Q-Rious Transmissions | misc |
-| capture the :flag: | forensics |
-| SUPER | forensics |
+| [Q-Rious Transmissions](q-rious-transmissions.md) | misc |
+| [capture the :flag:](capture-the-flag.md) | forensics |
+| [SUPER](super.md) | forensics |
 

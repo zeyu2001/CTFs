@@ -137,7 +137,7 @@ def get_prediction(image_bytes, model, curr_image = None):
 
 To understand the attack, we need a bit of machine learning theory. Neural networks are loosely inspired by the human brain. Like how the human brain is made up of neurons, neural networks are made up of **nodes**. These nodes span across multiple **layers**, starting from the input layer and ending at the output layer.
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 Nodes at each layer connect to nodes at the next layer. Each node represents some function $$f(x, w)$$ , where $$x$$ represents the input features and $$w$$ represents the **weight** of a node connection.
 
@@ -149,13 +149,13 @@ But in order for the model to learn, a **backward pass**, or **backpropagation**
 
 _OK,_ [_some people_](https://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/) _won't be happy with the above statement, so maybe it's a little more subtle than that. You don't need to know this, but backpropagation is a special case of a technique known as automatic differentiation - as opposed to symbolic differentiation - which is a nice way of efficiently computing the derivative of a program with intermediate variables. I'll refer you to_ [_Justin Domke's notes_](https://people.cs.umass.edu/~domke/courses/sml2011/08autodiff_nnets.pdf) _for this._
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 Using the chain rule, we calculate the sensitivity of the loss to each of the inputs. This is repeated \(backpropagated\) through each node in the network. It might help to look at this as an optimization problem where the chain rule and memoization are used to save work calculating each of the local gradients.
 
 This allows us to optimize the weights by performing a [gradient descent](https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html). Intuitively, we want to find an optimal weight $$w$$ so that $$J(w)$$is minimized. To do this, we use the gradient calculated above - if $$\frac{\partial{J}}{\partial{w}} <0$$, we are going in the right direction. Otherwise, we have "overshot" our goal.
 
-![](../../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image%20%2828%29.png)
 
 ### Gradient-Based Attacks
 
@@ -163,11 +163,11 @@ What if, when backpropagating, instead of treating $$w$$ as the variable we want
 
 The [Fast Gradient Sign Method \(FGSM\)](https://arxiv.org/abs/1412.6572) does this by applying a small pertubation to the original data, in the direction of increasing loss.
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 Intuitively, we are "nudging" the input in the "wrong direction", causing the model to make less accurate predictions.
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 ### Exploitation
 
@@ -383,21 +383,21 @@ This was just a CTF challenge, but there are plenty of real-life examples that h
 
 For instance, [these adversarial examples](https://deepdrive.berkeley.edu/node/212) involve printed color stickers on road signs to fool DNN models used by self-driving cars - imagine causing an accident by simply placing a few stickers on stop signs! 
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2825%29.png)
 
 One might be tempted to use a "person detector" in a physical intrusion detection mechanism. But as [this paper](https://arxiv.org/abs/1904.08653) shows, such models can be easily fooled by the person's clothing.
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 ### Bugs or Features?
 
 Adversarial attacks and their defences are still a very active research topic. [One paper](https://arxiv.org/abs/1905.02175) argues that "[Adversarial Examples Aren't Bugs, They're Features](http://gradientscience.org/adv/)" - in brief, the researchers showed that the "non-robust" features imperceptible to humans might not be unnatural and meaningless, and are just as useful as perceptible "robust" ones in maximizing test-set accuracy.
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2837%29.png)
 
 When we make a small adversarial perturbation, we do not significantly affect the robust features, but flip the non-robust features. Since the model has no reason to prefer robust features over non-robust features, these seemingly small changes have a significant impact on the resulting output. When non-robust features are removed from the training set, it was found that robust models can be obtained with standard training.
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
 Suppose an alien with no _human_ concepts of "similarity". It might be confused why the original and final images should be identically classified. Remember, this alien perceives images in a completely different way from how humans do - it would spot patterns that humans are oblivious to, yet are extremely predictive of the image's class.
 
