@@ -16,6 +16,14 @@
 
 ## 2021
 
+* [InCTF 2021](2021/inctf-2021/README.md)
+  * [Notepad 1 - Snakehole's Secret](2021/inctf-2021/notepad-1-snakeholes-secret.md)
+  * [RaaS](2021/inctf-2021/raas.md)
+  * [MD Notes](2021/inctf-2021/md-notes.md)
+  * [Shell Boi](2021/inctf-2021/shell-boi.md)
+  * [Listen](2021/inctf-2021/listen.md)
+  * [Ermittlung](2021/inctf-2021/ermittlung.md)
+  * [Alpha Pie](2021/inctf-2021/alpha-pie.md)
 * [UIUCTF 2021](2021/uiuctf-2021/README.md)
   * [pwnies\_please](2021/uiuctf-2021/pwnies_please.md)
   * [yana](2021/uiuctf-2021/yana.md)
