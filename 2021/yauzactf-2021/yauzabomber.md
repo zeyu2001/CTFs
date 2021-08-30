@@ -14,7 +14,7 @@ Your task is to learn a new service for fast sending messages at
 
 ### Unintended
 
-The `.git` directory and source code was exposed. In `app.py`, the flag is exposed.
+The `.git` directory and source code was exposed on the webserver. In `app.py`, the flag is exposed.
 
 ```python
 @app.route("/shop/", methods=['POST'])
