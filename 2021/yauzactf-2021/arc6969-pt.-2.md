@@ -1,3 +1,7 @@
+---
+description: Writing an emulator / disassembler
+---
+
 # ARC6969 Pt. 2
 
 ## Description

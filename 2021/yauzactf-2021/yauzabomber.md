@@ -1,3 +1,7 @@
+---
+description: Server-Side Template Injection (SSTI) in SMS template
+---
+
 # Yauzabomber
 
 ## Description
