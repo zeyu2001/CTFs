@@ -127,3 +127,13 @@
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
 
+---
+
+* [YauzaCTF 2021](yauzactf-2021/README.md)
+  * [Yauzacraft Pt. 2](yauzactf-2021/yauzacraft-pt.-2.md)
+  * [Yauzabomber](yauzactf-2021/yauzabomber.md)
+  * [RISC 8bit CPU](yauzactf-2021/risc-8bit-cpu.md)
+  * [ARC6969 Pt. 1](yauzactf-2021/arc6969-pt.-1.md)
+  * [ARC6969 Pt. 2](yauzactf-2021/arc6969-pt.-2.md)
+  * [Back in 1986 - User](yauzactf-2021/back-in-1986-user.md)
+
