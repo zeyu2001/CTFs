@@ -16,6 +16,13 @@
 
 ## 2021
 
+* [YauzaCTF 2021](2021/yauzactf-2021/README.md)
+  * [Yauzacraft Pt. 2](2021/yauzactf-2021/yauzacraft-pt.-2.md)
+  * [Yauzabomber](2021/yauzactf-2021/yauzabomber.md)
+  * [RISC 8bit CPU](2021/yauzactf-2021/risc-8bit-cpu.md)
+  * [ARC6969 Pt. 1](2021/yauzactf-2021/arc6969-pt.-1.md)
+  * [ARC6969 Pt. 2](2021/yauzactf-2021/arc6969-pt.-2.md)
+  * [Back in 1986 - User](2021/yauzactf-2021/back-in-1986-user.md)
 * [InCTF 2021](2021/inctf-2021/README.md)
   * [Notepad 1 - Snakehole's Secret](2021/inctf-2021/notepad-1-snakeholes-secret.md)
   * [RaaS](2021/inctf-2021/raas.md)
@@ -126,14 +133,4 @@
 * [DSO-NUS CTF 2021](2021/dso-nus-ctf/README.md)
   * [Insecure \(100\)](2021/dso-nus-ctf/insecure-100.md)
   * [Easy SQL \(200\)](2021/dso-nus-ctf/easy-sql-200.md)
-
----
-
-* [YauzaCTF 2021](yauzactf-2021/README.md)
-  * [Yauzacraft Pt. 2](yauzactf-2021/yauzacraft-pt.-2.md)
-  * [Yauzabomber](yauzactf-2021/yauzabomber.md)
-  * [RISC 8bit CPU](yauzactf-2021/risc-8bit-cpu.md)
-  * [ARC6969 Pt. 1](yauzactf-2021/arc6969-pt.-1.md)
-  * [ARC6969 Pt. 2](yauzactf-2021/arc6969-pt.-2.md)
-  * [Back in 1986 - User](yauzactf-2021/back-in-1986-user.md)
 
