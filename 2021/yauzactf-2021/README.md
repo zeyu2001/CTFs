@@ -23,3 +23,7 @@ This soviet-themed CTF was really fun! Social Engineering Experts ended in 9th p
 
 * [Back in 1986 - User](back-in-1986-user.md)
 
+## Stego/Misc
+
+* [Lorem-Ipsum](lorem-ipsum.md)
+

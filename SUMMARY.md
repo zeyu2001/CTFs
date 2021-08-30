@@ -23,6 +23,7 @@
   * [ARC6969 Pt. 1](2021/yauzactf-2021/arc6969-pt.-1.md)
   * [ARC6969 Pt. 2](2021/yauzactf-2021/arc6969-pt.-2.md)
   * [Back in 1986 - User](2021/yauzactf-2021/back-in-1986-user.md)
+  * [Lorem-Ipsum](2021/yauzactf-2021/lorem-ipsum.md)
 * [InCTF 2021](2021/inctf-2021/README.md)
   * [Notepad 1 - Snakehole's Secret](2021/inctf-2021/notepad-1-snakeholes-secret.md)
   * [RaaS](2021/inctf-2021/raas.md)
