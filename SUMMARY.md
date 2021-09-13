@@ -16,6 +16,12 @@
 
 ## 2021
 
+* [CSAW CTF Qualification Round 2021](2021/csaw-ctf-qualification-round-2021/README.md)
+  * [Save the Tristate](2021/csaw-ctf-qualification-round-2021/save-the-tristate.md)
+  * [securinotes](2021/csaw-ctf-qualification-round-2021/securinotes.md)
+  * [no pass needed](2021/csaw-ctf-qualification-round-2021/no-pass-needed.md)
+  * [Gatekeeping](2021/csaw-ctf-qualification-round-2021/gatekeeping.md)
+  * [Ninja](2021/csaw-ctf-qualification-round-2021/ninja.md)
 * [YauzaCTF 2021](2021/yauzactf-2021/README.md)
   * [Yauzacraft Pt. 2](2021/yauzactf-2021/yauzacraft-pt.-2.md)
   * [Yauzabomber](2021/yauzactf-2021/yauzabomber.md)

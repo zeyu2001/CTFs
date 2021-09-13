@@ -20,11 +20,13 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 | CTF Name | Date | Type | Position |
 | :--- | :--- | :--- | :--- |
+| CSAW CTF Qualification Round 2021 | 11 September | Jeopardy | 23rd |
 | [YauzaCTF 2021](2021/yauzactf-2021/) | 27 August | Jeopardy | 9th |
 | [InCTF International](2021/inctf-2021/) | 13 August | Jeopardy | 22nd |
 | DEF CON 29 Red Team Village CTF \(Finals\) | 7 August | Hack Quest | 18th |
 | DEF CON 29 Red Team Village CTF \(Quals\) | 6 August | Jeopardy | 16th |
 | [UIUCTF 2021](2021/uiuctf-2021/) | 31 July | Jeopardy | 18th |
+| Securebug Loki CTF | 19 July | Jeopardy | 5th |
 | [Google CTF 2021](2021/google-ctf-2021/) | 17 July | Jeopardy | &lt; 20% |
 | [TyphoonCon CTF 2021](2021/typhooncon-ctf-2021/) | 12 July | Jeopardy | 10th |
 | [DSTA BrainHack CDDC21](2021/dsta-brainhack-cddc21/) | 24 June | Jeopardy | 3rd |
