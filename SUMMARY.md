@@ -16,6 +16,14 @@
 
 ## 2021
 
+* [Asian Cyber Security Challenge \(ACSC\) 2021](2021/asian-cyber-security-challenge-acsc-2021/README.md)
+  * [Cowsay As A Service](2021/asian-cyber-security-challenge-acsc-2021/cowsay-as-a-service.md)
+  * [Favorite Emojis](2021/asian-cyber-security-challenge-acsc-2021/favorite-emojis.md)
+  * [Baby Developer](2021/asian-cyber-security-challenge-acsc-2021/baby-developer.md)
+  * [API](2021/asian-cyber-security-challenge-acsc-2021/api.md)
+  * [RSA Stream](2021/asian-cyber-security-challenge-acsc-2021/rsa-stream.md)
+  * [Filtered](2021/asian-cyber-security-challenge-acsc-2021/filtered.md)
+  * [NYONG Coin](2021/asian-cyber-security-challenge-acsc-2021/nyong-coin.md)
 * [CSAW CTF Qualification Round 2021](2021/csaw-ctf-qualification-round-2021/README.md)
   * [Save the Tristate](2021/csaw-ctf-qualification-round-2021/save-the-tristate.md)
   * [securinotes](2021/csaw-ctf-qualification-round-2021/securinotes.md)

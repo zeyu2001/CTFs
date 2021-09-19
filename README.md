@@ -18,27 +18,157 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 ## ~\# ls -la 2021
 
-| CTF Name | Date | Type | Position |
-| :--- | :--- | :--- | :--- |
-| [CSAW CTF Qualification Round 2021](2021/csaw-ctf-qualification-round-2021/) | 11 September | Jeopardy | 23rd |
-| [YauzaCTF 2021](2021/yauzactf-2021/) | 27 August | Jeopardy | 9th |
-| [InCTF International](2021/inctf-2021/) | 13 August | Jeopardy | 22nd |
-| DEF CON 29 Red Team Village CTF \(Finals\) | 7 August | Hack Quest | 18th |
-| DEF CON 29 Red Team Village CTF \(Quals\) | 6 August | Jeopardy | 16th |
-| [UIUCTF 2021](2021/uiuctf-2021/) | 31 July | Jeopardy | 18th |
-| Securebug Loki CTF | 19 July | Jeopardy | 5th |
-| [Google CTF 2021](2021/google-ctf-2021/) | 17 July | Jeopardy | &lt; 20% |
-| [TyphoonCon CTF 2021](2021/typhooncon-ctf-2021/) | 12 July | Jeopardy | 10th |
-| [DSTA BrainHack CDDC21](2021/dsta-brainhack-cddc21/) | 24 June | Jeopardy | 3rd |
-| [BCACTF 2.0](2021/bcactf-2.0/) | 11 June | Jeopardy | 43rd |
-| [Zh3ro CTF V2](2021/zh3ro-ctf-v2/) | 4 June | Jeopardy | 37th |
-| [Pwn2Win CTF](2021/pwn2win-ctf-2021/) | 28 May | Jeopardy | 62nd |
-| [NorzhCTF](2021/norzhctf-2021/) | 22 May | Hack Quest | 29th |
-| [DawgCTF](2021/dawgctf-2021/) | 8 May | Jeopardy | 13th |
-| [UMDCTF](2021/umdctf-2021/) | 17 Apr | Jeopardy | 8th |
-| [Midnight Sun CTF](2021/midnight-sun-ctf/) | 10 Apr | Jeopardy | &lt; 20% |
-| [picoCTF](2021/picoctf/) | 17 Mar | Jeopardy | &lt; 5% |
-| [DSO-NUS CTF](2021/dso-nus-ctf/) | 27 Feb | Jeopardy | &lt; 20% |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">CTF Name</th>
+      <th style="text-align:left">Date</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Asian Cyber Security Challenge (ACSC) 2021</td>
+      <td style="text-align:left">18 September</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">
+        <p>3rd (SG)</p>
+        <p>33rd (Asia)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/csaw-ctf-qualification-round-2021/">CSAW CTF Qualification Round 2021</a>
+      </td>
+      <td style="text-align:left">11 September</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">23rd</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/yauzactf-2021/">YauzaCTF 2021</a>
+      </td>
+      <td style="text-align:left">27 August</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">9th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/inctf-2021/">InCTF International</a>
+      </td>
+      <td style="text-align:left">13 August</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">22nd</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">DEF CON 29 Red Team Village CTF (Finals)</td>
+      <td style="text-align:left">7 August</td>
+      <td style="text-align:left">Hack Quest</td>
+      <td style="text-align:left">18th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">DEF CON 29 Red Team Village CTF (Quals)</td>
+      <td style="text-align:left">6 August</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">16th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/uiuctf-2021/">UIUCTF 2021</a>
+      </td>
+      <td style="text-align:left">31 July</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">18th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Securebug Loki CTF</td>
+      <td style="text-align:left">19 July</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">5th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/google-ctf-2021/">Google CTF 2021</a>
+      </td>
+      <td style="text-align:left">17 July</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">&lt; 20%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/typhooncon-ctf-2021/">TyphoonCon CTF 2021</a>
+      </td>
+      <td style="text-align:left">12 July</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">10th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/dsta-brainhack-cddc21/">DSTA BrainHack CDDC21</a>
+      </td>
+      <td style="text-align:left">24 June</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">3rd</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/bcactf-2.0/">BCACTF 2.0</a>
+      </td>
+      <td style="text-align:left">11 June</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">43rd</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/zh3ro-ctf-v2/">Zh3ro CTF V2</a>
+      </td>
+      <td style="text-align:left">4 June</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">37th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/pwn2win-ctf-2021/">Pwn2Win CTF</a>
+      </td>
+      <td style="text-align:left">28 May</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">62nd</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/norzhctf-2021/">NorzhCTF</a>
+      </td>
+      <td style="text-align:left">22 May</td>
+      <td style="text-align:left">Hack Quest</td>
+      <td style="text-align:left">29th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/dawgctf-2021/">DawgCTF</a>
+      </td>
+      <td style="text-align:left">8 May</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">13th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/umdctf-2021/">UMDCTF</a>
+      </td>
+      <td style="text-align:left">17 Apr</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">8th</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/midnight-sun-ctf/">Midnight Sun CTF</a>
+      </td>
+      <td style="text-align:left">10 Apr</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">&lt; 20%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/picoctf/">picoCTF</a>
+      </td>
+      <td style="text-align:left">17 Mar</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">&lt; 5%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="2021/dso-nus-ctf/">DSO-NUS CTF</a>
+      </td>
+      <td style="text-align:left">27 Feb</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">&lt; 20%</td>
+    </tr>
+  </tbody>
+</table>
 
 ## ~\# cat LICENSE
 
