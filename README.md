@@ -38,7 +38,7 @@ Social Engineering Experts is a small team founded by a group of friends.
       </td>
       <td style="text-align:left">
         <p>3rd (SG)</p>
-        <p>33rd (Asia)</p>
+        <p>33rd (Overall)</p>
       </td>
     </tr>
     <tr>
