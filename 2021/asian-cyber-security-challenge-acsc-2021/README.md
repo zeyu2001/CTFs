@@ -7,22 +7,32 @@ description: >-
 
 # Asian Cyber Security Challenge \(ACSC\) 2021
 
-## Web
+## Writeups
 
-* API
-* Baby Developer
-* Favorite Emojis
-* Cowsay as a Service
+### Web
 
-## Crypto
+* [API](api.md)
+* [Baby Developer](baby-developer.md)
+* [Favorite Emojis](favorite-emojis.md)
+* [Cowsay as a Service](cowsay-as-a-service.md)
 
-* RSA Stream
+### Crypto
 
-## Pwn
+* [RSA Stream](rsa-stream.md)
 
-* Filtered
+### Pwn
 
-## Forensics
+* [Filtered](filtered.md)
 
-* NYONG Coin
+### Forensics
+
+* [NYONG Coin](nyong-coin.md)
+
+## Results
+
+I ended up 33rd in the global scoreboard, and 3rd in Singapore. 
+
+I definitely have a lot more to learn! Nevertheless, this CTF was really fun :\)
+
+![](../../.gitbook/assets/screenshot-2021-09-19-at-2.33.54-pm.png)
 
