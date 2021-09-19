@@ -31,8 +31,11 @@ Social Engineering Experts is a small team founded by a group of friends.
     <tr>
       <td style="text-align:left"><a href="2021/asian-cyber-security-challenge-acsc-2021/">Asian Cyber Security Challenge (ACSC) 2021</a>
       </td>
-      <td style="text-align:left">18 September</td>
-      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">18 Sep</td>
+      <td style="text-align:left">
+        <p>Jeopardy</p>
+        <p>(Individual)</p>
+      </td>
       <td style="text-align:left">
         <p>3rd (SG)</p>
         <p>33rd (Asia)</p>
@@ -41,81 +44,81 @@ Social Engineering Experts is a small team founded by a group of friends.
     <tr>
       <td style="text-align:left"><a href="2021/csaw-ctf-qualification-round-2021/">CSAW CTF Qualification Round 2021</a>
       </td>
-      <td style="text-align:left">11 September</td>
+      <td style="text-align:left">11 Sep</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">23rd</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/yauzactf-2021/">YauzaCTF 2021</a>
       </td>
-      <td style="text-align:left">27 August</td>
+      <td style="text-align:left">27 Aug</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">9th</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/inctf-2021/">InCTF International</a>
       </td>
-      <td style="text-align:left">13 August</td>
+      <td style="text-align:left">13 Aug</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">22nd</td>
     </tr>
     <tr>
       <td style="text-align:left">DEF CON 29 Red Team Village CTF (Finals)</td>
-      <td style="text-align:left">7 August</td>
+      <td style="text-align:left">7 Aug</td>
       <td style="text-align:left">Hack Quest</td>
       <td style="text-align:left">18th</td>
     </tr>
     <tr>
       <td style="text-align:left">DEF CON 29 Red Team Village CTF (Quals)</td>
-      <td style="text-align:left">6 August</td>
+      <td style="text-align:left">6 Aug</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">16th</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/uiuctf-2021/">UIUCTF 2021</a>
       </td>
-      <td style="text-align:left">31 July</td>
+      <td style="text-align:left">31 Jul</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">18th</td>
     </tr>
     <tr>
       <td style="text-align:left">Securebug Loki CTF</td>
-      <td style="text-align:left">19 July</td>
+      <td style="text-align:left">19 Jul</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">5th</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/google-ctf-2021/">Google CTF 2021</a>
       </td>
-      <td style="text-align:left">17 July</td>
+      <td style="text-align:left">17 Jul</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">&lt; 20%</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/typhooncon-ctf-2021/">TyphoonCon CTF 2021</a>
       </td>
-      <td style="text-align:left">12 July</td>
+      <td style="text-align:left">12 Jul</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">10th</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/dsta-brainhack-cddc21/">DSTA BrainHack CDDC21</a>
       </td>
-      <td style="text-align:left">24 June</td>
+      <td style="text-align:left">24 Jun</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">3rd</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/bcactf-2.0/">BCACTF 2.0</a>
       </td>
-      <td style="text-align:left">11 June</td>
+      <td style="text-align:left">11 Jun</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">43rd</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="2021/zh3ro-ctf-v2/">Zh3ro CTF V2</a>
       </td>
-      <td style="text-align:left">4 June</td>
+      <td style="text-align:left">4 Jun</td>
       <td style="text-align:left">Jeopardy</td>
       <td style="text-align:left">37th</td>
     </tr>
