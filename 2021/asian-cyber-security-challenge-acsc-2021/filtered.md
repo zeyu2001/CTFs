@@ -45,9 +45,7 @@ int readint(const char *msg) {
 }
 ```
 
-I came across this thread: [https://stackoverflow.com/questions/41869515/overflow-when-change-from-string-to-int-in-c/41869611](https://stackoverflow.com/questions/41869515/overflow-when-change-from-string-to-int-in-c/41869611)
-
-Using `2147483648`, an integer overflow is caused since the largest unsigned int is `2147483647`. Therefore, `length` is a negative signed integer, passing the length check.
+I came across [this thread](https://stackoverflow.com/questions/41869515/overflow-when-change-from-string-to-int-in-c/41869611). Using `2147483648`, an integer overflow is caused since the largest unsigned int is `2147483647`. Therefore, `length` will be a negative signed integer, passing the length check.
 
 However, when calling `readline()`, the length is passed to a `size_t` argument.
 
