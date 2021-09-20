@@ -8,7 +8,7 @@ description: >-
 
 ## Description
 
-I made a mobile\(apple watch miniminimini series 1337\) viewer on my personal server..
+I made a mobile \(apple watch miniminimini series 1337\) viewer on my personal server.
 
 * `http://baby-developer.chal.acsc.asia:8888/`
 * `ssh baby-developer.chal.acsc.asia -p2222`
