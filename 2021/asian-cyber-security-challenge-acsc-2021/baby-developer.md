@@ -59,7 +59,7 @@ From `mobile-viewer`, we can make a request to our attacker site, which contains
 Get the private key and SSH into the server to get the flag:
 
 ```text
-➜  babydev ssh stypr@baby-developer.chal.acsc.asia -p2222 -i id_rsa 
+$ ssh stypr@baby-developer.chal.acsc.asia -p2222 -i id_rsa 
 ACSC{weird_bugs_pwned_my_system_too_late_to_get_my_CVE}
 ```
 
