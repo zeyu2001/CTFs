@@ -35,8 +35,6 @@ router.get('/cowsay', (ctx, next) => {
   }
 ```
 
-### Prototype Pollution
-
 The settings endpoint sets the settings for `ctx.state.user`, which is also equal to the `username` cookie. The setting name is also user-controlled.
 
 ```javascript
@@ -50,7 +48,7 @@ router.post('/setting/:name', (ctx, next) => {
 });
 ```
 
-I used `__proto__` as the username, which will set settings for `{}.__proto__`. Then, we can use `shell` as the setting name to set `shell=true` for all objects.
+This allows us to perform prototype pollution. I used `__proto__` as the username, which will set settings for `{}.__proto__`. Then, we can use `shell` as the setting name to set `shell=true` for all objects.
 
 ```http
 POST /setting/shell HTTP/1.1

@@ -20,9 +20,55 @@ description: Prerender dynamic rendering leads to SSRF
 
 ## Solution
 
-I came across this post which gave me the inspiration for the exploit: [https://r2c.dev/blog/2020/exploiting-dynamic-rendering-engines-to-take-control-of-web-apps/](https://r2c.dev/blog/2020/exploiting-dynamic-rendering-engines-to-take-control-of-web-apps/)
+The server uses something called dynamic rendering, which renders JavaScript on the server-side before serving web crawlers. This is meant to improve SEO.
 
-The pre-renderer uses Chrome. We can perform XSS within the renderer.
+If we look at the Nginx configuration, we can see that as long as we set our HTTP `User-Agent` header to one of the web crawlers, e.g.`googlebot`, the request is re-written and forwarded to the pre-renderer at `http://renderer:3000`.
+
+```text
+location / {
+    try_files $uri @prerender;
+}
+
+...
+
+location @prerender {
+    proxy_set_header X-Prerender-Token YOUR_TOKEN;
+    
+    set $prerender 0;
+    if ($http_user_agent ~* "googlebot|bingbot|yandex|baiduspider|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|W3C_Validator|whatsapp") {
+        set $prerender 1;
+    }
+    if ($args ~ "_escaped_fragment_") {
+        set $prerender 1;
+    }
+    if ($http_user_agent ~ "Prerender") {
+        set $prerender 0;
+    }
+    if ($uri ~* "\.(js|css|xml|less|png|jpg|jpeg|gif|pdf|doc|txt|ico|rss|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ttf|woff|svg|eot)") {
+        set $prerender 0;
+    }
+
+    if ($prerender = 1) {
+        rewrite .* /$scheme://$host$request_uri? break;
+        proxy_pass http://renderer:3000;
+    }
+    if ($prerender = 0) {
+        rewrite .* /index.html break;
+    }
+}
+```
+
+The goal is to get to `http://api:8000/`.
+
+```python
+@app.route("/", methods=["GET"])
+def root():
+    return FLAG
+```
+
+If the API server was hosted on port 80 instead, there would be no need for any exploitation - the need for subsequent exploitation stems from the fact that `$host` will strip the port number in the HTTP `Host` header, preventing us from accessing the API server at port 8000 directly.
+
+I came across [this post](https://r2c.dev/blog/2020/exploiting-dynamic-rendering-engines-to-take-control-of-web-apps/) which gave me the inspiration for the exploit. We know that the server uses [Prerender](https://github.com/tvanro/prerender-alpine) to handle these requests. Since Prerender uses Chrome to render JavaScript, we can perform XSS within the renderer.
 
 Set the host header so that the renderer visits our attacker-controlled site. From there, we can redirect the browser using the `Location` header.
 
@@ -46,7 +92,7 @@ From the user's perspective, the Nginx server will return the 302 redirect, inst
 </html>
 ```
 
-Since both the current site and the iframe's source are `localhost:3000`, this bypasses SOP and allows us to access the iframe's contents.
+Since both the current site and the iframe's source are `http://localhost:3000`, this bypasses SOP and allows us to access the iframe's contents.
 
 This gives us the `http://api:8000` contents:
 

@@ -42,7 +42,7 @@ RUN touch /home/stypr/.hushlogin && \
     chmod +x /home/stypr/readflag && rm -rf /home/stypr/readflag.c
 ```
 
-The `website` server runs `yarn dev`, which runs `vitepress dev src`. Refer to the website source: [https://github.com/stypr/harold.kim/blob/main/package.json](https://github.com/stypr/harold.kim/blob/main/package.json)
+Refer to the [website source](https://github.com/stypr/harold.kim/blob/main/package.json). The `website` server runs `yarn dev`, which runs `vitepress dev src`.
 
 Vitepress is run on dev mode. I found that this enables CORS, allowing us to perform a CSRF to exfiltrate data. Furthermore, I found that there was a path traversal vulnerability, allowing us to get the SSH key: `http://website/../../../../../home/stypr/.ssh/id_rsa`
 
