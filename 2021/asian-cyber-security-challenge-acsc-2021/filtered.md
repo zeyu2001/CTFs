@@ -16,7 +16,25 @@ Backup: `nc 167.99.78.201 9001`
 
 ## Solution
 
-Although there is a length check for `length > 0x100`, it is implemented using `atoi()`:
+First, the user is asked for the data length. If the length is more than 0x100, the program exits.
+
+```c
+int length;
+char buf[0x100];
+
+/* Read and check length */
+length = readint("Size: ");
+if (length > 0x100) {
+  print("Buffer overflow detected!\n");
+  exit(1);
+}
+
+/* Read data */
+readline("Data: ", buf, length);
+print("Bye!\n");
+```
+
+The length is read using `atoi()`:
 
 ```c
 /* Print `msg` and read an integer value */
@@ -29,7 +47,47 @@ int readint(const char *msg) {
 
 I came across this thread: [https://stackoverflow.com/questions/41869515/overflow-when-change-from-string-to-int-in-c/41869611](https://stackoverflow.com/questions/41869515/overflow-when-change-from-string-to-int-in-c/41869611)
 
-Using `2147483648`, an integer overflow is caused since the largest unsigned int is `2147483647`.
+Using `2147483648`, an integer overflow is caused since the largest unsigned int is `2147483647`. Therefore, `length` is a negative signed integer, passing the length check.
+
+However, when calling `readline()`, the length is passed to a `size_t` argument.
+
+```c
+/* Print `msg` and read `size` bytes into `buf` */
+void readline(const char *msg, char *buf, size_t size) {
+  char c;
+  print(msg);
+  for (size_t i = 0; i < size; i++) {
+    if (read(0, &c, 1) <= 0) {
+      print("I/O Error\n");
+      exit(1);
+    } else if (c == '\n') {
+      buf[i] = '\0';
+      break;
+    } else {
+      buf[i] = c;
+    }
+  }
+}
+```
+
+Now, `size_t` is _unsigned_, so the permitted size would instead become a large positive integer. We can try this experiment ourselves:
+
+```c
+int main() {
+    int length = atoi("2147483648");
+    printf("%d\n", length);
+
+    size_t size = length;
+    printf("%zu\n", length);
+}
+```
+
+The output would be:
+
+```text
+-2147483648
+2147483648
+```
 
 From here, this is a regular buffer overflow challenge. The offset is 280, and we want to jump to the win function here:
 
