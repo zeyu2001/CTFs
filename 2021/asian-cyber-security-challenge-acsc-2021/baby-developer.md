@@ -18,7 +18,7 @@ I made a mobile \(apple watch miniminimini series 1337\) viewer on my personal s
 ## Solution
 
 * There is a `genflag` server which you are supposed to SSRF
-* However, the user agent is checked so you cant do it directly from `mobile-viewer`
+* However, the remote address and user agent are checked so you can't do it directly from `mobile-viewer`
 * The pages are rendered as screenshots
 
 ```python
