@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Zeyu's CTF Writeups](README.md)
+* [Home](https://infosec.zeyu2001.com/)
+* [Pentesting](https://pentesting.zeyu2001.com/)
 
 ## My Challenges
 
