@@ -29,6 +29,12 @@ Social Engineering Experts is a small team founded by a group of friends.
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">DeconstruCT.F</td>
+      <td style="text-align:left">1 Oct</td>
+      <td style="text-align:left">Jeopardy</td>
+      <td style="text-align:left">14th</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><a href="2021/asian-cyber-security-challenge-acsc-2021/">Asian Cyber Security Challenge (ACSC) 2021</a>
       </td>
       <td style="text-align:left">18 Sep</td>
