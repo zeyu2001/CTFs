@@ -6,8 +6,8 @@ description: >-
 
 # SPbCTF's Student CTF Quals
 
-| Challenge             | Category | Points |
-| --------------------- | -------- | ------ |
-| [CatStep](catstep.md) | Misc     | 110    |
-| [BLT](blt.md)         | Web      | 174    |
-| 31 Line PHP           | Web      | 427    |
+| Challenge                     | Category | Points |
+| ----------------------------- | -------- | ------ |
+| [CatStep](catstep.md)         | Misc     | 110    |
+| [BLT](blt.md)                 | Web      | 174    |
+| [31 Line PHP](31-line-php.md) | Web      | 427    |
