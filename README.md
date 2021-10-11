@@ -18,8 +18,9 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 ## \~# ls -la 2021
 
-| SPbCTF's Student CTF 2021 Quals                                                              | 10 Oct | Jeopardy                            | 37th                                 |
+| CTF Name                                                                                     | Date   | Type                                | Position                             |
 | -------------------------------------------------------------------------------------------- | ------ | ----------------------------------- | ------------------------------------ |
+| SPbCTF's Student CTF 2021 Quals                                                              | 10 Oct | Jeopardy                            | 37th                                 |
 | pbCTF 2021                                                                                   | 9 Oct  | Jeopardy                            | 32nd                                 |
 | DeconstruCT.F                                                                                | 1 Oct  | Jeopardy                            | 14th                                 |
 | [Asian Cyber Security Challenge (ACSC) 2021](2021/asian-cyber-security-challenge-acsc-2021/) | 18 Sep | <p>Jeopardy </p><p>(Individual)</p> | <p>3rd (SG)</p><p>33rd (Overall)</p> |
