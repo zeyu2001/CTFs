@@ -12,18 +12,16 @@ description: Web and Crypto challenges from Zh3r0 CTF V2 hosted from 4 June - 6 
 
 ## Crypto
 
-* [alice\_bob\_dave](alice_bob_dave.md)
+* [alice_bob_dave](alice_bob_dave.md)
 * [chaos](chaos.md)
-* [1n\_jection](1n_jection.md)
+* [1n_jection](1n_jection.md)
 * [Twist and Shout](twist-and-shout.md)
 
 ## Results
 
 We finished in 37th place.
 
-![](../../.gitbook/assets/screenshot-2021-06-07-at-4.54.03-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-06-07 at 4.54.03 AM.png>)
 
 I definitely learnt a thing or two from this, and they did Crypto justice!
-
-
 

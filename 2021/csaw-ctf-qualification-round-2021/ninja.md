@@ -12,7 +12,7 @@ http://web.chal.csaw.io:5000
 
 ## Solution
 
-The webpage is vulnerable to a Server-Side Template Injection \(SSTI\) vulnerability.
+The webpage is vulnerable to a Server-Side Template Injection (SSTI) vulnerability.
 
 However, there are a few restrictions. Using any of the blacklisted words will yield the following error:
 
@@ -75,7 +75,6 @@ Connection: close
 
 Finally, `cat flag.txt` gives us the flag!
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](<../../.gitbook/assets/image (76).png>)
 
 The flag is `flag{m0mmy_s33_1m_4_r34l_n1nj4}`.
-

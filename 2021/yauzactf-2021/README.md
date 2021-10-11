@@ -6,7 +6,7 @@ description: Hosted by SFT0 from BMSTU
 
 This soviet-themed CTF was really fun! Social Engineering Experts ended in 9th place.
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-10.07.35-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 10.07.35 AM.png>)
 
 ## Web
 
@@ -26,4 +26,3 @@ This soviet-themed CTF was really fun! Social Engineering Experts ended in 9th p
 ## Stego/Misc
 
 * [Lorem-Ipsum](lorem-ipsum.md)
-

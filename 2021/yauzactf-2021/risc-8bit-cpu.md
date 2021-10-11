@@ -8,23 +8,27 @@ description: Writing an emulator / disassembler
 
 The SFT0 CPU is a secure processor designed to store encryption key. Find out how the processor works and get the key.
 
-{% file src="../../.gitbook/assets/manual.pdf" caption="manual.pdf" %}
+{% file src="../../.gitbook/assets/manual.pdf" %}
+manual.pdf
+{% endfile %}
 
-{% file src="../../.gitbook/assets/rom.bin" caption="rom.bin" %}
+{% file src="../../.gitbook/assets/rom.bin" %}
+rom.bin
+{% endfile %}
 
 ## Solution
 
-We're given the specifications for this custom processor. This one is pretty simple - there are 3 registers \(A, B and C\), a program counter \(PC\) and a 1-bit flag register.
+We're given the specifications for this custom processor. This one is pretty simple - there are 3 registers (A, B and C), a program counter (PC) and a 1-bit flag register.
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-1.40.29-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 1.40.29 PM.png>)
 
 We're told that the address space is from 0x0000 to 0xFFFF. Furthermore, the PC starts from 0x1000:
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-1.41.53-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 1.41.53 PM.png>)
 
 We're given the ROM to be loaded at 0x0000, and we need to write an emulator that parses and executes the following instructions.
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-1.42.26-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 1.42.26 PM.png>)
 
 We can simply represent the memory space as an array, access 4 bytes at a time, and parse the instructions based on the specification above. Initially, I ran into some errors because I forgot to always take the lower 8 bits after an arithmetic operation. The rest is just a bunch of if-else statements!
 
@@ -167,5 +171,4 @@ while not done:
 
 The flag is `YauzaCTF{s0_s3cr3t_y3t_s0_fr33}`.
 
-![](../../.gitbook/assets/image%20%2870%29.png)
-
+![](<../../.gitbook/assets/image (71).png>)

@@ -4,7 +4,7 @@ description: STANDCON CTF is a Singaporean CTF competition for tertiary students
 
 # STANDCON CTF 2021
 
-![](../../.gitbook/assets/screenshot-2021-07-25-at-4.53.08-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-25 at 4.53.08 PM.png>)
 
 Here are the solutions to my challenges for the STANDCON CTF, hosted by N0H4TS on 25 July. It was my first time writing challenges for a CTF, so please feel free to let me know if you have any feedback!
 
@@ -42,4 +42,3 @@ Rocket Science proved to be the most challenging. This challenge required partic
 Rocket Ship Academy was a classic textbook RSA chosen-ciphertext attack.
 
 Space Noise was a little more challenging, requiring participants to find patterns in the given PCAP file, and infer that a covert channel was implemented using morse code.
-

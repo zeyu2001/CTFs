@@ -1,5 +1,5 @@
 ---
-description: 'Spoofable client IP address, SQL injection vulnerability'
+description: Spoofable client IP address, SQL injection vulnerability
 ---
 
 # Star Cereal 2
@@ -28,7 +28,7 @@ TODO:
 -->
 ```
 
-Point 1\) is referring to the previous challenge. Point 2\) is interesting.
+Point 1) is referring to the previous challenge. Point 2) is interesting.
 
 If we go to `login.php`, we get a 403 Forbidden Page:
 
@@ -43,9 +43,9 @@ We could deduce that perhaps the server filters requests by the client IP.
 
 A common security misconfiguration in implementing such a filter is the use of the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For). This header is used for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or a load balancer.
 
-Note that HTTP request headers can be [easily spoofed](https://portswigger.net/kb/issues/00400110_spoofable-client-ip-address). Knowing that one of the internal IP addresses is 172.16.2.155, we may want to check the 172.16.2.0/24 subnet for valid client IPs.
+Note that HTTP request headers can be [easily spoofed](https://portswigger.net/kb/issues/00400110\_spoofable-client-ip-address). Knowing that one of the internal IP addresses is 172.16.2.155, we may want to check the 172.16.2.0/24 subnet for valid client IPs.
 
-If we do a scan \(e.g. using Burp Suite Intruder\) for the 172.16.2.0/24 subnet with the `X-Forwarded-For` header, we would find that if we set:
+If we do a scan (e.g. using Burp Suite Intruder) for the 172.16.2.0/24 subnet with the `X-Forwarded-For` header, we would find that if we set:
 
 ```http
 X-Forwarded-For: 172.16.2.24
@@ -57,15 +57,15 @@ then we would see the login page.
 
 First, set the payload position as follows:
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.07.01-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.07.01 PM.png>)
 
 Then, configure the payload as a list of numbers from 1 to 255.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.08.01-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.08.01 PM.png>)
 
 Run the attack. Sort the output by either the Status or Length columns. We will find that `X-Forwarded-For: 172.16.2.24` gives us a 200 OK response code, and shows us the login page.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.09.23-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.09.23 PM.png>)
 
 
 
@@ -104,5 +104,4 @@ email=test&pass=test' UNION SELECT 'test', 'test';#
 
 The flag is `STC{w0w_you'r3_r3lly_a_l33t_h4x0r_bc1d4611be52117c9a8bb99bf572d6a7}`.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.18.39-pm.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.18.39 PM.png>)

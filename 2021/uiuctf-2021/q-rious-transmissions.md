@@ -6,11 +6,13 @@ description: Superdense coding quantum communication protocol
 
 ## Description
 
-Alice is stuck in the bygone era of classical computing, while Bob is using quantum. She wants to show Bob a cool picture so she decides to give quantum a chance. Bob and Alice share a quantum state. Alice can't figure out how to send qubits, so she shares details of each operation instead. The initial state is 1/sqrt\(2\)\*\(\|00&gt; + \|11&gt;\)
+Alice is stuck in the bygone era of classical computing, while Bob is using quantum. She wants to show Bob a cool picture so she decides to give quantum a chance. Bob and Alice share a quantum state. Alice can't figure out how to send qubits, so she shares details of each operation instead. The initial state is 1/sqrt(2)\*(|00> + |11>)
 
 **author**: boron
 
-{% file src="../../.gitbook/assets/info.txt" caption="info.txt" %}
+{% file src="../../.gitbook/assets/info.txt" %}
+info.txt
+{% endfile %}
 
 ## Solution
 
@@ -18,15 +20,15 @@ Alice is stuck in the bygone era of classical computing, while Bob is using quan
 
 We are told that the initial state is $$\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle)$$.
 
-Using the superdense coding protocol, Alice applies one of four quantum gates \($$I$$, $$X$$, $$Z$$, $$Z*X$$\) to transform the entangled qubit into one of four Bell states.
+Using the superdense coding protocol, Alice applies one of four quantum gates ($$I$$, $$X$$, $$Z$$, $$Z*X$$) to transform the entangled qubit into one of four Bell states.
 
 Applying a quantum gate to a qubit is essentially performing matrix multiplication. [This article](https://quantumcomputinguk.org/tutorials/introduction-to-quantum-logic-gates-and-matrices) does a great job at explaining it.
 
 For instance, the $$X$$ gate is represented as $$X =\begin{bmatrix} 0 & 1\\ 1 & 0\\ \end{bmatrix}$$. When applied to $$|1\rangle$$, the following matrix multiplication is performed:
 
-![](../../.gitbook/assets/screenshot-2021-08-05-at-11.22.16-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-05 at 11.22.16 AM.png>)
 
-As a result of applying the quantum gates, a new entangled state is formed, and this can be decoded by Bob to obtain the classical 2-bit message by applying _CNOT_ and $$H\otimes I$$.
+As a result of applying the quantum gates, a new entangled state is formed, and this can be decoded by Bob to obtain the classical 2-bit message by applying _CNOT _and $$H\otimes I$$.
 
 The following script applies each quantum gate to the entangled state, and decodes the classical 2-bit messages. Each gate in the message would thus translate to 2 bits.
 
@@ -117,9 +119,9 @@ for m in messageDigest[:]:
 print(digest)
 ```
 
-The decoded message looks like this. Hmm... not very useful! This is not surprising, though, since the message contains a lot of identity __\($$I$$\) gates, which do not modify the quantum state - we should expect a lot of repeated bits in the output.
+The decoded message looks like this. Hmm... not very useful! This is not surprising, though, since the message contains a lot of identity_ _($$I$$) gates, which do not modify the quantum state - we should expect a lot of repeated bits in the output.
 
-![](../../.gitbook/assets/screenshot-2021-08-05-at-12.24.29-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-05 at 12.24.29 PM.png>)
 
 It turns out that this was a QR code! The 40,000 bits can be arranged into a 200 x 200 square matrix. Each bit represents either a white or black pixel.
 
@@ -139,5 +141,4 @@ We get a QR code, which we can decode to reveal the flag!
 
 ![](../../.gitbook/assets/q-rious.png)
 
-![](../../.gitbook/assets/screenshot-2021-08-05-at-12.32.35-pm.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-08-05 at 12.32.35 PM.png>)

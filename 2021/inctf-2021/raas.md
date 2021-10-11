@@ -16,11 +16,11 @@ description: SSRF using Gopher protocol leads to tampering of Redis key-value st
 
 We are able to enter a URL for the server to request. A pretty trivial LFI vulnerability exists as a result of SSRF, allowing us to view files using the `file://` protocol.
 
-![](../../.gitbook/assets/screenshot-2021-08-16-at-6.59.26-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-16 at 6.59.26 PM.png>)
 
 Since we're provided with the Dockerfile, we know that the server code is in `/code/app.py`.
 
-```text
+```
 ADD flask-server /code
 WORKDIR /code
 RUN pip install -r requirements.txt
@@ -85,7 +85,7 @@ It appears that we would have to overwrite our `<userID>_isAdmin` value. Since w
 
 ### Redis Over Gopher
 
-In `main.py`, we can see that the `Requests_On_Steroids` function supports the Gopher protocol. Using Gopher, we can communicate with any TCP server \(but of course, we would have to follow the service's higher-layer protocol\). 
+In `main.py`, we can see that the `Requests_On_Steroids` function supports the Gopher protocol. Using Gopher, we can communicate with any TCP server (but of course, we would have to follow the service's higher-layer protocol). 
 
 However, instead of `gopher://`, we must use `inctf://` instead.
 
@@ -146,7 +146,7 @@ class GopherAdapter(requests.adapters.BaseAdapter):
 
 With some Googling, we can find out that the Gopher adapter was actually modified from this [GitHub gist](https://gist.github.com/MineRobber9000/24c87d3fb50d0b942989cbe4d4da7e73). I wanted to find out if any changes was made from the original script, so I diff-ed the two scripts.
 
-![](../../.gitbook/assets/upload_0c5ea44b408970eff89e390b45d2dae1.png)
+![](../../.gitbook/assets/upload\_0c5ea44b408970eff89e390b45d2dae1.png)
 
 Interestingly,  a line of code was modified to remove `/_` in the URL's path.
 
@@ -156,27 +156,26 @@ msg = parsed.path.replace('/_','')
 
 Ideally, we would send multi-line input using the [RESP protocol](https://redis.io/topics/protocol), but this wouldn't work because `urllib.parse` was updated to [strip newline characters](https://docs.python.org/3.6/library/urllib.parse.html#module-urllib.parse). 
 
-Redis also offers inline commands, allowing us to send our commands directly, but without the above change, our inline commands \(`parsed.path`\) would still look like this:
+Redis also offers inline commands, allowing us to send our commands directly, but without the above change, our inline commands (`parsed.path`) would still look like this:
 
-```text
+```
 /SET <userID>_isAdmin "yes"
 ```
 
 The `/SET` command is unrecognized, leading to an error. Instead, we can leverage the replacement using the following payload:
 
-```text
+```
 url=inctf://redis:6379/_SET <userID>_isAdmin "yes"
 ```
 
 The path, when replaced, would be
 
-```text
+```
 SET <userID>_isAdmin "yes"
 ```
 
 which sets our `<userID>_isAdmin` value to "yes".
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](<../../.gitbook/assets/image (44).png>)
 
 This gives us the flag: `inctfi{IDK_WHY_I_EVEN_USED_REDIS_HERE!!!}`
-

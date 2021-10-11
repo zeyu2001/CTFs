@@ -1,14 +1,14 @@
 ---
-description: 'The fifth international edition of InCTF, hosted by team bi0s'
+description: The fifth international edition of InCTF, hosted by team bi0s
 ---
 
 # InCTF 2021
 
 ## Results
 
-This CTF was a blast! [Social Engineering Experts](https://ctftime.org/team/154571) ****placed 22nd, out of 604 scoring teams.
+This CTF was a blast! [Social Engineering Experts](https://ctftime.org/team/154571)** **placed 22nd, out of 604 scoring teams.
 
-![](../../.gitbook/assets/screenshot-2021-08-17-at-2.13.03-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-17 at 2.13.03 AM.png>)
 
 ## Web
 
@@ -28,4 +28,3 @@ This CTF was a blast! [Social Engineering Experts](https://ctftime.org/team/1545
 ## Misc
 
 * [Alpha Pie](alpha-pie.md)
-

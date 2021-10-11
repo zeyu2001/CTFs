@@ -6,18 +6,20 @@ description: Prototype pollution leads to RCE
 
 ## Description
 
-Enjoy your cowsay life with our Cowsay as a Service!  
-You can spawn your private instance from https://cowsay-as-a-service.chal.acsc.asia/.  
-  
-Notice: Please do not spawn too many instances since our server resource is limited.  
-You can check the source code and run it in your local machine before do that.  
-Each instances are alive only for 5 minutes.  
-But don't worry! You can spawn again even if your instance expired.  
+Enjoy your cowsay life with our Cowsay as a Service!\
+You can spawn your private instance from https://cowsay-as-a-service.chal.acsc.asia/.\
+\
+Notice: Please do not spawn too many instances since our server resource is limited.\
+You can check the source code and run it in your local machine before do that.\
+Each instances are alive only for 5 minutes.\
+But don't worry! You can spawn again even if your instance expired.\
 
 
 `https://cowsay-as-a-service.chal.acsc.asia/`
 
-{% file src="../../.gitbook/assets/cowsay-as-a-service.tar.gz\_b1f19fe170867369eb5297d2b9d4cc29.gz" caption="Challenge Files" %}
+{% file src="../../.gitbook/assets/cowsay-as-a-service.tar.gz_b1f19fe170867369eb5297d2b9d4cc29.gz" %}
+Challenge Files
+{% endfile %}
 
 ## Solution
 
@@ -70,4 +72,3 @@ This will output the `FLAG` environment variable.
 ![](../../.gitbook/assets/813db7ee6ba24656a515c09f5a719ebc.png)
 
 `ACSC{(oo)<Moooooooo_B09DRWWCSX!}`
-

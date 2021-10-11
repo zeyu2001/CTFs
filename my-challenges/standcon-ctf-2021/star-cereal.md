@@ -14,7 +14,9 @@ _The flag is in the flag format: STC{...}_
 
 **Author: zeyu2001**
 
-{% file src="../../.gitbook/assets/process\_login.php" caption="process\_login.php" %}
+{% file src="../../.gitbook/assets/process_login.php" %}
+process_login.php
+{% endfile %}
 
 ## Solution
 
@@ -22,11 +24,11 @@ The goal of this challenge is to perform an authentication bypass through a PHP 
 
 We are given the following page:
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.44.41-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.44.41 AM.png>)
 
 Going over to the login page, we see the following 3 fields.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.45.15-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.45.15 AM.png>)
 
 ### Source Code Inspection
 
@@ -174,7 +176,7 @@ When user data is deserialized into objects, we can inject custom objects to e.g
 
 #### MFA Token
 
-The MFA token check can be bypassed if we set `$mfa_token` as a reference to the `$_correctValue` attribute using the ampersand \(&\). Note that in PHP, a reference is simply another variable that points to the same data \(unlike pointers in C\).
+The MFA token check can be bypassed if we set `$mfa_token` as a reference to the `$_correctValue` attribute using the ampersand (&). Note that in PHP, a reference is simply another variable that points to the same data (unlike pointers in C).
 
 Thus, this will ensure that the two values are always **equal**.
 
@@ -261,9 +263,8 @@ echo urlencode(base64_encode(serialize($login)));
 
 Running the above script gives us the required cookie value.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.50.39-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.50.39 AM.png>)
 
 Plugging this into the `login` cookie on our browser, we can login and get the flag.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.51.43-am.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.51.43 AM.png>)

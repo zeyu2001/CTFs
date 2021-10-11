@@ -14,15 +14,19 @@ _The flag is in the flag format: STC{...}_
 
 **Author: zeyu2001**
 
-{% file src="../../.gitbook/assets/requirements.txt" caption="requirements.txt" %}
+{% file src="../../.gitbook/assets/requirements.txt" %}
+requirements.txt
+{% endfile %}
 
-{% file src="../../.gitbook/assets/rocket\_science.py" caption="rocket\_science.py" %}
+{% file src="../../.gitbook/assets/rocket_science.py" %}
+rocket_science.py
+{% endfile %}
 
 ## Solution
 
 The requirements file contains only a single dependency.
 
-```text
+```
 lambdajson == 0.1.4
 ```
 
@@ -52,19 +56,19 @@ It's always a good idea to check dependencies for vulnerabilities, so let's go t
 
 On the [release notes](https://pypi.org/project/lambdaJSON/0.1.5/) from version 0.1.5, we find our vulnerability.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-4.00.39-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 4.00.39 PM.png>)
 
 Under the "Changes from previous" section:
 
-> Security fix. Using ast.literal\_eval as eval.
+> Security fix. Using ast.literal_eval as eval.
 
 From the release history, we can find out when this fix was released.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-4.03.52-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 4.03.52 PM.png>)
 
 This allows us to find the [GitHub commit](https://github.com/pouya-eghbali/lambdaJSON/commit/0d3bcb8bf3388c90819f0f24c9865bc8d4d8b91e) for this fix.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-4.05.24-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 4.05.24 PM.png>)
 
 Great! We have found the source code for the vulnerable version of the package. In the [source code](https://github.com/pouya-eghbali/lambdaJSON/blob/05d8d92916cdb9df20b83265c6ccd38d6b29d52b/lambdaJSON.py), we find that the `restore()` function used by `deserialize()` uses `eval()`!
 
@@ -106,17 +110,17 @@ The vulnerable version of `deserialize()` will strip the starting `tuple://` and
 
 So, if we use the following payload:
 
-```text
+```
 "tuple://(int.from_bytes(open('flag.txt').read().encode(), byteorder='big'), 2)"
 ```
 
 we will get the integer representation of the flag.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-4.16.35-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 4.16.35 PM.png>)
 
 The flag is `STC{3v4l_1s_3v1l_00e80002e832f357cf5c05ee114a5cb40e746757}`
 
-```text
+```
 ➜  ~ python3
 Python 3.9.5 (default, May  4 2021, 03:36:27)
 [Clang 12.0.0 (clang-1200.0.32.29)] on darwin
@@ -126,4 +130,3 @@ Type "help", "copyright", "credits" or "license" for more information.
 b'STC{3v4l_1s_3v1l_00e80002e832f357cf5c05ee114a5cb40e746757}\n'
 >>>
 ```
-

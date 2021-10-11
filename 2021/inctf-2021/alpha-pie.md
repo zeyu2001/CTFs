@@ -8,7 +8,7 @@ description: Breadth-first Search algorithm for a fun programming task
 
 We have created a mini game to test your skills. Go grab the flag!!
 
-**authors :** careless\_finch, malf0y
+**authors :** careless_finch, malf0y
 
 `nc misc.challenge.bi0s.in 1337`
 
@@ -16,9 +16,9 @@ We have created a mini game to test your skills. Go grab the flag!!
 
 Here are the rules of the challenge:
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](<../../.gitbook/assets/image (63).png>)
 
-This could be solved by performing a breadth-first search \(BFS\) on all the possible moves. The problem with a depth-first search \(DFS\) - which I tried at first - was that we could get a solution, but it wouldn't be the _best_ solution \(it will exceed the maximum number of moves\) , and finding the _best_ solution would take too long on later levels.
+This could be solved by performing a breadth-first search (BFS) on all the possible moves. The problem with a depth-first search (DFS) - which I tried at first - was that we could get a solution, but it wouldn't be the _best_ solution (it will exceed the maximum number of moves) , and finding the _best_ solution would take too long on later levels.
 
 But even on a BFS, the lower layers would eventually get too big since each game state would have many possible moves. To solve this, I filtered out those moves that heuristically "don't make sense".
 
@@ -228,5 +228,4 @@ print(conn.recv().decode())
 
 After successfully solving nine levels, we get the flag.
 
-![](../../.gitbook/assets/image%20%2852%29.png)
-
+![](<../../.gitbook/assets/image (64).png>)

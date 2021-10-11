@@ -5,7 +5,7 @@ description: >-
   Cybersecurity (ENISA).
 ---
 
-# Asian Cyber Security Challenge \(ACSC\) 2021
+# Asian Cyber Security Challenge (ACSC) 2021
 
 ## Writeups
 
@@ -32,7 +32,6 @@ description: >-
 
 I ended up 33rd in the global scoreboard, and 3rd in Singapore. 
 
-I definitely have a lot more to learn! Nevertheless, this CTF was really fun :\)
+I definitely have a lot more to learn! Nevertheless, this CTF was really fun :)
 
-![](../../.gitbook/assets/screenshot-2021-09-19-at-2.33.54-pm.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-09-19 at 2.33.54 PM.png>)

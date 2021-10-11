@@ -8,7 +8,9 @@ description: JavaScript Prototype Injection
 
 Laura just found a website used for monitoring security mechanisms on Rhiza's state and is planning to hack into it to forge the status of these security services. After that she will deactivate these security resources without alerting government agents. Your goal is to get into the server to change the monitoring service behaviour.
 
-{% file src="../../.gitbook/assets/illusion.tar.gz" caption="Illusion" %}
+{% file src="../../.gitbook/assets/illusion.tar.gz" %}
+Illusion
+{% endfile %}
 
 ## Solution
 
@@ -60,7 +62,7 @@ app.post("/change_status", (req, res) => {
 })
 ```
 
-A quick search led me to this GitHub pull request: [ https://github.com/Starcounter-Jack/JSON-Patch/pull/262](%20https://github.com/Starcounter-Jack/JSON-Patch/pull/262). A prototype pollution vulnerability exists in `applyPatch()`.
+A quick search led me to this GitHub pull request: [ https://github.com/Starcounter-Jack/JSON-Patch/pull/262](https://github.com/Starcounter-Jack/JSON-Patch/pull/262). A prototype pollution vulnerability exists in `applyPatch()`.
 
 It appears that the issue is not yet fixed, even in the latest version!
 
@@ -103,7 +105,7 @@ app.get("/", async (req, res) => {
 })
 ```
 
-Testing locally as a normal user first \(the actual challenge uses a guest user\), we can POST the following data to test that RCE exists:
+Testing locally as a normal user first (the actual challenge uses a guest user), we can POST the following data to test that RCE exists:
 
 ```javascript
 {
@@ -159,4 +161,3 @@ First, I set up a `ngrok` TCP forwarder. Then, in our RCE payload, we can use th
 This should forward the reverse shell to our local machine, and we get the flag!
 
 ![](../../.gitbook/assets/c314f1e63edd4cb9acfb5204153a17b3.png)
-

@@ -8,11 +8,13 @@ description: >-
 
 We are provided with the following 6234-line source code:
 
-{% file src="../../.gitbook/assets/cpp.c" caption="cpp.c" %}
+{% file src="../../.gitbook/assets/cpp.c" %}
+cpp.c
+{% endfile %}
 
 Essentially, the flag is checked through a bunch of `#define` and `#ifdef` statements in the source code. Compiling the code gives the following output:
 
-![](../../.gitbook/assets/screenshot-2021-07-18-at-10.55.48-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-18 at 10.55.48 PM.png>)
 
 The way it works is that you define your flag here:
 
@@ -50,7 +52,7 @@ The way it works is that you define your flag here:
 
 and the following preprocessor directives determine whether the flag is valid.
 
-## Analysis \(Part 1\)
+## Analysis (Part 1)
 
 Looking through the code, here are some findings. First, the `ROM_x_y` macros represent the bits of each flag character. 
 
@@ -76,8 +78,8 @@ Looking through the code, here are some findings. First, the `ROM_x_y` macros re
 
 Next,  
 
-* `LD(x, y)` means `ROM_ ## x ## _ ## y` \(concatenate\)
-* `l` means `l7 ## l6 ## l5 ## l4 ## l3 ## l2 ## l1 ## l0` \(concatenate\)
+* `LD(x, y)` means `ROM_ ## x ## _ ## y` (concatenate)
+* `l` means `l7 ## l6 ## l5 ## l4 ## l3 ## l2 ## l1 ## l0` (concatenate)
 
 ```c
 #define _LD(x, y) ROM_ ## x ## _ ## y
@@ -87,9 +89,9 @@ Next,
 #define l MA(l0, l1, l2, l3, l4, l5, l6, l7)
 ```
 
-Subsequently, `LD(l, y)` is used to check whether the flag characters are valid. The first example of this is after `if S == 34` \(line 4229\).
+Subsequently, `LD(l, y)` is used to check whether the flag characters are valid. The first example of this is after `if S == 34` (line 4229).
 
-First, the bits `l0` to `l7` are set, where `lx` is the `x`-th bit. Together, `l7 l6 ... l0` form the `x` \(flag index\) in `ROM_x_y`. 
+First, the bits `l0` to `l7` are set, where `lx` is the `x`-th bit. Together, `l7 l6 ... l0` form the `x` (flag index) in `ROM_x_y`. 
 
 ```c
 #ifdef B0
@@ -127,7 +129,7 @@ Then, `LD(l, y)` is used to check the `y`-th bit of the flag character.
 
 Finally, note that all of this only happens when `__INCLUDE_LEVEL__ > 12`. Before that, it recursively includes itself. Note the definition of the pre-defined `__INCLUDE_LEVEL__` macro:
 
-> This macro expands to a decimal integer constant that represents the depth of nesting in include files. The value of this macro is incremented on every ‘\#include’ directive and decremented at the end of every included file. It starts out at 0, its value within the base file specified on the command line.
+> This macro expands to a decimal integer constant that represents the depth of nesting in include files. The value of this macro is incremented on every ‘#include’ directive and decremented at the end of every included file. It starts out at 0, its value within the base file specified on the command line.
 
 The following `else` statement corresponds to the previous `if __INCLUDE_LEVEL__ > 12` which, if passed, checks the flag.
 
@@ -248,7 +250,7 @@ For `LD(x, y)`, we can define the following function which accepts `l` as an arr
     return eval(f"ROM_{''.join([str(x) for x in l])}_{n}")
 ```
 
-## Analysis \(Part 2\)
+## Analysis (Part 2)
 
 After some dynamic analysis, I found that the code essentially checks each character of the flag one by one, starting from index 0. The value of `S` follows a predictable sequence for the checking of the first few characters, then goes to `S = 56` before the program says `INVALID_FLAG`.
 
@@ -354,5 +356,4 @@ print('FLAG:', result)
 
 This gives us the flag relatively quickly: `CTF{pr3pr0cess0r_pr0fe5sor}`
 
-![](../../.gitbook/assets/cpp%20%281%29.png)
-
+![](<../../.gitbook/assets/cpp (2).png>)

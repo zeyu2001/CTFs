@@ -6,8 +6,8 @@ description: Recovering the internal state of Python's Mersenne Twister PRNG.
 
 ## Problem
 
-Wise men once said, "Well, shake it up, baby, now Twist and shout come on and work it on out" I obliged, now the flag is as twisted as my sense of humour  
-  
+Wise men once said, "Well, shake it up, baby, now Twist and shout come on and work it on out" I obliged, now the flag is as twisted as my sense of humour\
+\
 `nc crypto.zh3r0.cf 5555`
 
 ## Solution
@@ -36,7 +36,7 @@ print(*outputs,sep='\n')
 A few things here:
 
 1. The `state` tuple has a fixed length of 624 \* 4, and the flag is hidden inside.
-2. Python's `random` pseudo-random number generator \(PRNG\) state is set to the `state` tuple, with an additional number 624 at the back.
+2. Python's `random` pseudo-random number generator (PRNG) state is set to the `state` tuple, with an additional number 624 at the back.
 3. Then, 624 32-bit integers are generated using the PRNG and printed.
 
 ### Pseudo-RNGs
@@ -55,7 +55,7 @@ The `random` module, on the other hand, implements a deterministic PRNG. Determi
 
 In Python, `random` is implemented using the Mersenne Twister. Basically, the RNG works on an internal **state** of 624 32-bit values. The generator also keeps track of the current position `i`  in the state array, and each "random number" is essentially `state[i]` after some mangling.
 
-If we look at the [CPython source code](https://github.com/certik/python-2.7/blob/master/Modules/_randommodule.c), we can see exactly how this is implemented: 
+If we look at the [CPython source code](https://github.com/certik/python-2.7/blob/master/Modules/\_randommodule.c), we can see exactly how this is implemented: 
 
 ```c
 static unsigned long
@@ -125,7 +125,7 @@ and that `getstate()` will
 
 > Return an object capturing the current internal state of the generator. This object can be passed to [`setstate()`](https://docs.python.org/3/library/random.html#random.setstate) to restore the state.
 
-Well, that doesn't really help, but again, the [CPython source code](https://github.com/certik/python-2.7/blob/master/Modules/_randommodule.c) gives us some answers.
+Well, that doesn't really help, but again, the [CPython source code](https://github.com/certik/python-2.7/blob/master/Modules/\_randommodule.c) gives us some answers.
 
 ```c
 static PyObject *
@@ -253,7 +253,7 @@ The state we obtained from our script above is from unmangling the previous 624 
 
 ### Recovering the Previous State
 
-What we need to do, then, is to recover the previous state of the generator. I found this great [post](https://jazzy.id.au/2010/09/25/cracking_random_number_generators_part_4.html) containing an algorithm to recover the previous state array.
+What we need to do, then, is to recover the previous state of the generator. I found this great [post](https://jazzy.id.au/2010/09/25/cracking_random_number_generators_part\_4.html) containing an algorithm to recover the previous state array.
 
 The algorithm looks like this:
 
@@ -381,5 +381,4 @@ print(result)
 
 And the output contains the flag:
 
-![](../../.gitbook/assets/image%20%284%29.png)
-
+![](<../../.gitbook/assets/image (11).png>)

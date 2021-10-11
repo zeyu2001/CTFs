@@ -20,9 +20,9 @@ _The flag is in the flag format: STC{...}_
 
 We are given an RSA decryption oracle. We can supply any ciphertext to be decrypted, except the original, given ciphertext.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-6.00.10-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 6.00.10 PM.png>)
 
-Textbook RSA is vulnerable to Chosen Ciphertext Attack \(CCA\), where a user is able to supply an arbitrary ciphertext to be decrypted.
+Textbook RSA is vulnerable to Chosen Ciphertext Attack (CCA), where a user is able to supply an arbitrary ciphertext to be decrypted.
 
 Recall that
 
@@ -82,5 +82,4 @@ print(long_to_bytes(Decimal(decrypted) / 2))
 
 The flag is `STC{ch0s3n_c1ph3rt3xt_d7b593cd54baba9e2ffa49215d33e4c657cf230a}`.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-6.59.38-pm.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 6.59.38 PM.png>)

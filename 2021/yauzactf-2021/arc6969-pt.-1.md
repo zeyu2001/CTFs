@@ -8,9 +8,13 @@ description: Writing an emulator / disassembler
 
 The ARC6969 is an old and forgotten architecture used in a military computers during Cold War. Although we don't have the computers anymore, we got CPU manual and a few programs.
 
-{% file src="../../.gitbook/assets/manual\_1.pdf" caption="manual\_1.pdf" %}
+{% file src="../../.gitbook/assets/manual_1.pdf" %}
+manual\_1.pdf
+{% endfile %}
 
-{% file src="../../.gitbook/assets/rom\_1.bin" caption="rom\_1.bin" %}
+{% file src="../../.gitbook/assets/rom_1.bin" %}
+rom\_1.bin
+{% endfile %}
 
 ## Solution
 
@@ -20,9 +24,9 @@ The idea behind this challenge is the same as that of the previous [RISC 8bit CP
 
 There are now 4 flags that can be set by the comparison instructions.
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](<../../.gitbook/assets/image (72).png>)
 
-The first three are pretty straightforward. Note that for signed numbers, the MSB determines the sign \(1 for negative, 0 for positive\).
+The first three are pretty straightforward. Note that for signed numbers, the MSB determines the sign (1 for negative, 0 for positive).
 
 The overflow flag can be a bit tricky - one trick is to check the sign of the compared operands and the result. If both $$R_x$$ and $$R_y$$ have the same sign, but $$R_x-R_y$$ yields a different sign, then an overflow has occurred.
 
@@ -71,7 +75,7 @@ if opcode == 4 or opcode == 5:
 
 There are two I/O interfaces - a GPU and a serial interface.
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](<../../.gitbook/assets/image (73).png>)
 
 It is given that the GPU display is 64 x 32. This is represented by a 2D array, where each element represents a pixel. The GPU is not yet needed for this challenge, so we'll touch up the `display_screen()` function in the next challenge. The serial I/O is pretty standard - we'll accept user input one byte at a time.
 
@@ -357,9 +361,9 @@ while not done:
             registers[i] = 256 - abs(registers[i])
 ```
 
-Running the program, we're prompted for 3 bytes of user input \(the "key"\).
+Running the program, we're prompted for 3 bytes of user input (the "key").
 
-```text
+```
 ➜  ARC6969 python3 arc6969.py
 Hello fellow komrade.
 Wanna capture the flag?
@@ -368,7 +372,7 @@ Enter the key:
 
 After entering the key, some scrambled text is printed.
 
-```text
+```
 ➜  ARC6969 python3 arc6969.py
 Hello fellow komrade.
 Wanna capture the flag?
@@ -383,7 +387,7 @@ This probably means our key is wrong. Hmm... let's reverse engineer the program 
 
 First, R4 is cleared by AND-ing with 0. Then, the three bytes of user input are stored in R1, R0 and R2 respectively.
 
-```text
+```
 ARITHMETIC; opcode: 11; Rx: 4; Ry: 4; Rz/Imm8: 0
 IO; Rx: 1; Imm3: 6
 Byte: 0
@@ -395,7 +399,7 @@ Byte: 0
 
 I found that after receiving the 3 bytes of input, the program repeatedly performs the following loop:
 
-```text
+```
 MEMORY OPERATION; opcode: 14; Rx: 6; Ry: 7; Rz: 8
 ARITHMETIC; opcode: 12; Rx: 9; Ry: 6; Rz/Imm8: 12
 ARITHMETIC; opcode: 13; Rx: 10; Ry: 6; Rz/Imm8: 11
@@ -414,7 +418,7 @@ JUMP; opcode: 18; Imm16: 910
 
 We can now translate this to the following pseudocode:
 
-```text
+```
 R11 = 2
 R12 = 6
 R4 = R4 & 0
@@ -436,7 +440,7 @@ WHILE R4 != 31
 
 We can see that the 3-byte key is essentially used to perform the addition, XOR, and subtration operations on each byte of the flag. The loop continues until all 31 bytes of the flag are printed.
 
-```text
+```
 R6 = R6 + R1
 R6 = R6 ^ R0
 R6 = R6 - R2
@@ -469,7 +473,6 @@ for key in possible:
         print("Progress:", i / len(possible))
 ```
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](<../../.gitbook/assets/image (74).png>)
 
 The flag is `YauzaCTF{H3ll0_fr0m_1969_k1dd0}`.
-

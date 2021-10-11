@@ -18,13 +18,13 @@ _The flag is in the flag format: STC{...}_
 
 Going to the given site only shows `Hello Mars!`.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.03.46-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.03.46 AM.png>)
 
 
 
 Performing a simple directory busting scan, we find some interesting information.
 
-```text
+```
 └─# gobuster dir -u http://20.198.209.142:55047/ -w /usr/share/dirb/wordlists/common.txt -k -x .txt,.php --threads 10
 ===============================================================
 Gobuster v3.0.1
@@ -61,21 +61,21 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 We find a `/flag.txt`, but we cannot view it. Let's keep in mind that the flag is in web root for now. 
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.09.17-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.09.17 AM.png>)
 
 Going to `/app` gives us a web proxy application.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.11.57-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.11.57 AM.png>)
 
-We can enter any URL, and the corresponding page will be rendered on our browser. At the bottom of the page, we find that this application is "Powered by PHP-Proxy" and a [link](https://www.php-proxy.com/) is given.
+We can enter any URL, and the corresponding page will be rendered on our browser. At the bottom of the page, we find that this application is "Powered by PHP-Proxy" and a [link](https://www.php-proxy.com) is given.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.14.36-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.14.36 AM.png>)
 
 This link leads us to the GitHub repository, where a search for Issues containing the word "vulnerability" yields several results.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.15.00-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.15.00 AM.png>)
 
-A currently open and unfixed issue is that PHP-Proxy \(all versions\) suffers from a Local File Inclusion \(LFI\) vulnerability: [https://github.com/Athlon1600/php-proxy-app/issues/135](https://github.com/Athlon1600/php-proxy-app/issues/135). We can also find more details here: [https://github.com/0xUhaw/CVE-Bins/tree/master/PHP-Proxy](https://github.com/0xUhaw/CVE-Bins/tree/master/PHP-Proxy)
+A currently open and unfixed issue is that PHP-Proxy (all versions) suffers from a Local File Inclusion (LFI) vulnerability: [https://github.com/Athlon1600/php-proxy-app/issues/135](https://github.com/Athlon1600/php-proxy-app/issues/135). We can also find more details here: [https://github.com/0xUhaw/CVE-Bins/tree/master/PHP-Proxy](https://github.com/0xUhaw/CVE-Bins/tree/master/PHP-Proxy)
 
 ### The Exploit
 
@@ -121,7 +121,7 @@ print(exploit('http://20.198.209.142:55047/app', 'file:///var/www/html/flag.txt'
 
 Running the script gives us the flag, `STC{l0cal_f1l3_1nclus10n_328d47c2ac5b2389ddc47e5500d30e04}`
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-11.24.34-am.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 11.24.34 AM.png>)
 
 To understand why the exploit works, read on below!
 
@@ -141,7 +141,7 @@ The URL is encrypted as follows:
 $url = str_rot_pass($url, $key);
 ```
 
-The following encryption function is not secure enough. It simply takes every character of the key and adds it to the original plaintext. Since we know both the plaintext \(the original URL\) and the ciphertext \(the `q=` parameter\), we can easily reverse-engineer the key.
+The following encryption function is not secure enough. It simply takes every character of the key and adds it to the original plaintext. Since we know both the plaintext (the original URL) and the ciphertext (the `q=` parameter), we can easily reverse-engineer the key.
 
 ```php
 // rotate each string character based on corresponding ascii values from some key
@@ -168,4 +168,3 @@ function str_rot_pass($str, $key, $decrypt = false){
 ```
 
 Then, after getting the key, it is simply a matter of encrypting `file:///var/www/html/flag.txt` since the `file://` protocol is not explicitly banned.
-

@@ -30,5 +30,4 @@ We can run a Burp intruder scan to find out what other hosts we can connect to t
 
 Indeed, on scanning the `10.0.42.0/24` network, we find `10.0.42.2` and `10.0.42.200` is a valid endpoint.
 
-![](../../.gitbook/assets/ac58c875d75641f49253c08bf7481749.png)
-
+![](<../../.gitbook/assets/ac58c875d75641f49253c08bf7481749 (1).png>)

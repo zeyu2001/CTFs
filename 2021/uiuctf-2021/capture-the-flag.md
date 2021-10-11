@@ -21,7 +21,7 @@ Hints:
 
 The EXIF data on the image contains an interesting description.
 
-```text
+```
 $ exiftool flag.png
 
 ExifTool Version Number         : 12.26
@@ -49,7 +49,7 @@ Megapixels                      : 0.014
 
 It says `LSBs(Pixels[1337:])`. Hmm... maybe it's telling us to get the LSBs of everything after the 1337th pixel.
 
-My initial method was to go row by row, left to right \(like reading English\).
+My initial method was to go row by row, left to right (like reading English).
 
 ```python
 list(im.getdata())[1337:]
@@ -57,9 +57,9 @@ list(im.getdata())[1337:]
 
 This did not yield any meaningful results. 
 
-Plugging it into a steganography tool, like [StegOnline](https://stegonline.georgeom.net/image), helps us to figure out what's going on. In all of the 0th-bit \(LSB\) planes, there appeared to be some data hidden on the flag pole.
+Plugging it into a steganography tool, like [StegOnline](https://stegonline.georgeom.net/image), helps us to figure out what's going on. In all of the 0th-bit (LSB) planes, there appeared to be some data hidden on the flag pole.
 
-![](../../.gitbook/assets/screenshot-2021-08-05-at-12.44.59-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-05 at 12.44.59 PM.png>)
 
 That explains! The pixels were meant to be read column-by-column instead.
 
@@ -107,7 +107,5 @@ for pixel in pixels:
 
 We can see the flag right at the beginning. 
 
-![](../../.gitbook/assets/screenshot-2021-08-05-at-12.51.25-pm.png)
-
-
+![](<../../.gitbook/assets/Screenshot 2021-08-05 at 12.51.25 PM.png>)
 

@@ -13,7 +13,7 @@ Our Incident Response team started their investigation on a device found when pi
 **Questions:**
 
 * What is the name of the chat application program?
-  * Ex: `Mozilla_Firefox` \(Use Name of the program, Not the name of the binary. If there is a space replace it with `_`. \)
+  * Ex: `Mozilla_Firefox` (Use Name of the program, Not the name of the binary. If there is a space replace it with `_`. )
 * When did the user last used this chat application?
   * Answer in `DD-MM-YYYY_HH:MM:SS`. Timestamp in UTC
 * How many unread messages are there in the chat application that the user is using?
@@ -29,15 +29,15 @@ Our Incident Response team started their investigation on a device found when pi
 
 **MD5 Hash**: `ermittlung.raw 110305F3CF71432B4DFAFD1538CDF850`
 
-**Challenge Author**: [g4rud4](https://twitter.com/_Nihith)
+**Challenge Author**: [g4rud4](https://twitter.com/\_Nihith)
 
 ## Solution
 
-This challenge requires us to do some basic memory forensics using [Volatility](https://www.volatilityfoundation.org/).
+This challenge requires us to do some basic memory forensics using [Volatility](https://www.volatilityfoundation.org).
 
 First of all, let's determine the profile.
 
-```text
+```
 $ vol.py -f ermittlung.raw imageinfo
 Volatility Foundation Volatility Framework 2.6.1
 INFO    : volatility.debug    : Determining profile based on KDBG search...
@@ -61,7 +61,7 @@ Great! We will use the `WinXPSP2x86` profile from now on.
 
 If we look at the process tree, the only relevant process with "chat" functionality is `msimn.exe`, which is Outlook Express.
 
-```text
+```
 $ vol.py --profile=WinXPSP2x86 pstree -f ermittlung.raw
 Volatility Foundation Volatility Framework 2.6.1
 Name                                                  Pid   PPid   Thds   Hnds Time
@@ -96,13 +96,13 @@ Name                                                  Pid   PPid   Thds   Hnds T
 
 ### **When did the user last used this chat application?**
 
-The date and timestamp are provided in the above output \(2020-07-27 12:26:17 UTC+0000\).
+The date and timestamp are provided in the above output (2020-07-27 12:26:17 UTC+0000).
 
 ### **How many unread messages are there in the chat application that the user is using?**
 
 A quick Google search on Outlook Express registry keys showed us that the registry key`Software\Microsoft\Windows\CurrentVersion\UnreadMail` contains information about the unread mail. There is a subkey for each email address, and the `MessageCount` value of those subkeys tell us how many unread messages there are.
 
-```text
+```
 $ vol.py --profile=WinXPSP2x86 printkey -K "Software\Microsoft\Windows\CurrentVersion\UnreadMail\danial.banjamin008@gmail.com" -f ermittlung.raw
 Volatility Foundation Volatility Framework 2.6.1
 Legend: (S) = Stable   (V) = Volatile
@@ -127,17 +127,16 @@ There were 4 unread messages.
 
 We can use `procdump` to dump the executable.
 
-```text
+```
 vol.py --profile=WinXPSP2x86 procdump -p 2132 -D msimn -f ermittlung.raw
 ```
 
 Opening up the file properties in Windows, the answer is staring at us in the face!
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](<../../.gitbook/assets/image (62).png>)
 
 The current version is 6.0.2900.5512.
 
 ### Final Flag
 
 `inctf{Outlook_Express_27-07-2020_12:26:17_4_6.0.2900.5512}`
-

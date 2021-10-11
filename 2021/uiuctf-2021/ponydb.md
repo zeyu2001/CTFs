@@ -8,11 +8,13 @@ description: SQL injection and truncation attack
 
 http://ponydb.chal.uiuc.tf
 
-\(note: has unintended element that makes it slightly easier. see miniaturehorsedb for the full-difficulty challenge.\)
+(note: has unintended element that makes it slightly easier. see miniaturehorsedb for the full-difficulty challenge.)
 
 **author**: kmh
 
-{% file src="../../.gitbook/assets/handout.tar.gz" caption="handout.tar.gz" %}
+{% file src="../../.gitbook/assets/handout.tar.gz" %}
+handout.tar.gz
+{% endfile %}
 
 ## Solution
 
@@ -96,7 +98,7 @@ Finally, the `ponies.html` template is rendered with the `ponies` and `flag` var
 return render_template('ponies.html', ponies=ponies, flag=flag)
 ```
 
-In `ponies.html`, we find that `flag` is rendered under the condition that the pony's "favorite number" \(the one stored in the JSON data\) is 1337. This is the condition we have to bypass in order to solve the challenge.
+In `ponies.html`, we find that `flag` is rendered under the condition that the pony's "favorite number" (the one stored in the JSON data) is 1337. This is the condition we have to bypass in order to solve the challenge.
 
 ```haskell
 {% for favorite in pony['favorites'] %}
@@ -111,7 +113,7 @@ In `ponies.html`, we find that `flag` is rendered under the condition that the p
 
 Now, if we look at the POST endpoint, we will start to get an idea of the intended exploit.
 
-There are 7 parameters to submit. Each one is checked for single quotes \(`'`\), and the length of the parameters are checked. While we have control over the `number` parameter, the validation ensures that it is an integer from 0 to 100, so we cannot simply set it to 1337.
+There are 7 parameters to submit. Each one is checked for single quotes (`'`), and the length of the parameters are checked. While we have control over the `number` parameter, the validation ensures that it is an integer from 0 to 100, so we cannot simply set it to 1337.
 
 ```python
 @app.route('/pony', methods=['POST'])
@@ -173,11 +175,11 @@ For instance, if we submit `number":1337,"color` as the `favorite_key` parameter
 
 Unfortunately, as stated in the documentation, `json.loads()` handles repeated keys in JSON objects by ignoring everything except the last key-value pair.
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-6.29.36-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 6.29.36 PM.png>)
 
 Therefore, while we might be able to inject a custom `number` key-value pair into the JSON string _stored in the database_, it will eventually be ignored when parsed by the `json` library.
 
-#### The \(Unintended\) Fatal Flaw
+#### The (Unintended) Fatal Flaw
 
 It took us a few hours to spot this, but there was a flaw in the code. The `favorite_key` and `favorite_value` length checks actually don't produce any errors!
 
@@ -203,7 +205,7 @@ CREATE TABLE `ponies` ( ..., `favorites` varchar(256), ... )
 
 According to the [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/char.html), if strict SQL mode is not enabled, assigning a VARCHAR value that exceeds the column length will cause the value to be truncated without raising an error.
 
-> If strict SQL mode is not enabled and you assign a value to a CHAR or VARCHAR column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated. For truncation of nonspace characters, you can cause an error to occur \(rather than a warning\) and suppress insertion of the value by using strict SQL mode. See Section 5.1.11, “Server SQL Modes”.
+> If strict SQL mode is not enabled and you assign a value to a CHAR or VARCHAR column that exceeds the column's maximum length, the value is truncated to fit and a warning is generated. For truncation of nonspace characters, you can cause an error to occur (rather than a warning) and suppress insertion of the value by using strict SQL mode. See Section 5.1.11, “Server SQL Modes”.
 
 Note that while strict SQL mode is enabled by default, the `sql_mode` option was set to `'NO_BACKSLASH_ESCAPES'`.
 
@@ -292,9 +294,8 @@ match = re.search(r"<p>Favorite flag: (.+)</p>", r.text)
 print(match[1])
 ```
 
-![](../../.gitbook/assets/screenshot-2021-08-03-at-7.50.15-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-03 at 7.50.15 PM.png>)
 
 The last part of the script just automates the HTTP requests. We could, of course, submit the payload manually as well, and see our pony in all its glory.
 
-![](../../.gitbook/assets/image%20%2823%29.png)
-
+![](<../../.gitbook/assets/image (22).png>)

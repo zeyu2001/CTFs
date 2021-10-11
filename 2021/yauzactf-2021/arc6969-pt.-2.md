@@ -8,9 +8,13 @@ description: Writing an emulator / disassembler
 
 The ARC6969 is an old and forgotten architecture used in a military computers during Cold War. Although we don't have the computers anymore, we got CPU manual and a few programs.
 
-{% file src="../../.gitbook/assets/manual\_2.pdf" caption="manual\_2.pdf" %}
+{% file src="../../.gitbook/assets/manual_2.pdf" %}
+manual\_2.pdf
+{% endfile %}
 
-{% file src="../../.gitbook/assets/rom\_2.bin" caption="rom\_2.bin" %}
+{% file src="../../.gitbook/assets/rom_2.bin" %}
+rom\_2.bin
+{% endfile %}
 
 ## Solution
 
@@ -18,7 +22,7 @@ This is an extension from [ARC6969 Pt .1](arc6969-pt.-1.md). This time, the GPU 
 
 Each pixel of the GPU is represented by a 6-bit color bitmap:
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-2.45.29-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 2.45.29 PM.png>)
 
 Since each of the R, G and B colors are represented by only 2 bits, we have to scale this to match the normal 8-bit RGB channels. This means that `0b01` would correspond to 85, `0b10` would correspond to 170, and `0b11` would correspond to 255 on the 0 to 255 scale.
 
@@ -53,7 +57,7 @@ def update_screen(gpu):
 
 Each time the `IO_GPU_UPDATE` instruction is executed, the frame is added to the output video. The final video contains the flag: `YauzaCTF{SW0RDFISH}`.
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](<../../.gitbook/assets/image (75).png>)
 
 Full emulator script:
 
@@ -311,4 +315,3 @@ while not done:
         while registers[i] < 0:
             registers[i] = 256 - abs(registers[i])
 ```
-

@@ -20,7 +20,7 @@ When scanning the network, I found that only 172.30.0.5 and 172.30.0.8 were up. 
 
 Port 1337 on 172.30.0.5 was "open", but the service closes the connection immediately after the handshake is completed.
 
-```text
+```
 Nmap scan report for 172.30.0.5
 Host is up (0.042s latency).
 Not shown: 65534 closed ports
@@ -39,17 +39,17 @@ Well, what better way to test this theory than to sniff the traffic? I tried usi
 
 Filtering the traffic on port 1337, we can see quite a lot of connections. Let's start with following one of those connections:
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](<../../.gitbook/assets/image (56).png>)
 
 172.30.0.8 is sending the following base 64 encoded message to 172.30.0.5, on port 1337:
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](<../../.gitbook/assets/image (58).png>)
 
 The two lines translate to 172.30.0.8 and 34599 respectively.
 
 Hm... filtering the traffic on port 34599, some interesting traffic appears:
 
-![](../../.gitbook/assets/image%20%2844%29.png)
+![](<../../.gitbook/assets/image (59).png>)
 
 Okay, now we understand what is happening.
 
@@ -58,15 +58,15 @@ Okay, now we understand what is happening.
 
 ### Hijacking the Session
 
-Essentially, we need to intercept the TCP connection, and spoof a response containing our custom command to the server. This is called **TCP session hijacking**, which builds on top of a MITM attack. The idea is that we have to calculate the correct SEQ and ACK numbers, in order to spoof a packet as the client.
+Essentially, we need to intercept the TCP connection, and spoof a response containing our custom command to the server. This is called** TCP session hijacking**, which builds on top of a MITM attack. The idea is that we have to calculate the correct SEQ and ACK numbers, in order to spoof a packet as the client.
 
-In a TCP connection, if invalid SEQ numbers are received, the receiver simply discards the packets. Initial sequence numbers \(ISNs\) are thus randomised, preventing SEQ numbers from being predicted. Arbitrarily injected packets by an attacker "guessing" the SEQ number would therefore be likely to have invalid SEQ numbers. ****
+In a TCP connection, if invalid SEQ numbers are received, the receiver simply discards the packets. Initial sequence numbers (ISNs) are thus randomised, preventing SEQ numbers from being predicted. Arbitrarily injected packets by an attacker "guessing" the SEQ number would therefore be likely to have invalid SEQ numbers.** **
 
 However, if an attacker is able to achieve a man-in-the-middle attack, it would be trivial to obtain the relevant SEQ numbers of TCP packets transmitted between two nodes.
 
-![](https://lh5.googleusercontent.com/22lSaL0ogOMcs18PYt33A84ORcf7JXfuyD_ZYwTBAw5y5u_vyCwNDpZQfxKgP63YvD9-X2_bZSC_1EQxnu1AP0IhYPXIsD-d_YY5go8SPTZDiZGGo4R53qMm6KMmHjZVwn1H68Nr)
+![](https://lh5.googleusercontent.com/22lSaL0ogOMcs18PYt33A84ORcf7JXfuyD_ZYwTBAw5y5u_vyCwNDpZQfxKgP63YvD9-X2\_bZSC\_1EQxnu1AP0IhYPXIsD-d_YY5go8SPTZDiZGGo4R53qMm6KMmHjZVwn1H68Nr)
 
-The following script implements this \(this script is run _after_ first establishing a MITM using Ettercap - we could also use Scapy to implement the MITM, but it gets really messy and Scapy faces its own limitations too\). 
+The following script implements this (this script is run _after_ first establishing a MITM using Ettercap - we could also use Scapy to implement the MITM, but it gets really messy and Scapy faces its own limitations too). 
 
 ```python
 from scapy.all import *
@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
 ```
 
-One small problem, though. When the client \(172.30.0.8\) sends an RST, the connection is closed before we get a chance to send our spoofed command! To get around this, I used the following Ettercap filter to drop the RST and RST, ACK packets.
+One small problem, though. When the client (172.30.0.8) sends an RST, the connection is closed before we get a chance to send our spoofed command! To get around this, I used the following Ettercap filter to drop the RST and RST, ACK packets.
 
 ```c
 if (ip.src == '172.30.0.8') {
@@ -185,7 +185,7 @@ Now, we can run the Python script and specify our desired command. Our command i
 
 The next time that a shell is sent to the client, our script will intercept the traffic and send the reverse shell payload to the server, allowing us to catch a shell, and obtain the flag.
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](<../../.gitbook/assets/image (61).png>)
 
 The flag is `inctf{Ha!Security_1s_4_my7h!!!}`.
 
@@ -193,7 +193,6 @@ _And that, everyone, is why we use SSH instead of Telnet._
 
 ### On Hindsight...
 
-There was an easier way to solve this. After performing the ARP spoofing attack using Ettercap, we could have just forged the base 64 encoded request, specifying the IP address and port of our choice to receive the shell \(no scripting required?\). 
+There was an easier way to solve this. After performing the ARP spoofing attack using Ettercap, we could have just forged the base 64 encoded request, specifying the IP address and port of our choice to receive the shell (no scripting required?). 
 
 But hey, this was more fun, and probably more realistic!
-

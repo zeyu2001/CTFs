@@ -14,9 +14,13 @@ _The flag is in the flag format: STC{...}_
 
 **Author: zeyu2001**
 
-{% file src="../../.gitbook/assets/mission\_control.bin" caption="mission\_control" %}
+{% file src="../../.gitbook/assets/mission_control (1)" %}
+mission_control
+{% endfile %}
 
-{% file src="../../.gitbook/assets/mission\_control.c" caption="mission\_control.c" %}
+{% file src="../../.gitbook/assets/mission_control.c" %}
+mission_control.c
+{% endfile %}
 
 ## Solution
 
@@ -87,25 +91,25 @@ else
 
 Using `objdump`, we can find the memory address of `secret_code`.
 
-```text
+```
 $ objdump -t mission_control | grep secret_code
 080dffbc g     O .bss    00000004 secret_code
 ```
 
-We need to send 4 bytes in order to specify the address which we want to overwrite. Let this be `AAAA` for now. By sending `I am not a robotAAAA%x.%x.%x ...`, we can leak the stack values \(every `%x` represents 4 bytes\).
+We need to send 4 bytes in order to specify the address which we want to overwrite. Let this be `AAAA` for now. By sending `I am not a robotAAAA%x.%x.%x ...`, we can leak the stack values (every `%x` represents 4 bytes).
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.52.33-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.52.33 PM.png>)
 
 Notice that `4141746f` appears at the 10th index and `78254141` at the 11th index. We need the full four bytes to be at the same index, so let's add two extra bytes before the `AAAA`.
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-2.57.44-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 2.57.44 PM.png>)
 
-We have added two extra bytes `BB` and used Direct Parameter Access \(DPA\) to specify we want the 11th index. The payload is `I am not a robotBBAAAA%11$p`. As we can see, the 11th index is now our `AAAA` string, i.e.`0x41414141`. Perfect!
+We have added two extra bytes `BB` and used Direct Parameter Access (DPA) to specify we want the 11th index. The payload is `I am not a robotBBAAAA%11$p`. As we can see, the 11th index is now our `AAAA` string, i.e.`0x41414141`. Perfect!
 
 The final payload is `I am not a robotBB\xbc\xff\x0d\x08%168x%11$n`.
 
-* `\xbc\xff\x0d\x08` is the memory address of `secret_code` \(0x080dffbc\) in little-endian.
-* `%168x%11$n` writes 168 + \[bytes already wrote\] to the address on the 11th index.
+* `\xbc\xff\x0d\x08` is the memory address of `secret_code` (0x080dffbc) in little-endian.
+* `%168x%11$n` writes 168 + \[bytes already wrote] to the address on the 11th index.
 
 The exploitation process is outlined by this script:
 
@@ -141,7 +145,6 @@ conn.interactive()
 
 Once we overwrite the secret code, we are given a shell. 
 
-![](../../.gitbook/assets/screenshot-2021-07-24-at-3.11.43-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-07-24 at 3.11.43 PM.png>)
 
 The flag is `STC{1_l0v3_f0rm4t_st1ngs_0ab7a4af7bb1343810ccde8244031f2f}`.
-

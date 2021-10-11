@@ -6,7 +6,7 @@ description: Bypassing Nginx directive through manipulating Gunicorn WSGI variab
 
 ## Description
 
-My previous flag file got encrypted by some dumb ransomware. They didn't even tell me how to pay them, so I'm totally out of luck. All I have is the site that is supposed to decrypt my files \(but obviously that doesn't work either\).
+My previous flag file got encrypted by some dumb ransomware. They didn't even tell me how to pay them, so I'm totally out of luck. All I have is the site that is supposed to decrypt my files (but obviously that doesn't work either).
 
 Author: `itszn`, Ret2 Systems
 
@@ -16,7 +16,7 @@ http://web.chal.csaw.io:5004
 
 When inspecting the provided Nginx configuration, I found an interesting directive:
 
-```text
+```
 # INFO(brad)
 # Thought I would explain this to clear it up:
 # When we make a request, nginx forwards the request to gunicorn.
@@ -53,7 +53,7 @@ Clearly, we had to get to the `/admin/key` endpoint to get the key. But how?
 
 There is another interesting part of the Nginx configuration. When forwarding requests to Gunicorn, the request headers are preserved.
 
-```text
+```
 proxy_pass http://unix:/tmp/gunicorn.sock;
 proxy_pass_request_headers on;
 ```
@@ -62,7 +62,7 @@ I began wondering if HTTP headers could somehow manipulate the processing of the
 
 Apparently, when the `SCRIPT_NAME` WSGI variable is set, the `SCRIPT_NAME` prefix is stripped from `PATH_INFO`. According to the [documentation](https://docs.gunicorn.org/en/stable/faq.html#how-do-i-set-script-name), the `SCRIPT_NAME` can be set through a HTTP header.
 
-![](../../.gitbook/assets/screenshot-2021-09-13-at-6.33.45-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-09-13 at 6.33.45 PM.png>)
 
 Interesting! Consider the following request:
 
@@ -74,7 +74,7 @@ GET /test/admin/key HTTP/1.1
 SCRIPT_NAME: /test
 ```
 
-Nginx first receives the request. It checks against the directives specified in the configuration file, and confirms that access is not denied \(`/test/admin/key` does not start with `/admin`\). The request is now forwarded to Gunicorn.
+Nginx first receives the request. It checks against the directives specified in the configuration file, and confirms that access is not denied (`/test/admin/key` does not start with `/admin`). The request is now forwarded to Gunicorn.
 
 Gunicorn sees the `SCRIPT_NAME` HTTP header, and hence uses `/test` as the `SCRIPT_NAME` WSGI variable. Gunicorn strips `SCRIPT_NAME` from the  beginning of the URL path, leaving us with `/admin/key`. Therefore, `/admin/key` is the final endpoint that is served by the Flask application.
 
@@ -110,7 +110,7 @@ The `key_id` for the flag file is `05d1dc92ce82cc09d9d7ff1ac9d5611d`.
 
 Using this `key_id`, we can find that the decryption key is `b5082f02fd0b6a06203e0a9ffb8d7613dd7639a67302fc1f357990c49a6541f3`.
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](<../../.gitbook/assets/image (77).png>)
 
 The only thing left to do is to decrypt the file. I modified the `/decrypt` endpoint to do this.
 
@@ -127,4 +127,3 @@ def pwn():
 ```
 
 The flag is `flag{gunicorn_probably_should_not_do_that}`.
-

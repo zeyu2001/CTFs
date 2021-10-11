@@ -8,21 +8,23 @@ description: postMessage information disclosure leads to stored XSS
 
 **Description:** Here's a nice web application to host your notes.
 
-**Author:** [yadhu\#2142](https://twitter.com/YadhuKrishna_)
+**Author:** [yadhu#2142](https://twitter.com/YadhuKrishna\_)
 
-{% file src="../../.gitbook/assets/md-notes.zip" caption="md-notes.zip" %}
+{% file src="../../.gitbook/assets/md-notes.zip" %}
+md-notes.zip
+{% endfile %}
 
 ## Solution
 
 We are given a Markdown Editor, where we can save our notes. As usual, an admin bot visits the URLs that we submit.
 
-![](../../.gitbook/assets/screenshot-2021-08-16-at-4.37.36-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-16 at 4.37.36 PM.png>)
 
 We're interested in creating an XSS payload, so let's analyse how the application processes our Markdown.
 
 ### Preview Function
 
-Interestingly, the preview \(right side\) is an iframe of `/demo`.
+Interestingly, the preview (right side) is an iframe of `/demo`.
 
 ```markup
 <div class="col-md-6">
@@ -127,7 +129,7 @@ Now, we can craft a simple payload that loads `/demo` in an iframe, posts a mess
 
 We receive the admin's hash on our exploit server:
 
-```text
+```
 /?hash=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 ```
 
@@ -149,7 +151,7 @@ if createpost.Hash != CONFIG.admin_hash {
 
 Thus, simply sending a POST request to `/api/create` with the admin's hash allows us to create a stored XSS payload.
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](<../../.gitbook/assets/image (40).png>)
 
 We can simply craft a CSRF payload that fetches `/api/flag` and makes a callback to our exploit server with the page contents. Note that single and double quotes are still escaped, so `fromCharCode()` is used to avoid that.
 
@@ -166,7 +168,6 @@ We can simply craft a CSRF payload that fetches `/api/flag` and makes a callback
 
 Receiving the `/api/flag` contents:
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](<../../.gitbook/assets/image (41).png>)
 
 URL-decode the output, and we get the flag: `inctf{8d739_csrf_is_fun_3d587ec9}`
-

