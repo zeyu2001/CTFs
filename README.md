@@ -46,4 +46,4 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 ## \~# cat LICENSE
 
-All code is licensed under the MIT license.
+All original code is licensed under the MIT license.
