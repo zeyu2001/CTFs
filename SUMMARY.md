@@ -19,6 +19,10 @@
 
 ## 2021
 
+* [SPbCTF's Student CTF Quals](2021/spbctfs-student-ctf-quals/README.md)
+  * [31 Line PHP](2021/spbctfs-student-ctf-quals/31-line-php.md)
+  * [BLT](2021/spbctfs-student-ctf-quals/blt.md)
+  * [CatStep](2021/spbctfs-student-ctf-quals/catstep.md)
 * [Asian Cyber Security Challenge (ACSC) 2021](2021/asian-cyber-security-challenge-acsc-2021/README.md)
   * [Cowsay As A Service](2021/asian-cyber-security-challenge-acsc-2021/cowsay-as-a-service.md)
   * [Favorite Emojis](2021/asian-cyber-security-challenge-acsc-2021/favorite-emojis.md)
