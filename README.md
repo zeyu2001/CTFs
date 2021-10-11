@@ -16,6 +16,8 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 {% embed url="https://ctftime.org/team/151372" %}
 
+Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challenge).
+
 ## \~# ls -la 2021
 
 | CTF Name                                                                                     | Date   | Type                                | Position                             |
