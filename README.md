@@ -2,185 +2,47 @@
 description: Here you can find writeups from various CTFs that I've participated in.
 ---
 
-# Zeyu's CTF Writeups
+# 🚩 Zeyu's CTF Writeups
 
-## ~\# man CTFs
+## \~# man CTFs
 
 In case you don't know what are CTFs, here's a nice definition:
 
-> A capture the flag \(CTF\) contest is a special kind of cybersecurity competition designed to challenge its participants to solve computer security problems and/or capture and defend computer systems.
+> A capture the flag (CTF) contest is a special kind of cybersecurity competition designed to challenge its participants to solve computer security problems and/or capture and defend computer systems.
 
-## ~\# groups
+## \~# groups
 
 Social Engineering Experts is a small team founded by a group of friends.
 
 {% embed url="https://ctftime.org/team/151372" %}
 
-## ~\# ls -la 2021
+## \~# ls -la 2021
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">CTF Name</th>
-      <th style="text-align:left">Date</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Position</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">DeconstruCT.F</td>
-      <td style="text-align:left">1 Oct</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">14th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/asian-cyber-security-challenge-acsc-2021/">Asian Cyber Security Challenge (ACSC) 2021</a>
-      </td>
-      <td style="text-align:left">18 Sep</td>
-      <td style="text-align:left">
-        <p>Jeopardy</p>
-        <p>(Individual)</p>
-      </td>
-      <td style="text-align:left">
-        <p>3rd (SG)</p>
-        <p>33rd (Overall)</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/csaw-ctf-qualification-round-2021/">CSAW CTF Qualification Round 2021</a>
-      </td>
-      <td style="text-align:left">11 Sep</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">23rd</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/yauzactf-2021/">YauzaCTF 2021</a>
-      </td>
-      <td style="text-align:left">27 Aug</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">9th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/inctf-2021/">InCTF International</a>
-      </td>
-      <td style="text-align:left">13 Aug</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">22nd</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DEF CON 29 Red Team Village CTF (Finals)</td>
-      <td style="text-align:left">7 Aug</td>
-      <td style="text-align:left">Hack Quest</td>
-      <td style="text-align:left">18th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DEF CON 29 Red Team Village CTF (Quals)</td>
-      <td style="text-align:left">6 Aug</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">16th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/uiuctf-2021/">UIUCTF 2021</a>
-      </td>
-      <td style="text-align:left">31 Jul</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">18th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Securebug Loki CTF</td>
-      <td style="text-align:left">19 Jul</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">5th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/google-ctf-2021/">Google CTF 2021</a>
-      </td>
-      <td style="text-align:left">17 Jul</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">&lt; 20%</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/typhooncon-ctf-2021/">TyphoonCon CTF 2021</a>
-      </td>
-      <td style="text-align:left">12 Jul</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">10th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/dsta-brainhack-cddc21/">DSTA BrainHack CDDC21</a>
-      </td>
-      <td style="text-align:left">24 Jun</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">3rd</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/bcactf-2.0/">BCACTF 2.0</a>
-      </td>
-      <td style="text-align:left">11 Jun</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">43rd</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/zh3ro-ctf-v2/">Zh3ro CTF V2</a>
-      </td>
-      <td style="text-align:left">4 Jun</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">37th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/pwn2win-ctf-2021/">Pwn2Win CTF</a>
-      </td>
-      <td style="text-align:left">28 May</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">62nd</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/norzhctf-2021/">NorzhCTF</a>
-      </td>
-      <td style="text-align:left">22 May</td>
-      <td style="text-align:left">Hack Quest</td>
-      <td style="text-align:left">29th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/dawgctf-2021/">DawgCTF</a>
-      </td>
-      <td style="text-align:left">8 May</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">13th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/umdctf-2021/">UMDCTF</a>
-      </td>
-      <td style="text-align:left">17 Apr</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">8th</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/midnight-sun-ctf/">Midnight Sun CTF</a>
-      </td>
-      <td style="text-align:left">10 Apr</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">&lt; 20%</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/picoctf/">picoCTF</a>
-      </td>
-      <td style="text-align:left">17 Mar</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">&lt; 5%</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="2021/dso-nus-ctf/">DSO-NUS CTF</a>
-      </td>
-      <td style="text-align:left">27 Feb</td>
-      <td style="text-align:left">Jeopardy</td>
-      <td style="text-align:left">&lt; 20%</td>
-    </tr>
-  </tbody>
-</table>
+| SPbCTF's Student CTF 2021 Quals                                                              | 10 Oct | Jeopardy                            | 37th                                 |
+| -------------------------------------------------------------------------------------------- | ------ | ----------------------------------- | ------------------------------------ |
+| pbCTF 2021                                                                                   | 9 Oct  | Jeopardy                            | 32nd                                 |
+| DeconstruCT.F                                                                                | 1 Oct  | Jeopardy                            | 14th                                 |
+| [Asian Cyber Security Challenge (ACSC) 2021](2021/asian-cyber-security-challenge-acsc-2021/) | 18 Sep | <p>Jeopardy </p><p>(Individual)</p> | <p>3rd (SG)</p><p>33rd (Overall)</p> |
+| [CSAW CTF Qualification Round 2021](2021/csaw-ctf-qualification-round-2021/)                 | 11 Sep | Jeopardy                            | 23rd                                 |
+| [YauzaCTF 2021](2021/yauzactf-2021/)                                                         | 27 Aug | Jeopardy                            | 9th                                  |
+| [InCTF International](2021/inctf-2021/)                                                      | 13 Aug | Jeopardy                            | 22nd                                 |
+| DEF CON 29 Red Team Village CTF (Finals)                                                     | 7 Aug  | Hack Quest                          | 18th                                 |
+| DEF CON 29 Red Team Village CTF (Quals)                                                      | 6 Aug  | Jeopardy                            | 16th                                 |
+| [UIUCTF 2021](2021/uiuctf-2021/)                                                             | 31 Jul | Jeopardy                            | 18th                                 |
+| Securebug Loki CTF                                                                           | 19 Jul | Jeopardy                            | 5th                                  |
+| [Google CTF 2021](2021/google-ctf-2021/)                                                     | 17 Jul | Jeopardy                            | < 20%                                |
+| [TyphoonCon CTF 2021](2021/typhooncon-ctf-2021/)                                             | 12 Jul | Jeopardy                            | 10th                                 |
+| [DSTA BrainHack CDDC21](2021/dsta-brainhack-cddc21/)                                         | 24 Jun | Jeopardy                            | 3rd                                  |
+| [BCACTF 2.0](2021/bcactf-2.0/)                                                               | 11 Jun | Jeopardy                            | 43rd                                 |
+| [Zh3ro CTF V2](2021/zh3ro-ctf-v2/)                                                           | 4 Jun  | Jeopardy                            | 37th                                 |
+| [Pwn2Win CTF](2021/pwn2win-ctf-2021/)                                                        | 28 May | Jeopardy                            | 62nd                                 |
+| [NorzhCTF](2021/norzhctf-2021/)                                                              | 22 May | Hack Quest                          | 29th                                 |
+| [DawgCTF](2021/dawgctf-2021/)                                                                | 8 May  | Jeopardy                            | 13th                                 |
+| [UMDCTF](2021/umdctf-2021/)                                                                  | 17 Apr | Jeopardy                            | 8th                                  |
+| [Midnight Sun CTF](2021/midnight-sun-ctf/)                                                   | 10 Apr | Jeopardy                            | < 20%                                |
+| [picoCTF](2021/picoctf/)                                                                     | 17 Mar | Jeopardy                            | < 5%                                 |
+| [DSO-NUS CTF](2021/dso-nus-ctf/)                                                             | 27 Feb | Jeopardy                            | < 20%                                |
 
-## ~\# cat LICENSE
+## \~# cat LICENSE
 
 All code is licensed under the MIT license.
-
