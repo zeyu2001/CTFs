@@ -22,6 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                                                                                     | Type                                | Position                             |
 | -------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------ |
+| BuckeyeCTF 2021                                                                              | Jeopardy                            | 7th                                  |
 | [SPbCTF's Student CTF 2021 Quals](2021/spbctfs-student-ctf-quals/)                           | Jeopardy                            | 37th                                 |
 | pbCTF 2021                                                                                   | Jeopardy                            | 32nd                                 |
 | DeconstruCT.F                                                                                | Jeopardy                            | 14th                                 |
