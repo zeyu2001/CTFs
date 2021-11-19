@@ -4,9 +4,9 @@
 
 ### Challenge 1
 
-> _We've sent the following secret message on a secret channel._
+> We've sent the following secret message on a secret channel.
 >
-> _Submit your flag in this format: TISC{decoded message in lower case}_
+> Submit your flag in this format: TISC{decoded message in lower case}
 
 We have a .wav audio file.
 
