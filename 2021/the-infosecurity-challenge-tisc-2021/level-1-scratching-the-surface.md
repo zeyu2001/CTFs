@@ -156,7 +156,7 @@ The flag is `TISC{2-0-0}`.
 
 We can find recently mounted devices in registry keys. The following registry key contains the mounted shared folder as a subkey:
 
-`\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2##VBoxSvr#vm-shared`
+`Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\`
 
 ![](../../.gitbook/assets/4df19a2ae2f64282a8d960ff40cf07bd.png)
 
