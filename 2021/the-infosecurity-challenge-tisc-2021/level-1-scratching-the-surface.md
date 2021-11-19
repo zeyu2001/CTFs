@@ -150,6 +150,20 @@ The flag is `TISC{2-0-0}`.
 
 ### Challenge 9
 
+> A device with the drive letter “Z” was connected as a shared folder in VirtualBox. What was the label of the volume? Perhaps the registry can tell us the "connected" drive?
+>
+> Submit your flag in this format: TISC{label of volume}.
+
+We can find recently mounted devices in registry keys. The following registry key contains the mounted shared folder as a subkey:
+
+`\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2##VBoxSvr#vm-shared`
+
+![](../../.gitbook/assets/4df19a2ae2f64282a8d960ff40cf07bd.png)
+
+The name is `vm-shared`.
+
+### Challenge 10
+
 > A file with SHA1 0D97DBDBA2D35C37F434538E4DFAA06FCCC18A13 is in the VM… somewhere. What is the name of the file that is of interest?
 
 I wrote a simple PowerShell script to find this.
