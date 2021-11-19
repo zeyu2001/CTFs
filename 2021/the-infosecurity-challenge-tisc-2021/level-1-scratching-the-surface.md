@@ -48,6 +48,14 @@ The flag is `TISC{2003:08:25 14:55:27}`
 
 ![](../../.gitbook/assets/3053fbc761904742866deb82ecc39b52.png)
 
+Binwalk shows us that there is a zip archive hidden in the file.&#x20;
+
+Extract it and we get a `picture_with_text.jpg`.&#x20;
+
+We can clearly see that before the JPEG magic bytes, there is some text.
+
+![](../../.gitbook/assets/0038a38172c2445294dfae0b328cee77.png)
+
 This is a substitution cipher, the answer is
 
 ```
