@@ -12,11 +12,13 @@ description: Prerender dynamic rendering leads to SSRF
 
 
 
-                                🏃
+&#x20;                               🏃
 
 `http://favorite-emojis.chal.acsc.asia:5000`
 
-{% file src="../../.gitbook/assets/favorite-emojis.tar.gz\_88c58c7d867bcad99c40a2013cc77a58.gz" caption="Challenge Files" %}
+{% file src="../../.gitbook/assets/favorite-emojis.tar.gz_88c58c7d867bcad99c40a2013cc77a58.gz" %}
+Challenge Files
+{% endfile %}
 
 ## Solution
 
@@ -24,7 +26,7 @@ The server uses something called dynamic rendering, which renders JavaScript on 
 
 If we look at the Nginx configuration, we can see that as long as we set our HTTP `User-Agent` header to one of the web crawlers, e.g.`googlebot`, the request is re-written and forwarded to the pre-renderer at `http://renderer:3000`.
 
-```text
+```
 location / {
     try_files $uri @prerender;
 }
@@ -96,7 +98,7 @@ Notice that the browser is currently on `http://localhost:3000`, viewing the pre
 
 This gives us the `http://api:8000/` contents:
 
-```text
+```
 [Sat Sep 18 19:36:42 2021] 127.0.0.1:49207 [404]: /?PGhlYWQ+PC9oZWFkPjxib2R5PkFDU0N7c2hhcmtzX2FyZV9hbHdheXNfaHVuZ3J5fTwvYm9keT4= - No such file or directory
 ```
 
@@ -105,4 +107,3 @@ Which decodes to
 ```markup
 <head></head><body>ACSC{sharks_are_always_hungry}</body>
 ```
-
