@@ -22,7 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                                                                                     | Type                                | Position                             |
 | -------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------ |
-| CyberSecurityRumble CTF                                                                      | Jeopardy                            | 16th                                 |
+| [CyberSecurityRumble CTF](2021/cybersecurityrumble-ctf/)                                     | Jeopardy                            | 16th                                 |
 | [The InfoSecurity Challenge (TISC) 2021](2021/the-infosecurity-challenge-tisc-2021/)         | Jeopardy (Individual)               | 23rd                                 |
 | BuckeyeCTF 2021                                                                              | Jeopardy                            | 7th                                  |
 | [SPbCTF's Student CTF 2021 Quals](2021/spbctfs-student-ctf-quals/)                           | Jeopardy                            | 37th                                 |
