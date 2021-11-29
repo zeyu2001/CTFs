@@ -19,6 +19,13 @@
 
 ## 2021
 
+* [CyberSecurityRumble CTF](2021/cybersecurityrumble-ctf/README.md)
+  * [Lukas App](2021/cybersecurityrumble-ctf/lukas-app.md)
+  * [Finance Calculat0r 2021](2021/cybersecurityrumble-ctf/finance-calculat0r-2021.md)
+  * [Personal Encryptor with Nonbreakable Inforation-theoretic Security](2021/cybersecurityrumble-ctf/personal-encryptor-with-nonbreakable-inforation-theoretic-security.md)
+  * [Enterprice File Sharing](2021/cybersecurityrumble-ctf/enterprice-file-sharing.md)
+  * [Payback](2021/cybersecurityrumble-ctf/payback.md)
+  * [Stonks Street Journal](2021/cybersecurityrumble-ctf/stonks-street-journal.md)
 * [The InfoSecurity Challenge (TISC) 2021](2021/the-infosecurity-challenge-tisc-2021/README.md)
   * [Level 4 -  The Magician's Den](2021/the-infosecurity-challenge-tisc-2021/level-4-the-magicians-den.md)
   * [Level 3 - Needle in a Greystack](2021/the-infosecurity-challenge-tisc-2021/level-3-needle-in-a-greystack.md)

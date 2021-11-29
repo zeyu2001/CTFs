@@ -108,11 +108,11 @@ This still allows us to request the file _while_ the XML parsing is being perfor
 
 Using the `phpinfo()` output, we can see the `disable_functions` configuration.
 
-![](<../../.gitbook/assets/image (79).png>)
+![](<../../.gitbook/assets/image (79) (1).png>)
 
 As we can see, all of the functions that can give us a shell command execution are disabled.
 
-### disable_functions Bypass
+### disable\_functions Bypass
 
 The challenge hinted at a zero-day being needed for the last step.
 
