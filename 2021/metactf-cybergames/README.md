@@ -4,7 +4,7 @@ description: MetaCTF's 7th annual virtual jeopardy-style CTF, held from 4 Dec to
 
 # MetaCTF CyberGames
 
-We placed 24th! It was a really great experience, and&#x20;
+We placed 24th! It was a really great experience, and I truly enjoyed the challenges - no regrets doing this CTF in parallel with the [Metasploit Community CTF](../metasploit-community-ctf.md).
 
 | Challenge                                                | Category            | Points        |
 | -------------------------------------------------------- | ------------------- | ------------- |
