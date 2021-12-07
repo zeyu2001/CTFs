@@ -122,11 +122,11 @@ We cannot use `checkpoint=1` , though, because this won’t pass the extension c
 
 Looking a bit more into the Tar manual, I saw that the default checkpoint number is 10, which means that the checkpoint action is performed every 10 records.
 
-![](<../../.gitbook/assets/image (80).png>)
+![](<../../.gitbook/assets/image (80) (1).png>)
 
 But how big is each record? Apparently, it's 20 512-byte blocks.
 
-![](<../../.gitbook/assets/image (82).png>)
+![](<../../.gitbook/assets/image (82) (1).png>)
 
 So if we upload enough bytes, our tar archive will eventually exceed 10 records \* 20 blocks \* 512 bytes = 102400 bytes. Once that happens, we would have 10 records within the tar archive and the checkpoint action will be executed.
 

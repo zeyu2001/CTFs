@@ -16,7 +16,7 @@ info.txt
 
 ## Solution
 
-[Superdense coding](https://en.wikipedia.org/wiki/Superdense_coding) is a quantum communication protocol based on the sender and receiver pre-sharing a pair of maximally entangled qubits.
+[Superdense coding](https://en.wikipedia.org/wiki/Superdense\_coding) is a quantum communication protocol based on the sender and receiver pre-sharing a pair of maximally entangled qubits.
 
 We are told that the initial state is $$\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle)$$.
 
@@ -28,7 +28,7 @@ For instance, the $$X$$ gate is represented as $$X =\begin{bmatrix} 0 & 1\\ 1 & 
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-05 at 11.22.16 AM.png>)
 
-As a result of applying the quantum gates, a new entangled state is formed, and this can be decoded by Bob to obtain the classical 2-bit message by applying _CNOT _and $$H\otimes I$$.
+As a result of applying the quantum gates, a new entangled state is formed, and this can be decoded by Bob to obtain the classical 2-bit message by applying _CNOT_ and $$H\otimes I$$.
 
 The following script applies each quantum gate to the entangled state, and decodes the classical 2-bit messages. Each gate in the message would thus translate to 2 bits.
 
@@ -119,7 +119,7 @@ for m in messageDigest[:]:
 print(digest)
 ```
 
-The decoded message looks like this. Hmm... not very useful! This is not surprising, though, since the message contains a lot of identity_ _($$I$$) gates, which do not modify the quantum state - we should expect a lot of repeated bits in the output.
+The decoded message looks like this. Hmm... not very useful! This is not surprising, though, since the message contains a lot of identity __ ($$I$$) gates, which do not modify the quantum state - we should expect a lot of repeated bits in the output.
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-05 at 12.24.29 PM.png>)
 

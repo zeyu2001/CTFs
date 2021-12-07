@@ -19,6 +19,14 @@
 
 ## 2021
 
+* [Metasploit Community CTF](2021/metasploit-community-ctf.md)
+* [MetaCTF CyberGames](2021/metactf-cybergames/README.md)
+  * [Look, if you had one shot](2021/metactf-cybergames/look-if-you-had-one-shot.md)
+  * [Custom Blog](2021/metactf-cybergames/custom-blog.md)
+  * [Yummy Vegetables](2021/metactf-cybergames/yummy-vegetables.md)
+  * [Ransomware Patch](2021/metactf-cybergames/ransomware-patch.md)
+  * [I Hate Python](2021/metactf-cybergames/i-hate-python.md)
+  * [Interception](2021/metactf-cybergames/interception.md)
 * [CyberSecurityRumble CTF](2021/cybersecurityrumble-ctf/README.md)
   * [Lukas App](2021/cybersecurityrumble-ctf/lukas-app.md)
   * [Finance Calculat0r 2021](2021/cybersecurityrumble-ctf/finance-calculat0r-2021.md)

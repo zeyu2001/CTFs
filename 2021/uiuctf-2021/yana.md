@@ -12,7 +12,7 @@ https://chal.yana.wtf
 
 admin bot `nc yana-bot.chal.uiuc.tf 1337`
 
-**author**: arxenix[ ](https://uiuc.tf/files/3efbedb61ac2d4079cf03fad6237279d/bot.js?token=eyJ1c2VyX2lkIjoxMjEsInRlYW1faWQiOjQ2LCJmaWxlX2lkIjoxNX0.YQk1yw.3nM_RFWReF9QpVym4Lk7fNCcB4A)
+**author**: arxenix[ ](https://uiuc.tf/files/3efbedb61ac2d4079cf03fad6237279d/bot.js?token=eyJ1c2VyX2lkIjoxMjEsInRlYW1faWQiOjQ2LCJmaWxlX2lkIjoxNX0.YQk1yw.3nM\_RFWReF9QpVym4Lk7fNCcB4A)
 
 {% file src="../../.gitbook/assets/bot.js" %}
 bot.js
@@ -46,7 +46,7 @@ We can see this in action using Chrome DevTools.
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-03 at 8.30.57 PM.png>)
 
-There is also a search feature that "searches" for notes. Interestingly, the search query gets placed into the URL's [fragment identifier](https://en.wikipedia.org/wiki/URI_fragment) through `document.location.hash`.
+There is also a search feature that "searches" for notes. Interestingly, the search query gets placed into the URL's [fragment identifier](https://en.wikipedia.org/wiki/URI\_fragment) through `document.location.hash`.
 
 ```javascript
 const searchForm = document.getElementById("search");
@@ -159,7 +159,7 @@ This would allow us to brute-force the flag character by character.
 
 ### Setting Up The Attack
 
-To implement the cache probing attack, we need to come up with a JavaScript payload that would be run on the victim's browser to determine whether the image was cached. 
+To implement the cache probing attack, we need to come up with a JavaScript payload that would be run on the victim's browser to determine whether the image was cached.&#x20;
 
 We define an `onFrameLoad()` function that will be called when the iframe of the notes site, containing the search query, is loaded.
 
@@ -254,7 +254,7 @@ In brief, a new "Network Isolation Key" was added, which contains both the top-l
 
 The initial fetching of the image through the notes application iframe should have resulted in a cache key of (`attacker-site`, `notes-app-site`, `image-url`)
 
-The second time the image is fetched through the attacker-controlled site, the cache key would _not _contain the notes application site, and would instead be (`attacker-site`, `attacker-site`,`image-url`). 
+The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes application site, and would instead be (`attacker-site`, `attacker-site`,`image-url`).&#x20;
 
 This should _not_ result in a cache hit, since the two cache keys are different. But it did. After some local testing, I found that **headless chrome simply doesn't perform cache partitioning**.
 
@@ -297,9 +297,9 @@ We can verify that both times, `y.png` was downloaded from the network, not fetc
 
 ### The Intended Solution
 
-Assuming that cache partitioning worked, how could we bypass it? 
+Assuming that cache partitioning worked, how could we bypass it?&#x20;
 
-An important implementation detail is that subdomains and port numbers are actually ignored when creating the cache key. 
+An important implementation detail is that subdomains and port numbers are actually ignored when creating the cache key.&#x20;
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-04 at 2.01.50 AM.png>)
 

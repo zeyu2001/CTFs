@@ -12,13 +12,13 @@ CDDC 2021 Feedback
 
 **SocialEngineeringExperts obtained 3rd place in the JC/IP category.** However, I'm sure that title could easily have gone to other teams if the challenges were properly planned - it didn't take us long to realise that the top teams would have obtained the maximum possible score long before the CTF ended due to the lack of difficult and diverse challenges. I arrived at work an hour early just to ensure that I'll make it in time for the last challenge release: the CTF was 'over' (we knew the winners) less than an hour later.
 
-Nevertheless, previous years have shown that CDDC _can be good. _Here's to hoping for a better event next year.
+Nevertheless, previous years have shown that CDDC _can be good._ Here's to hoping for a better event next year.
 
 ![](../../.gitbook/assets/Results.jpeg)
 
 ## Challenges
 
-The challenges are split into "Missions". Each mission contains a set of challenges. 
+The challenges are split into "Missions". Each mission contains a set of challenges.&#x20;
 
 * [File It Away (Pwn)](file-it-away-pwn.md)
 * [Linux Rules the World (Linux) ](linux-rules-the-world-linux.md)

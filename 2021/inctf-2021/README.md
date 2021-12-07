@@ -6,7 +6,7 @@ description: The fifth international edition of InCTF, hosted by team bi0s
 
 ## Results
 
-This CTF was a blast! [Social Engineering Experts](https://ctftime.org/team/154571)** **placed 22nd, out of 604 scoring teams.
+This CTF was a blast! [Social Engineering Experts](https://ctftime.org/team/154571) **** placed 22nd, out of 604 scoring teams.
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-17 at 2.13.03 AM.png>)
 

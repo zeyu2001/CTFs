@@ -108,7 +108,7 @@ This still allows us to request the file _while_ the XML parsing is being perfor
 
 Using the `phpinfo()` output, we can see the `disable_functions` configuration.
 
-![](<../../.gitbook/assets/image (79) (1).png>)
+![](<../../.gitbook/assets/image (79) (1) (1).png>)
 
 As we can see, all of the functions that can give us a shell command execution are disabled.
 

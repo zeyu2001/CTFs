@@ -4,7 +4,7 @@ description: >-
   (FGSM)
 ---
 
-# pwnies_please
+# pwnies\_please
 
 ## Description
 
@@ -34,9 +34,9 @@ The premise of the challenge was simple - we had to upload images to fool an ima
 
 ### Source Code Analysis
 
-The "bouncer" is a [ResNet-18](https://pytorch.org/hub/pytorch_vision_resnet/) image classification model that classifies a given image as one of 10 classes ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'). This is the **non-robust** model that we have to fool, and we are given the model weights.
+The "bouncer" is a [ResNet-18](https://pytorch.org/hub/pytorch\_vision\_resnet/) image classification model that classifies a given image as one of 10 classes ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'). This is the **non-robust** model that we have to fool, and we are given the model weights.
 
-Another **robust** model, also using the ResNet-18 architecture, is used. This is meant to be the more accurate model, and serves as the [ground truth](https://en.wikipedia.org/wiki/Ground_truth).
+Another **robust** model, also using the ResNet-18 architecture, is used. This is meant to be the more accurate model, and serves as the [ground truth](https://en.wikipedia.org/wiki/Ground\_truth).
 
 ```python
 # ------------------ Model goes here ⬇------------------ #
@@ -145,9 +145,9 @@ The "learning" takes place when the weights are updated, thus placing different 
 
 When neural networks make a prediction, a **forward pass** is performed. This simply means calculating the output, $$y=f(x,w)$$ of each node. At the end of the forward pass, a **loss function** $$J$$ calculates the error between our predicted output and the actual output.
 
-But in order for the model to learn, a** backward pass**, or **backpropagation**, must be performed. This might seem complicated, but it really isn't - it's just the [chain rule](https://en.wikipedia.org/wiki/Chain_rule)!
+But in order for the model to learn, a **backward pass**, or **backpropagation**, must be performed. This might seem complicated, but it really isn't - it's just the [chain rule](https://en.wikipedia.org/wiki/Chain\_rule)!
 
-_OK, _[_some people_](https://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/)_ won't be happy with the above statement, so maybe it's a little more subtle than that. You don't need to know this, but backpropagation is a special case of a technique known as automatic differentiation - as opposed to symbolic differentiation - which is a nice way of efficiently computing the derivative of a program with intermediate variables. I'll refer you to _[_Justin Domke's notes_](https://people.cs.umass.edu/\~domke/courses/sml2011/08autodiff_nnets.pdf)_ for this._
+_OK,_ [_some people_](https://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/) _won't be happy with the above statement, so maybe it's a little more subtle than that. You don't need to know this, but backpropagation is a special case of a technique known as automatic differentiation - as opposed to symbolic differentiation - which is a nice way of efficiently computing the derivative of a program with intermediate variables. I'll refer you to_ [_Justin Domke's notes_](https://people.cs.umass.edu/\~domke/courses/sml2011/08autodiff\_nnets.pdf) _for this._
 
 ![](<../../.gitbook/assets/image (26).png>)
 
@@ -159,7 +159,7 @@ This allows us to optimize the weights by performing a [gradient descent](https:
 
 ### Gradient-Based Attacks
 
-What if, when backpropagating, instead of treating $$w$$ as the variable we want to optimize, we look at the input $$x$$ instead? Instead of minimizing the loss by adjusting the weights based on the backpropagated gradients, the attack **adjusts the input data to maximize the loss **based on the same backpropagated gradients.
+What if, when backpropagating, instead of treating $$w$$ as the variable we want to optimize, we look at the input $$x$$ instead? Instead of minimizing the loss by adjusting the weights based on the backpropagated gradients, the attack **adjusts the input data to maximize the loss** based on the same backpropagated gradients.
 
 The [Fast Gradient Sign Method (FGSM)](https://arxiv.org/abs/1412.6572) does this by applying a small pertubation to the original data, in the direction of increasing loss.
 
@@ -218,9 +218,9 @@ $$
 x_{adv}=x+\epsilon \text{sign}(\nabla_xJ(x,y_{true}))
 $$
 
-This applies a perturbation of magnitude $$\epsilon$$ in the direction of increasing loss. 
+This applies a perturbation of magnitude $$\epsilon$$ in the direction of increasing loss.&#x20;
 
-The higher we set $$\epsilon$$, the less accurate the model will be **but **the perturbations become more easily perceptible. There is, therefore, a trade-off to consider between the relative closeness of the original and perturbed image, and the degree of accuracy degradation we can cause in the model's predictions. 
+The higher we set $$\epsilon$$, the less accurate the model will be **but** the perturbations become more easily perceptible. There is, therefore, a trade-off to consider between the relative closeness of the original and perturbed image, and the degree of accuracy degradation we can cause in the model's predictions.&#x20;
 
 In this case, I found that `eps = 0.02` worked well enough (perturbations are small enough that the two images are similar, and the loss is significant enough that the model misclassifies the results)
 
@@ -311,7 +311,7 @@ Let's complete our `get_adverserial_example()` function by saving the adversaria
     test_image.save('sol.png')
 ```
 
-All that's left now is the driver code for solving the CTF! 
+All that's left now is the driver code for solving the CTF!&#x20;
 
 I used Python's requests library to automate the downloading of the original images and the uploading of the adversarial examples.
 
@@ -381,7 +381,7 @@ I'm done with the CTF writeup, and at this point, I'm just writing/rambling out 
 
 This was just a CTF challenge, but there are plenty of real-life examples that highlight the severity of adversarial attacks.
 
-For instance, [these adversarial examples](https://deepdrive.berkeley.edu/node/212) involve printed color stickers on road signs to fool DNN models used by self-driving cars - imagine causing an accident by simply placing a few stickers on stop signs! 
+For instance, [these adversarial examples](https://deepdrive.berkeley.edu/node/212) involve printed color stickers on road signs to fool DNN models used by self-driving cars - imagine causing an accident by simply placing a few stickers on stop signs!&#x20;
 
 ![](<../../.gitbook/assets/image (31).png>)
 
