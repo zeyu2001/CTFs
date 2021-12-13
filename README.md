@@ -22,6 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                                                                                     | Type                                | Position                             |
 | -------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------ |
+| idekCTF 2021                                                                                 | Jeopardy                            | 13th                                 |
 | [Metasploit Community CTF](2021/metasploit-community-ctf.md)                                 | Hack Quest                          | 7th                                  |
 | [MetaCTF CyberGames](2021/metactf-cybergames/)                                               | Jeopardy                            | 24th                                 |
 | [CyberSecurityRumble CTF](2021/cybersecurityrumble-ctf/)                                     | Jeopardy                            | 16th                                 |
