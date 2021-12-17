@@ -14,7 +14,7 @@ In case you don't know what are CTFs, here's a nice definition:
 
 Social Engineering Experts is a small team founded by a group of friends.
 
-{% embed url="https://ctftime.org/team/151372" %}
+{% embed url="https://ctftime.org/team/154571" %}
 
 Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challenge).
 
