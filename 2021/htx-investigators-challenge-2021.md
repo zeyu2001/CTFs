@@ -50,7 +50,7 @@ I've added brief writeups for some challenges.
 * [Web 101](htx-investigators-challenge-2021.md#web-101)
 * [Find the Malicious Attacks by Revo Force](htx-investigators-challenge-2021.md#find-the-malicious-attacks-by-revo-force)
 * [Identifying the High-Risk Individuals](htx-investigators-challenge-2021.md#identifying-high-risk-individuals)
-* c0deD ME5sages
+* [c0deD ME5sages](htx-investigators-challenge-2021.md#c0ded-me5sages)
 
 ### SecureBank XSS Search
 
