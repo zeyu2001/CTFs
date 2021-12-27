@@ -19,6 +19,7 @@
 
 ## 2021
 
+* [HTX Investigator's Challenge 2021](2021/htx-investigators-challenge-2021.md)
 * [Metasploit Community CTF](2021/metasploit-community-ctf.md)
 * [MetaCTF CyberGames](2021/metactf-cybergames/README.md)
   * [Look, if you had one shot](2021/metactf-cybergames/look-if-you-had-one-shot.md)
