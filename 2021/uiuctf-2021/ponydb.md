@@ -68,9 +68,9 @@ def ponies():
 		cnx.commit()
 ```
 
-If a session ID has not yet been assigned, a secure one is generated and the `ponies` table in the database is populated with a default pony. 
+If a session ID has not yet been assigned, a secure one is generated and the `ponies` table in the database is populated with a default pony.&#x20;
 
-Interestingly, f-strings are used instead of [parameterized queries](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html). In this case, unfortunately, we do not have control over `session['id']`. 
+Interestingly, f-strings are used instead of [parameterized queries](https://cheatsheetseries.owasp.org/cheatsheets/Query\_Parameterization\_Cheat\_Sheet.html). In this case, unfortunately, we do not have control over `session['id']`.&#x20;
 
 Note the unusual format of the `favorites` data - it is meant to be a JSON string. The default pony has the following `favorites` data:
 
@@ -101,12 +101,14 @@ return render_template('ponies.html', ponies=ponies, flag=flag)
 In `ponies.html`, we find that `flag` is rendered under the condition that the pony's "favorite number" (the one stored in the JSON data) is 1337. This is the condition we have to bypass in order to solve the challenge.
 
 ```haskell
+{% raw %}
 {% for favorite in pony['favorites'] %}
 	<p>Favorite {{ favorite }}: {{ pony['favorites'][favorite] }}</p>
 	{% if favorite == 'number' and pony['favorites'][favorite] == 1337 %}
 		<p>Favorite flag: {{ flag }}</p>
 	{% endif %}
 {% endfor %}
+{% endraw %}
 ```
 
 #### POST Endpoint
@@ -149,7 +151,7 @@ def add():
 	if number < 0: error = "Ponies can't count that low"
 ```
 
-If the checks are passed, then the following `INSERT` statement is executed. Once again, f-strings are used instead of parameterized queries. This time, however, we have control over the variables through the POST request. 
+If the checks are passed, then the following `INSERT` statement is executed. Once again, f-strings are used instead of parameterized queries. This time, however, we have control over the variables through the POST request.&#x20;
 
 ```python
 if error: flash(error)
@@ -165,7 +167,7 @@ if error: flash(error)
 		cnx.close()
 ```
 
-While single quotes are filtered, we can easily escape out of the double quotes used in the JSON string. At first thought, we might think that we can simply inject a custom `"number": 1337` key-value pair to pass the number check in the Jinja template, thereby rendering the flag in the GET response. 
+While single quotes are filtered, we can easily escape out of the double quotes used in the JSON string. At first thought, we might think that we can simply inject a custom `"number": 1337` key-value pair to pass the number check in the Jinja template, thereby rendering the flag in the GET response.&#x20;
 
 For instance, if we submit `number":1337,"color` as the `favorite_key` parameter, the inserted JSON string would be:
 
@@ -230,7 +232,7 @@ Let's revisit the earlier payload. We have `number":1337,"color` as `favorite_ke
 
 We can leverage the truncation to "push out" the final `"number":13` from the 256-character VARCHAR and insert a truncated string _without_ the final key-value pair. This will resolve the repeated key problem when using `json.loads()`.
 
-My final solve script looked like this. We first set the `favorite_key` and `favorite_value`, with `favorite_key` containing the `"number": 1337` key-value pair and `favorite_value` ending in `"}`. Next, we create the JSON string up to `favorite_value`. 
+My final solve script looked like this. We first set the `favorite_key` and `favorite_value`, with `favorite_key` containing the `"number": 1337` key-value pair and `favorite_value` ending in `"}`. Next, we create the JSON string up to `favorite_value`.&#x20;
 
 Then, we can calculate the number of remaining characters needed to complete the 256-character VARCHAR. This number of characters will be appended to the beginning of `favorite_value`.
 

@@ -17,8 +17,19 @@
   * [Rocket Ship Academy](my-challenges/standcon-ctf-2021/rocket-ship-academy.md)
   * [Space Noise](my-challenges/standcon-ctf-2021/space-noise.md)
 
+## 2022
+
+* [DiceCTF 2022](2022/dicectf-2022/README.md)
+  * [knock-knock](2022/dicectf-2022/knock-knock.md)
+  * [blazingfast](2022/dicectf-2022/blazingfast.md)
+* [TetCTF 2022](2022/tetctf-2022/README.md)
+  * [2X-Service](2022/tetctf-2022/2x-service.md)
+  * [Animals](2022/tetctf-2022/animals.md)
+  * [Ezflag Level 1](2022/tetctf-2022/ezflag-level-1.md)
+
 ## 2021
 
+* [hxp CTF 2021](2021/hxp-ctf-2021.md)
 * [HTX Investigator's Challenge 2021](2021/htx-investigators-challenge-2021.md)
 * [Metasploit Community CTF](2021/metasploit-community-ctf.md)
 * [MetaCTF CyberGames](2021/metactf-cybergames/README.md)

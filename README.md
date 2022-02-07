@@ -18,10 +18,18 @@ Social Engineering Experts is a small team founded by a group of friends.
 
 Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challenge).
 
+## \~# ls -la 2022
+
+| CTF Name                           | Type     | Position |
+| ---------------------------------- | -------- | -------- |
+| [DiceCTF 2022](2022/dicectf-2022/) | Jeopardy | 33rd     |
+| [TetCTF 2022](2022/tetctf-2022/)   | Jeopardy | 7th      |
+
 ## \~# ls -la 2021
 
 | CTF Name                                                                                     | Type                                | Position                             |
 | -------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------ |
+| [hxp CTF 2021](2021/hxp-ctf-2021.md)                                                         | Jeopardy                            | 48th                                 |
 | [HTX Investigator's Challenge 2021](2021/htx-investigators-challenge-2021.md)                | Jeopardy                            | Top of Scoreboard                    |
 | idekCTF 2021                                                                                 | Jeopardy                            | 13th                                 |
 | [Metasploit Community CTF](2021/metasploit-community-ctf.md)                                 | Hack Quest                          | 7th                                  |

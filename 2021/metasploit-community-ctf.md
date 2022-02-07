@@ -203,7 +203,7 @@ This was interesting, so I decided to spin up Wireshark to analyse the traffic.
 
 The client-server communication appeared to be simple JSON messages. A client heartbeat is sent periodically to prevent the game from timing out, and the coordinates clicked by the user are sent as well. The server sends the client the coordinates of each target that is created.
 
-![](<../.gitbook/assets/image (89).png>)
+![](<../.gitbook/assets/image (89) (1).png>)
 
 We could beat the easy mode by implementing a custom client that "clicks" on each target that is received.
 
