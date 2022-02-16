@@ -19,6 +19,13 @@
 
 ## 2022
 
+* [YaCTF 2022](2022/yactf-2022/README.md)
+  * [Shiba](2022/yactf-2022/shiba.md)
+  * [Flag Market](2022/yactf-2022/flag-market.md)
+  * [Pasteless](2022/yactf-2022/pasteless.md)
+  * [Secretive](2022/yactf-2022/secretive.md)
+  * [MetaPDF](2022/yactf-2022/metapdf.md)
+  * [Crackme](2022/yactf-2022/crackme.md)
 * [DiceCTF 2022](2022/dicectf-2022/README.md)
   * [knock-knock](2022/dicectf-2022/knock-knock.md)
   * [blazingfast](2022/dicectf-2022/blazingfast.md)

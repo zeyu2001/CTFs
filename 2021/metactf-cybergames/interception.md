@@ -49,7 +49,7 @@ MetaCTF{addr3s5_r3s0lut1on_pwn4g3}
 
 This is a slightly more complex scenario - we don't know the IP addresses of the targets!
 
-![](<../../.gitbook/assets/image (90).png>)
+![](<../../.gitbook/assets/image (90) (1).png>)
 
 ### Method 1: Watch the World Burn
 

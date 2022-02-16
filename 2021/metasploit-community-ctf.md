@@ -197,7 +197,7 @@ This was a game called Clicktracer. The client connects to the game server at po
 
 When playing in easy mode, the messages are logged to the console.
 
-![](<../.gitbook/assets/image (80).png>)
+![](<../.gitbook/assets/image (80) (1).png>)
 
 This was interesting, so I decided to spin up Wireshark to analyse the traffic.
 

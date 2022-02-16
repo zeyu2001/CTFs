@@ -27,7 +27,7 @@ Here, `<Directory />` refers to the _filesystem_ directory, not the web root. He
 
 Taking a closer look a the server responses showed that the Apache server is on version 2.4.49, and vulnerable to a recent path traversal zero-day.
 
-![](<../../.gitbook/assets/image (80) (1) (1).png>)
+![](<../../.gitbook/assets/image (80) (1) (1) (1).png>)
 
 `GET /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/flag.txt HTTP/1.1` allows us to get the flag at `/flag.txt`.
 
