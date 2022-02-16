@@ -6,7 +6,7 @@ description: Here you can find writeups from various CTFs that I've participated
 
 ## \~# man CTFs
 
-In case you don't know what are CTFs, here's a nice definition:
+In case you don't know what CTFs are, here's a nice definition:
 
 > A capture the flag (CTF) contest is a special kind of cybersecurity competition designed to challenge its participants to solve computer security problems and/or capture and defend computer systems.
 
@@ -22,7 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                           | Type     | Position |
 | ---------------------------------- | -------- | -------- |
-| YaCTF 2022                         | Jeopardy | 13th     |
+| [YaCTF 2022](2022/yactf-2022/)     | Jeopardy | 13th     |
 | [DiceCTF 2022](2022/dicectf-2022/) | Jeopardy | 33rd     |
 | [TetCTF 2022](2022/tetctf-2022/)   | Jeopardy | 7th      |
 
