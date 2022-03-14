@@ -1,6 +1,6 @@
 # CTF.SG CTF
 
-Last year, Social Engineering Experts played CTF.SG CTF as our first CTF and barely solved any challenges. This year, we claimed 3rd and 1st place!
+Last year, Social Engineering Experts played CTF.SG CTF as one of our first CTFs and barely solved any challenges. This year, we claimed 3rd and 1st place!
 
 ![](../../.gitbook/assets/results2.png)
 
