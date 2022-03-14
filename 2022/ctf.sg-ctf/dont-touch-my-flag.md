@@ -4,8 +4,8 @@
 > \
 > Oh, the censoring? Sorry about that, I'll remove it after this CTF is over.\
 > \
-> [http://chals.ctf.sg:40101](http://chals.ctf.sg:40101)\
-> [http://chals.ctf.sg:40102](http://chals.ctf.sg:40102)\
+> http://chals.ctf.sg:40101\
+> http://chals.ctf.sg:40102\
 > \
 > author: JustinOng
 

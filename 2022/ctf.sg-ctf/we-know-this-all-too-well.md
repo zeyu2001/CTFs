@@ -4,7 +4,7 @@
 > \
 > JekGarb is a taxi company in an alternative universe that is 50 times the size of google, controlling the world's ride hailing services. I got hold of some their source, can you tell me what's wrong?\
 > \
-> [http://chals.ctf.sg:40301](http://chals.ctf.sg:40301)\
+> http://chals.ctf.sg:40301\
 > \
 > author: Gladiator
 

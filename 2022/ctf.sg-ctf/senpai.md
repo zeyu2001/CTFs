@@ -2,7 +2,7 @@
 
 > Rin or Sakura?\
 > \
-> [http://chals.ctf.sg:40201](http://chals.ctf.sg:40201)\
+> http://chals.ctf.sg:40201\
 > \
 > author: Gladiator
 
