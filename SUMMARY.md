@@ -19,6 +19,13 @@
 
 ## 2022
 
+* [CTF.SG CTF](2022/ctf.sg-ctf/README.md)
+  * [Chopsticks](2022/ctf.sg-ctf/chopsticks.md)
+  * [Asuna Waffles](2022/ctf.sg-ctf/asuna-waffles.md)
+  * [Senpai](2022/ctf.sg-ctf/senpai.md)
+  * [We know this all too well](2022/ctf.sg-ctf/we-know-this-all-too-well.md)
+  * [Don't Touch My Flag](2022/ctf.sg-ctf/dont-touch-my-flag.md)
+  * [Wildest Dreams Part 2](2022/ctf.sg-ctf/wildest-dreams-part-2.md)
 * [YaCTF 2022](2022/yactf-2022/README.md)
   * [Shiba](2022/yactf-2022/shiba.md)
   * [Flag Market](2022/yactf-2022/flag-market.md)
