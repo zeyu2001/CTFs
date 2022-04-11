@@ -20,9 +20,9 @@
 ## 2022
 
 * [Securinets CTF Quals 2022](2022/securinets-ctf-quals-2022/README.md)
-  * [NarutoKeeper](2022/securinets-ctf-quals-2022/narutokeeper.md)
   * [Document-Converter](2022/securinets-ctf-quals-2022/document-converter.md)
   * [PlanetSheet](2022/securinets-ctf-quals-2022/planetsheet.md)
+  * [NarutoKeeper](2022/securinets-ctf-quals-2022/narutokeeper.md)
 * [CTF.SG CTF](2022/ctf.sg-ctf/README.md)
   * [Asuna Waffles](2022/ctf.sg-ctf/asuna-waffles.md)
   * [Senpai](2022/ctf.sg-ctf/senpai.md)
