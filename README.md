@@ -22,6 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                           | Type                  | Position |
 | ---------------------------------- | --------------------- | -------- |
+| Securinets CTF Quals 2022          | Jeopardy              | 4th      |
 | [CTF.SG CTF](2022/ctf.sg-ctf/)     | Jeopardy              | 3rd      |
 | [YaCTF 2022](2022/yactf-2022/)     | Jeopardy (Individual) | 13th     |
 | [DiceCTF 2022](2022/dicectf-2022/) | Jeopardy              | 33rd     |

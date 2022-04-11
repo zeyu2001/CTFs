@@ -51,7 +51,7 @@ For instance, we can submit two queries the same HTTP request:
 
 Indeed, both queries were processed! We managed to try two MFA tokens, with the same CAPTCHA code.
 
-![](<../../.gitbook/assets/image (91).png>)
+![](<../../.gitbook/assets/image (91) (1).png>)
 
 Since the MFA token is only 4 digits, we could simply batch thousands of queries together, drastically reducing the number of CAPTCHAs required. Here I batched 3000 queries at a time due to the request length limits.
 
