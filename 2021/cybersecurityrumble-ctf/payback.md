@@ -103,7 +103,7 @@ Then, we perform parameter pollution on the frontend:
 
 Due to the way the frontend processes the parameters, this will result in the exact same message as above being checked, although carrying a different meaning.
 
-![](<../../.gitbook/assets/image (83) (1) (1).png>)
+![](<../../.gitbook/assets/image (83) (1) (1) (1).png>)
 
 We have successfully added 1337 coins to our account!
 

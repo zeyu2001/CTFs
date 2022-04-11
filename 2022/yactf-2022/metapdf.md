@@ -30,6 +30,6 @@ jj=~[];jj={___:++jj,$$$$:(![]+"")[jj],__$:++jj,$_$_:(![]+"")[jj],_$_:++jj,$_$$:(
 
 When pasted into the console, this alerts `yact`. If we remove the final `()`, the function is shown.
 
-![](<../../.gitbook/assets/image (83).png>)
+![](<../../.gitbook/assets/image (83) (1).png>)
 
 The flag is `yactf{4f82b4dac357ba268e2be4b516c8ac02}`
