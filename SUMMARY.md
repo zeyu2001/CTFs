@@ -7,6 +7,7 @@
 
 ## My Challenges
 
+* [Cyber League Major 1](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/Cyber-League-M1/pigeon-aircraft-takeoff)
 * [STANDCON CTF 2021](my-challenges/standcon-ctf-2021/README.md)
   * [Space Station](my-challenges/standcon-ctf-2021/space-station.md)
   * [Star Cereal](my-challenges/standcon-ctf-2021/star-cereal.md)
