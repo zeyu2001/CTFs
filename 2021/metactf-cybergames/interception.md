@@ -112,7 +112,7 @@ Listening on port 8000 gives us the flag. `MetaCTF{s0_m4ny_1ps_but_wh1ch_t0_ch00
 
 Woah... this is significantly more complicated. So far, we have been doing Layer 2 attacks, and these won't work since the flag is being sent across different subnets. We need to execute an attack from Layer 3, the network layer.
 
-![](<../../.gitbook/assets/image (87).png>)
+![](<../../.gitbook/assets/image (87) (1).png>)
 
 Perhaps we can gain access to the routers somehow? Indeed, we find the Telnet port open on one of the routers.
 

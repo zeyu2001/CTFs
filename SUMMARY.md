@@ -20,6 +20,21 @@
 
 ## 2022
 
+* [Securinets CTF Finals 2022](2022/securinets-ctf-finals-2022/README.md)
+  * [StrUggLe](2022/securinets-ctf-finals-2022/struggle.md)
+  * [XwaSS ftw?](2022/securinets-ctf-finals-2022/xwass-ftw.md)
+  * [Strong](2022/securinets-ctf-finals-2022/strong.md)
+  * [Artist](2022/securinets-ctf-finals-2022/artist.md)
+* [NahamCon CTF 2022](2022/nahamcon-ctf-2022/README.md)
+  * [Flaskmetal Alchemist](2022/nahamcon-ctf-2022/flaskmetal-alchemist.md)
+  * [Hacker TS](2022/nahamcon-ctf-2022/hacker-ts.md)
+  * [Two For One](2022/nahamcon-ctf-2022/two-for-one.md)
+  * [Deafcon](2022/nahamcon-ctf-2022/deafcon.md)
+  * [OTP Vault](2022/nahamcon-ctf-2022/otp-vault.md)
+  * [Click Me](2022/nahamcon-ctf-2022/click-me.md)
+  * [Geezip](2022/nahamcon-ctf-2022/geezip.md)
+  * [Ostrich](2022/nahamcon-ctf-2022/ostrich.md)
+  * [No Space Between Us](2022/nahamcon-ctf-2022/no-space-between-us.md)
 * [Securinets CTF Quals 2022](2022/securinets-ctf-quals-2022/README.md)
   * [Document-Converter](2022/securinets-ctf-quals-2022/document-converter.md)
   * [PlanetSheet](2022/securinets-ctf-quals-2022/planetsheet.md)

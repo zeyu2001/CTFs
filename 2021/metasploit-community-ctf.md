@@ -233,7 +233,7 @@ When we win the game, we get a URL to download the flag.
 
 This was more complex, but we could still pick up some patterns if we look hard enough.
 
-![](<../.gitbook/assets/image (86).png>)
+![](<../.gitbook/assets/image (86) (1).png>)
 
 Some kind of TLV protocol is used, but the general idea remains the same. By capturing the traffic a few times, we can infer the meaning of each field!
 
