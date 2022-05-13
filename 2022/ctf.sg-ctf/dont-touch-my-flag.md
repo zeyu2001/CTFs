@@ -60,7 +60,6 @@ Cookie: secret=8byEt7F60cCSRpQs1jeAXQqByOsK5P5b
 X-Forwarded-For: 178.128.25.242
 X-Forwarded-Proto: http
 
-
 ```
 
 Now we can send a request directly to the backend, which checks our secret before giving us the flag!
@@ -72,7 +71,6 @@ def get_flag():
         return "\N{Black Flag}"
 
     return flag
-
 ```
 
 The flag is `CTFSG{d0nT_toUcH_mY_c00k13s}`

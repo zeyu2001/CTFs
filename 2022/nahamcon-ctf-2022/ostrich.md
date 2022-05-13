@@ -49,7 +49,6 @@ for i in range(len(flag)):
 
 APNG.from_files(filenames, delay=0).save("result.apng")
 
-
 ```
 
 First of all, the result is an `.apng` file, which is a series of PNGs that form an animated image (similar to a GIF). We can get the individual frames by doing:
