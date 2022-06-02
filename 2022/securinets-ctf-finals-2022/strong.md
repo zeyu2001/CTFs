@@ -6,7 +6,7 @@ description: Jinja2 SSTI filter bypass
 
 > This type of challenges is created to be solved at the end, but you know it's a matter of time so who is the faster?
 >
-> Link: http://128.199.3.34:1234/\\
+> Link: http://128.199.3.34:1234
 >
 > **Author:** Kahla
 

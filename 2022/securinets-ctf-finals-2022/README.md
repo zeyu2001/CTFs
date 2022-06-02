@@ -6,7 +6,7 @@ description: Organised by Securinets Club
 
 We didn't manage to join everyone on-site but we had a great time with the Securinets CTF finals and came in 4th (retaining our position from the qualifiers)!
 
-![](<../../.gitbook/assets/image (87).png>)
+![](<../../.gitbook/assets/image (87) (2).png>)
 
 | Challenge                  | Category  | Points |
 | -------------------------- | --------- | ------ |

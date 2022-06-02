@@ -20,16 +20,17 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 ## \~# ls -la 2022
 
-| CTF Name                                                       | Type                  | Position |
-| -------------------------------------------------------------- | --------------------- | -------- |
-| [Securinets CTF Finals 2022](2022/securinets-ctf-finals-2022/) | Jeopardy              | 4th      |
-| [NahamCon CTF 2022](2022/nahamcon-ctf-2022/)                   | Jeopardy              | 13th     |
-| [Securinets CTF Quals 2022](2022/securinets-ctf-quals-2022/)   | Jeopardy              | 4th      |
-| LINE CTF 2022                                                  | Jeopardy              | 19th     |
-| [CTF.SG CTF](2022/ctf.sg-ctf)                                  | Jeopardy              | 3rd      |
-| [YaCTF 2022](2022/yactf-2022/)                                 | Jeopardy (Individual) | 13th     |
-| [DiceCTF 2022](2022/dicectf-2022/)                             | Jeopardy              | 33rd     |
-| [TetCTF 2022](2022/tetctf-2022/)                               | Jeopardy              | 7th      |
+| CTF Name                                                           | Type                  | Position |
+| ------------------------------------------------------------------ | --------------------- | -------- |
+| [DEF CON CTF 2022 Qualifiers](2022/def-con-ctf-2022-qualifiers.md) | Jeopardy              | 26th     |
+| [Securinets CTF Finals 2022](2022/securinets-ctf-finals-2022/)     | Jeopardy              | 4th      |
+| [NahamCon CTF 2022](2022/nahamcon-ctf-2022/)                       | Jeopardy              | 13th     |
+| [Securinets CTF Quals 2022](2022/securinets-ctf-quals-2022/)       | Jeopardy              | 4th      |
+| LINE CTF 2022                                                      | Jeopardy              | 19th     |
+| [CTF.SG CTF](2022/ctf.sg-ctf/)                                     | Jeopardy              | 3rd      |
+| [YaCTF 2022](2022/yactf-2022/)                                     | Jeopardy (Individual) | 13th     |
+| [DiceCTF 2022](2022/dicectf-2022/)                                 | Jeopardy              | 33rd     |
+| [TetCTF 2022](2022/tetctf-2022/)                                   | Jeopardy              | 7th      |
 
 ## \~# ls -la 2021
 

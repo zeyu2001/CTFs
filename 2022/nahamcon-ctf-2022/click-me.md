@@ -1,6 +1,6 @@
 # Click Me
 
-This was a "clicker" mobile application. The goal was to get more than 99999999 clicks.&#x20;
+This was a "clicker" mobile application. The goal was to get more than 99999999 clicks.
 
 After decompiling the APK, we could see the following relevant part of the source code.
 
@@ -50,4 +50,4 @@ if-gt p1, v1, :cond_0
 
 and [recompile the APK](https://gist.github.com/PuKoren/d0ec0c98350c0e92f467). Now the check is bypassed!
 
-![](<../../.gitbook/assets/image (84).png>)
+![](<../../.gitbook/assets/image (84) (2).png>)

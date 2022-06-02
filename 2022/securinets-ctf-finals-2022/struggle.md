@@ -4,9 +4,9 @@ description: HAProxy HTTP Request Smuggling
 
 # StrUggLe
 
-> Welcome to Web! I struggle everyday I face a new website, can you access /flag endpoint ?\\
+> Welcome to Web! I struggle everyday I face a new website, can you access /flag endpoint ?
 >
-> Link: http://128.199.3.34:1235\\
+> Link: http://128.199.3.34:1235
 >
 > **Author:** Kahla
 

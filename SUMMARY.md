@@ -20,6 +20,7 @@
 
 ## 2022
 
+* [DEF CON CTF 2022 Qualifiers](2022/def-con-ctf-2022-qualifiers.md)
 * [Securinets CTF Finals 2022](2022/securinets-ctf-finals-2022/README.md)
   * [StrUggLe](2022/securinets-ctf-finals-2022/struggle.md)
   * [XwaSS ftw?](2022/securinets-ctf-finals-2022/xwass-ftw.md)
@@ -81,7 +82,7 @@
   * [Payback](2021/cybersecurityrumble-ctf/payback.md)
   * [Stonks Street Journal](2021/cybersecurityrumble-ctf/stonks-street-journal.md)
 * [The InfoSecurity Challenge (TISC) 2021](2021/the-infosecurity-challenge-tisc-2021/README.md)
-  * [Level 4 -  The Magician's Den](2021/the-infosecurity-challenge-tisc-2021/level-4-the-magicians-den.md)
+  * [Level 4 - The Magician's Den](2021/the-infosecurity-challenge-tisc-2021/level-4-the-magicians-den.md)
   * [Level 3 - Needle in a Greystack](2021/the-infosecurity-challenge-tisc-2021/level-3-needle-in-a-greystack.md)
   * [Level 2 - Dee Na Saw as a need](2021/the-infosecurity-challenge-tisc-2021/level-2-dee-na-saw-as-a-need.md)
   * [Level 1 - Scratching the Surface](2021/the-infosecurity-challenge-tisc-2021/level-1-scratching-the-surface.md)

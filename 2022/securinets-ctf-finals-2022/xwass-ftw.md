@@ -5,8 +5,7 @@ description: Content Security Policy bypass using base tag
 # XwaSS ftw?
 
 > Just another typical web challenge that will be solved anyway :/\
-> Link: http://128.199.3.34:1236\
->
+> Link: http://128.199.3.34:1236
 >
 > **Author:** Kahla
 
