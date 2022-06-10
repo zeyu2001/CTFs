@@ -7,6 +7,7 @@
 
 ## My Challenges
 
+* [SEETF 2022](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/SEETF-2022)
 * [Cyber League Major 1](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/Cyber-League-M1/pigeon-aircraft-takeoff)
 * [STANDCON CTF 2021](my-challenges/standcon-ctf-2021/README.md)
   * [Space Station](my-challenges/standcon-ctf-2021/space-station.md)
@@ -20,6 +21,7 @@
 
 ## 2022
 
+* [Grey Cat The Flag 2022](2022/grey-cat-the-flag-2022.md)
 * [DEF CON CTF 2022 Qualifiers](2022/def-con-ctf-2022-qualifiers.md)
 * [Securinets CTF Finals 2022](2022/securinets-ctf-finals-2022/README.md)
   * [StrUggLe](2022/securinets-ctf-finals-2022/struggle.md)

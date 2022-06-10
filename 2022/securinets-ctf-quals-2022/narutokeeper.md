@@ -5,7 +5,7 @@
 
 {% file src="../../.gitbook/assets/source.tar.gz" %}
 
-In this challenge, we can create notes and search for them.&#x20;
+In this challenge, we can create notes and search for them.
 
 In particular, the search function is rather interesting. We can see that if a note is found with the given query, then a server-side 302 redirect is issued to `/view`.
 
@@ -50,7 +50,7 @@ I read [some slides](https://docs.google.com/presentation/d/1rlnxXUYHY9CHgCMckZs
 
 Therefore, we can leak whether a redirect occurred in the cross-origin request by catching the network error.
 
-On the client, we will make a request to our own attacker server. This server should redirect to itself 19 times, before redirecting to the actual target URL.&#x20;
+On the client, we will make a request to our own attacker server. This server should redirect to itself 19 times, before redirecting to the actual target URL.
 
 If the target URL then performs a further 302 redirect, then the redirect limit is reached - we can catch the error and exfiltrate the flag so far.
 
@@ -118,4 +118,4 @@ On our server, we run the following PHP script to redirect to ourself 19 times, 
 
 Here's the result! Thankfully the admin bot waits long enough for us to slowly bruteforce the flag letter by letter.
 
-![](<../../.gitbook/assets/image (91).png>)
+![](<../../.gitbook/assets/image (91) (1).png>)
