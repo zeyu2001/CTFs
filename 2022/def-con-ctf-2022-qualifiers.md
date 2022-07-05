@@ -91,7 +91,7 @@ def after_request(response):
 
 Ok so umm... I couldn't find this file signature anywhere, so the first step is to figure out what file format the file is expected to be in. We could download the original `/widget/chatmessage` widget and take a look:
 
-![](<../.gitbook/assets/image (81).png>)
+![](<../.gitbook/assets/image (81) (1).png>)
 
 This definitely contains styling and content information, but it isn't in an easily editable format.
 

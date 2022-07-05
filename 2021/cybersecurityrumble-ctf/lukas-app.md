@@ -20,9 +20,9 @@ The contents of https://lukas-app.de are not very interesting. It's only a stati
 
 The description said "At least we managed to get the TLS certificates for all hosts!", and the hints point us in that direction, so I decided to do a `crt.sh` certificate search.
 
-![](<../../.gitbook/assets/image (81) (1).png>)
+![](<../../.gitbook/assets/image (81) (1) (1).png>)
 
-This indeed revealed two additional subdomains! `beta.lukas-app.de` is another web app. There's a login page, but not much else.&#x20;
+This indeed revealed two additional subdomains! `beta.lukas-app.de` is another web app. There's a login page, but not much else.
 
 ![](<../../.gitbook/assets/Screenshot 2021-11-29 at 11.57.41 AM.png>)
 
