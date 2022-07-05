@@ -302,7 +302,7 @@ Thanks to Lord\_Idiot, waituck, bbbb and Gladiator for working on this challenge
 
 The webpage provides an interface to a router, which includes a ping functionality.
 
-![](<../.gitbook/assets/image (82).png>)
+![](<../.gitbook/assets/image (82) (2).png>)
 
 Using the `/ping?id=` endpoint, we get the base64-encoded result of each ping request. Using a sufficiently large `id`, we could get an out-of-bound memory read.
 
