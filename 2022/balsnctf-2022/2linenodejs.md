@@ -31,7 +31,7 @@ process.stdin.on('readable', () => {
 });
 ```
 
-`JSON.parse` will allow the `__proto__` key, storing it as `['__proto__']` instead (which surprisingly works as a key when used here:
+`JSON.parse` will allow the `__proto__` key, storing it as `['__proto__']` instead (which surprisingly works as a key when used here):
 
 ```javascript
 module.exports=(O,o) => (
