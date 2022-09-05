@@ -21,6 +21,9 @@
 
 ## 2022
 
+* [BalsnCTF 2022](2022/balsnctf-2022/README.md)
+  * [2linenodejs](2022/balsnctf-2022/2linenodejs.md)
+  * [Health Check](2022/balsnctf-2022/health-check.md)
 * [BSidesTLV 2022 CTF](2022/bsidestlv-2022-ctf/README.md)
   * [Smuggler](2022/bsidestlv-2022-ctf/smuggler.md)
   * [Wild DevTools](2022/bsidestlv-2022-ctf/wild-devtools.md)
