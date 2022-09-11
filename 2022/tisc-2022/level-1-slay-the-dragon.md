@@ -22,7 +22,7 @@
 >
 > Port: 18261
 
-{% file src="../../.gitbook/assets/slay_the_dragon (2).zip" %}
+{% file src="../../.gitbook/assets/slay_the_dragon.zip" %}
 
 ## Solution
 
