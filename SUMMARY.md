@@ -21,6 +21,9 @@
 
 ## 2022
 
+* [The InfoSecurity Challenge 2022](2022/tisc-2022/README.md)
+  * [Level 1 - Slay The Dragon](2022/tisc-2022/level-1-slay-the-dragon.md)
+  * [Level 2 - Leaky Matrices](2022/tisc-2022/level-2-leaky-matrices.md)
 * [BalsnCTF 2022](2022/balsnctf-2022/README.md)
   * [2linenodejs](2022/balsnctf-2022/2linenodejs.md)
   * [Health Check](2022/balsnctf-2022/health-check.md)
