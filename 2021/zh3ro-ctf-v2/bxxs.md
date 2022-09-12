@@ -20,7 +20,7 @@ Later, I found that we could submit arbitrary HTML that would be rendered by the
 <script> var i = new Image(); i.src = "http://8a8a8026deac.ngrok.io/"; </script>
 ```
 
-It is then trivial to obtain more information from the victim's browser. 
+It is then trivial to obtain more information from the victim's browser.
 
 We still don't know how exactly our submitted HTML is handled. Where is it rendered and in what context? To answer that question, I tried the following payload to get the page URL, contents and cookie.
 
@@ -42,9 +42,8 @@ My teammate rainbowpigeon then visited the `/Secret_admin_cookie_panel` endpoint
 
 ![](<../../.gitbook/assets/image (5).png>)
 
-My teammate lim_yj found that there is a `/flag` endpoint, previously inaccessible without the appropriate cookie.
+My teammate lim\_yj found that there is a `/flag` endpoint, previously inaccessible without the appropriate cookie.
 
 Visiting the page again with the admin cookie set gives us the flag.
 
-![](<../../.gitbook/assets/image (6).png>)
-
+![](<../../.gitbook/assets/image (6) (1).png>)
