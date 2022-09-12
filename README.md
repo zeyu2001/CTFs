@@ -22,6 +22,7 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 
 | CTF Name                                                            | Type                  | Position                         |
 | ------------------------------------------------------------------- | --------------------- | -------------------------------- |
+| [The InfoSecurity Challenge 2022](2022/tisc-2022/)                  | Jeopardy              | N.A. (Challenge Author)          |
 | [BalsnCTF 2022](2022/balsnctf-2022/)                                | Jeopardy              | 8th                              |
 | [BSidesTLV 2022 CTF](2022/bsidestlv-2022-ctf/)                      | Jeopardy              | 7th                              |
 | [Grey Cat The Flag 2022 Qualifiers](2022/grey-cat-the-flag-2022.md) | Jeopardy              | <p>3rd (SG)<br>4th (Overall)</p> |
