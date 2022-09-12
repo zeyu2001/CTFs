@@ -46,4 +46,4 @@ My teammate lim\_yj found that there is a `/flag` endpoint, previously inaccessi
 
 Visiting the page again with the admin cookie set gives us the flag.
 
-![](<../../.gitbook/assets/image (6) (1).png>)
+![](<../../.gitbook/assets/image (6).png>)

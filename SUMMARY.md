@@ -27,7 +27,7 @@
   * [Level 2 - Leaky Matrices](2022/tisc-2022/level-2-leaky-matrices.md)
   * [Level 3 - PATIENT0](2022/tisc-2022/level-3-patient0.md)
   * [Level 4B - CloudyNekos](2022/tisc-2022/level-4b-cloudynekos.md)
-  * [Level 5B - PALINDROME's Secret](2022/tisc-2022/level-5b-palindromes-secret.md)
+  * [Level 5B - PALINDROME's Secret (Author Writeup)](2022/tisc-2022/level-5b-palindromes-secret-author-writeup.md)
 * [BalsnCTF 2022](2022/balsnctf-2022/README.md)
   * [2linenodejs](2022/balsnctf-2022/2linenodejs.md)
   * [Health Check](2022/balsnctf-2022/health-check.md)
