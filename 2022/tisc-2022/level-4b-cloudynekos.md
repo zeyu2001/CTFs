@@ -116,7 +116,7 @@ Pacu also gave similar results during my initial privileges scan.
 
 ### Some Useful Information
 
-By trying each of these privileges one by one, I found some interesting information that would come. in handy later.
+By trying each of these privileges one by one, I found some interesting information that would come in handy later.
 
 For instance, `aws iam list-roles` gave a list of roles, some of which looked interesting:
 

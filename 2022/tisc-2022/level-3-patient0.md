@@ -26,7 +26,7 @@ PATIENT0: DOS/MBR boot sector, code offset 0x52+2, OEM-ID "NTFS    ", sectors/cl
 If we attempt to mount it, we see an interesting error message.
 
 ```
-$ sudo mount -t ntfs  ./PATIENT0 ./test                                                                                                                                 12 ⨯
+$ sudo mount -t ntfs  ./PATIENT0 ./test
 Reserved fields aren't zero (0, 0, 0, 0, 1129531732, 0).
 Failed to mount '/dev/loop0': Invalid argument
 The device '/dev/loop0' doesn't seem to have a valid NTFS.
@@ -94,7 +94,7 @@ A bit of googling later, I figured out how to mount the NTFS partition while pre
 ```
 $ ntfs-3g -o streams_interface=windows PATIENT0.ntfs ./test
 
-$ getfattr -n ntfs.streams.list message.png                                                                                                                              1 ⨯
+$ getfattr -n ntfs.streams.list message.png
 # file: message.png
 ntfs.streams.list="$RAND"
 ```
@@ -145,6 +145,6 @@ Since PowerPoint files were essentially zip archives, all we needed to do was un
 $ find . -name '*mp3'
 ./ppt/media/media1.mp3
 
-$ cat ./ppt/media/media1.mp3 | md5          
+$ cat ./ppt/media/media1.mp3 | md5
 f9fc54d767edc937fc24f7827bf91cfe
 ```
