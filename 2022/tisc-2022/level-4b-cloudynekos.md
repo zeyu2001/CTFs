@@ -35,7 +35,7 @@ Visiting the webpage, we see the following clues in the HTML source.
 
 Here's what this is referring to - CloudFront is Amazon's CDN and can be configured to use an S3 bucket as its origin. The CloudFront site will then use files on the S3 buckets to serve the static page. But even so, the user could just access the S3 instance directly. The missing step here is to restrict direct access to the S3 bucket except from authenticated requests from CloudFront using Origin Access Identity (OAI).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 The S3 bucket in its current state is readable by all authenticated users, so we could simply login to our own AWS account and use the AWS CLI to access the `palindromecloudynekos` bucket.
 

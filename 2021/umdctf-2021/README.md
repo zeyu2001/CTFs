@@ -51,6 +51,6 @@ Individually, I also won a PWK voucher, for having the 3rd most first bloods!
 
 ![](<../../.gitbook/assets/PWK Winner.png>)
 
-![](<../../.gitbook/assets/image (1).png>)
+![](../../.gitbook/assets/image.png)
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1).png>)
