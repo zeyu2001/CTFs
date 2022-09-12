@@ -2,6 +2,10 @@
 
 Hey, this is my challenge! I was slightly pressed for time when coming up with this challenge so it definitely wasn't as long and elaborate as some of the later stages, but I'm happy with how it turned out. Hope everyone had fun!
 
+You can find the challenge files here.
+
+{% embed url="https://github.com/zeyu2001/My-CTF-Challenges/tree/main/TISC-2022" %}
+
 ## Description
 
 > We have discovered PALINDROME's secret portal, but we can't seem to gain access. Thankfully, we managed to steal the source code - can you take a look?\
@@ -118,7 +122,7 @@ Content-Type: application/json\r\n
 
 A chunk extension is used here: `3;\nxxx`. The issue is two-pronged:
 
-1. ATS parses the LF () as a line terminator (instead of the CRLF sequence) and forwards it.
+1. ATS parses the LF (`\n`) as a line terminator (instead of the CRLF sequence) and forwards it.
 2. The Node.js HTTP server does not check if the chunk extension contains the illegal LF character.
 
 So ATS sees the following request:
