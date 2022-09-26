@@ -22,6 +22,10 @@
 
 ## 2022
 
+* [LakeCTF Qualifiers](2022/lakectf-qualifiers/README.md)
+  * [People](2022/lakectf-qualifiers/people.md)
+  * [Clob-Mate](2022/lakectf-qualifiers/clob-mate.md)
+  * [So What? Revenge](2022/lakectf-qualifiers/so-what-revenge.md)
 * [The InfoSecurity Challenge 2022](2022/tisc-2022/README.md)
   * [Level 1 - Slay The Dragon](2022/tisc-2022/level-1-slay-the-dragon.md)
   * [Level 2 - Leaky Matrices](2022/tisc-2022/level-2-leaky-matrices.md)
