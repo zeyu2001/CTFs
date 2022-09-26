@@ -144,7 +144,7 @@ Since the `MOV` operands are expressions, we could make use of mathematical oper
 
 And that was just what we needed to complete the shellcode!
 
-```
+```nasm
 .GLOBL    "w\x69n"
 .SET "w\x69n", .
     XOR    %RDX, %RDX
