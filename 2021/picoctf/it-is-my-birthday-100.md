@@ -2,17 +2,17 @@
 description: MD5 collisions
 ---
 
-# It Is My Birthday \(100\)
+# It Is My Birthday (100)
 
 ## Problem
 
-I sent out 2 invitations to all of my friends for my birthday! I'll know if they get stolen because the two invites look similar, and they even have the same md5 hash, but they are slightly different! You wouldn't believe how long it took me to find a collision. Anyway, see if you're invited by submitting 2 PDFs to my website. 
+I sent out 2 invitations to all of my friends for my birthday! I'll know if they get stolen because the two invites look similar, and they even have the same md5 hash, but they are slightly different! You wouldn't believe how long it took me to find a collision. Anyway, see if you're invited by submitting 2 PDFs to my website.
 
 {% embed url="http://mercury.picoctf.net:50970/" %}
 
 ## Solution
 
-It is now trivial to generate an MD5 collision of two images / PDF files. 
+It is now trivial to generate an MD5 collision of two images / PDF files.
 
 Take any two PDFs of different contents, we can make them have the same MD5 hash.
 
@@ -148,7 +148,6 @@ os.system('mutool info -X collision2.pdf')
 print
 print "MD5: %s" % md5
 print "Success!"
-
 ```
 
 These are the PDFs I generated. Note that they have different content, yet the same MD5.
@@ -164,4 +163,3 @@ After we've generated the two colliding PDFs, uploading them to the challenge pa
 ## References
 
 1. [https://github.com/corkami/collisions](https://github.com/corkami/collisions)
-

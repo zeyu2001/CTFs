@@ -41,7 +41,6 @@ class LCG:
 		next_x = (self._a * self._x + self._c) % self._m
 		self._x = next_x
 		return self._x
-
 ```
 
 LCGs can be quite easily [broken](https://teamrocketist.github.io/2019/03/31/Crypto-VolgaCtf2019-LG/), allowing us to find the values of `a`, `c` and `m`. We need to submit two messages, so that we get a pair of keys and their corresponding LCG-generated values. This is sufficient for us to find the LCG parameters.
@@ -96,7 +95,6 @@ for i in range(1411):
     print(x)
     x = (modinv(a, P) * (x - c)) % P
     print(x)
-
 ```
 
 With the key found, we can obtain the flag!

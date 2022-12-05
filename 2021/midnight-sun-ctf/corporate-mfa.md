@@ -61,7 +61,6 @@ if (!empty($_GET) && isset($_GET['userdata']))
 }
 
 include 'template/home.html';
-
 ```
 
 `User.php`:
@@ -119,9 +118,9 @@ From analysing the source code, we can gather the following information:
 
 * Username: Hardcoded
 * Password: From the first example here: [https://www.php.net/manual/en/function.password-verify.php](https://www.php.net/manual/en/function.password-verify.php)
-* MFA: Vulnerable to PHP object injection \(`unserialize()` vulnerability\)
+* MFA: Vulnerable to PHP object injection (`unserialize()` vulnerability)
 
-The trick here is to initialize the `mfa` attribute as a **reference** to the `_correctValue` attribute \(using the ampersand operator &\). This will allow us to bypass the MFA check, which checks `mfa` against a randomly-generated `_correctValue`:
+The trick here is to initialize the `mfa` attribute as a **reference** to the `_correctValue` attribute (using the ampersand operator &). This will allow us to bypass the MFA check, which checks `mfa` against a randomly-generated `_correctValue`:
 
 ```php
 private function verifyMFA()
@@ -152,4 +151,3 @@ The exploit script:
     $user->verify();
 ?>
 ```
-

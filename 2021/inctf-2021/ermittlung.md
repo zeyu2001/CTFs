@@ -91,7 +91,6 @@ Name                                                  Pid   PPid   Thds   Hnds T
 . 0x86569790:ctfmon.exe                              1176   1584      1     86 2020-07-27 12:25:57 UTC+0000
 . 0x865a27f8:VBoxTray.exe                            1156   1584     13    115 2020-07-27 12:25:57 UTC+0000
 . 0x861aec90:msimn.exe                               2132   1584     14    454 2020-07-27 12:26:17 UTC+0000
-
 ```
 
 ### **When did the user last used this chat application?**

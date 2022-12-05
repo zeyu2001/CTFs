@@ -12,7 +12,7 @@ https://chal.yana.wtf
 
 admin bot `nc yana-bot.chal.uiuc.tf 1337`
 
-**author**: arxenix[ ](https://uiuc.tf/files/3efbedb61ac2d4079cf03fad6237279d/bot.js?token=eyJ1c2VyX2lkIjoxMjEsInRlYW1faWQiOjQ2LCJmaWxlX2lkIjoxNX0.YQk1yw.3nM\_RFWReF9QpVym4Lk7fNCcB4A)
+**author**: arxenix
 
 {% file src="../../.gitbook/assets/bot.js" %}
 bot.js
@@ -159,7 +159,7 @@ This would allow us to brute-force the flag character by character.
 
 ### Setting Up The Attack
 
-To implement the cache probing attack, we need to come up with a JavaScript payload that would be run on the victim's browser to determine whether the image was cached.&#x20;
+To implement the cache probing attack, we need to come up with a JavaScript payload that would be run on the victim's browser to determine whether the image was cached.
 
 We define an `onFrameLoad()` function that will be called when the iframe of the notes site, containing the search query, is loaded.
 
@@ -237,7 +237,6 @@ for char in string.ascii_lowercase + string.digits + '{}_':
     conn = remote('yana-bot.chal.uiuc.tf', 1337)
     conn.recv()
     conn.send(URL + '\r\n')
-
 ```
 
 We will have to run this script for each new character, adding the previously found ones to the `FLAG` variable. (Perhaps I should have wrote a cleaner solution?)
@@ -254,7 +253,7 @@ In brief, a new "Network Isolation Key" was added, which contains both the top-l
 
 The initial fetching of the image through the notes application iframe should have resulted in a cache key of (`attacker-site`, `notes-app-site`, `image-url`)
 
-The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes application site, and would instead be (`attacker-site`, `attacker-site`,`image-url`).&#x20;
+The second time the image is fetched through the attacker-controlled site, the cache key would _not_ contain the notes application site, and would instead be (`attacker-site`, `attacker-site`,`image-url`).
 
 This should _not_ result in a cache hit, since the two cache keys are different. But it did. After some local testing, I found that **headless chrome simply doesn't perform cache partitioning**.
 
@@ -297,9 +296,9 @@ We can verify that both times, `y.png` was downloaded from the network, not fetc
 
 ### The Intended Solution
 
-Assuming that cache partitioning worked, how could we bypass it?&#x20;
+Assuming that cache partitioning worked, how could we bypass it?
 
-An important implementation detail is that subdomains and port numbers are actually ignored when creating the cache key.&#x20;
+An important implementation detail is that subdomains and port numbers are actually ignored when creating the cache key.
 
 ![](<../../.gitbook/assets/Screenshot 2021-08-04 at 2.01.50 AM.png>)
 

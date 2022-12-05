@@ -41,7 +41,6 @@ def index():
 if __name__ == "__main__":
     seed_db()
     app.run(debug=False)
-
 ```
 
 Looking into the `requirements.txt` file, we see that a rather old version of SQLAlchemy is used.
@@ -56,7 +55,6 @@ MarkupSafe==2.1.1
 SQLAlchemy==1.2.17
 Werkzeug==2.1.1
 zipp==3.8.0
-
 ```
 
 This version is in fact vulnerable to [an SQL injection vulnerability](https://github.com/sqlalchemy/sqlalchemy/issues/4481) in `order_by()`.

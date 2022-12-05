@@ -2,7 +2,7 @@
 description: Simple beginner challenge about base-n encodings
 ---
 
-# back_to_basics
+# back\_to\_basics
 
 ## Description
 
@@ -15,7 +15,7 @@ main.py
 {% endfile %}
 
 {% file src="../../.gitbook/assets/flag_enc" %}
-flag_enc
+flag\_enc
 {% endfile %}
 
 ## Solution
@@ -55,7 +55,6 @@ f = open("flag_enc", "wb")
 f.write(flag_enc)
 f.close()
 """
-
 ```
 
 This is a custom encryption algorithm that repeatedly base-_n_ encodes the ciphertext for each character of the key. In the encryption function, we see that the base is determined by the position of the key character `i` in the `ALPHABET`.

@@ -28,7 +28,6 @@ else:
         print("Password is correct! Flag:", x)
     else:
         print("WRONG!!!!!!")
-
 ```
 
 ## Solution

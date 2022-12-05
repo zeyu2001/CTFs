@@ -28,7 +28,6 @@ func flagHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	return
 }
-
 ```
 
 Let's look at the registration and login flow. This time, it seems like `user.Otp` is actually the JWT key - each user's key would be different!
@@ -191,7 +190,6 @@ POST /rin?url=http://localhost:8081/sakura?key=socengexp HTTP/1.1
 Host: chals.ctf.sg:40201
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NDcyNDI0NDIsInJvbGUiOiJ1c2VyIiwidXNlcm5hbWUiOiJzb2NlbmdleHAifQ.Y56UmyxoibdVHxvFjN03GI_RXeIgVBl76pQZDmih6Mo
 X-Forwarded-For: 127.0.0.1
-
 ```
 
 As mentioned earlier, the cached secret only exists for 2 seconds after logging in, so we must make the above request right after logging in.
