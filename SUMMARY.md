@@ -23,9 +23,10 @@
 ## 2022
 
 * [STACK the Flags 2022](2022/stack-the-flags-2022/README.md)
+  * [Secret of Meow Olympurr](2022/stack-the-flags-2022/secret-of-meow-olympurr.md)
+  * [GutHib Actions](2022/stack-the-flags-2022/guthib-actions.md)
   * [Electrogrid](2022/stack-the-flags-2022/electrogrid.md)
   * [BeautyCare](2022/stack-the-flags-2022/beautycare.md)
-  * [Secret of Meow Olympurr](2022/stack-the-flags-2022/secret-of-meow-olympurr.md)
 * [LakeCTF Qualifiers](2022/lakectf-qualifiers/README.md)
   * [People](2022/lakectf-qualifiers/people.md)
   * [Clob-Mate](2022/lakectf-qualifiers/clob-mate.md)

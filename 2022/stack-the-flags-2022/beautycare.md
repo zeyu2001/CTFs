@@ -121,7 +121,7 @@ for i in range(10):
 
 This allows us to find the correct code in a couple of seconds.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Now, we can head over to the admin dashboard at `/admin/dashboard`. We are presented with a UI for saving and previewing email templates, which leads us to believe that there might be an [SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection) vulnerability.
 

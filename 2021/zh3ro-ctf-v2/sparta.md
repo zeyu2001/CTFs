@@ -65,7 +65,7 @@ serialize.unserialize(payload);
 
 Once we tested that our payload works, we can encode the payload to base 64, and send it through the cookie header.
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 We obtain a reverse shell, which allows us to read the flag.
 
