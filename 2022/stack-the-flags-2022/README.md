@@ -4,7 +4,7 @@ STACK the Flags is a 48-hour, online jeopardy-style Capture-the-Flag competition
 
 I had fun playing this CTF casually with my friends, and trying out some interesting new categories like Cloud and IoT!
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Unfortunately, some challenges were contributed by Hack The Box and writeups for these are embargoed. Here are the rest of the writeups for the more interesting challenges I solved!
 
@@ -12,3 +12,4 @@ Unfortunately, some challenges were contributed by Hack The Box and writeups for
 | ----------------------------------------------------- | -------- |
 | [Secret of Meow Olympurr](secret-of-meow-olympurr.md) | Cloud    |
 | [BeautyCare](beautycare.md)                           | Fullpwn  |
+| [Electrogrid](electrogrid.md)                         | Fullpwn  |
