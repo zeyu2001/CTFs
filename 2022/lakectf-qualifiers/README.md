@@ -4,7 +4,7 @@ LakeCTF is a jeopardy-style security hacking contest organized by the [polygl0ts
 
 My team did well enough to qualify for the finals held in Lausanne!
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 | Challenge                              | Category | Solves |
 | -------------------------------------- | -------- | ------ |

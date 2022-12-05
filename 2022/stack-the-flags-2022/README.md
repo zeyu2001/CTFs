@@ -11,3 +11,4 @@ Unfortunately, some challenges were contributed by Hack The Box and writeups for
 | Challenge                                             | Category |
 | ----------------------------------------------------- | -------- |
 | [Secret of Meow Olympurr](secret-of-meow-olympurr.md) | Cloud    |
+| [BeautyCare](beautycare.md)                           | Fullpwn  |

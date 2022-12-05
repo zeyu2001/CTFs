@@ -12,7 +12,7 @@ We've made some new epic updates to our website. Could you send us some feedback
 
 We are given an endpoint that allows us to "Send a feedback to admin". I tried submitting URLs but these had no effect.
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 Later, I found that we could submit arbitrary HTML that would be rendered by the admin's browser. This could be verified by submitting the following and catching the HTTP request:
 
