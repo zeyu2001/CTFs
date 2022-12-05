@@ -185,7 +185,7 @@ for i in range(len(sources)):
         f.write(sourcesContent[i])
 ```
 
-In `mainUIComponents/messages.js`, an obvious HTML injection is achieved through regular messages.
+In `mainUIComponents/messages.js`, `dangerouslySetInnerHTML` allows us to perform HTML injection in regular messages.
 
 ```javascript
 if (message.type === 'file') {
@@ -239,7 +239,7 @@ For instance, I can spawn the Calculator app on my Mac.
 
 Since the remote server is running Linux, we need a slightly different way of gaining code execution. Internally, `shell.openExternal` will use the `xdg-open` program to open files. This will not executable binaries, but will instead likely open them with other programs like hex editors.
 
-However, on Ubuntu, `.desktop` files _are_ executed by `xdg-open`, allowing us to specify an executable to be run when the `.desktop` file is opened. For example, here's a `.desktop` file&#x20;
+However, on Ubuntu, `.desktop` files _are_ executed by `xdg-open`, allowing us to specify an executable to be run when the `.desktop` file is opened. For example, here's a `.desktop` file that spawns a reverse shell to our IP address.
 
 ```
 [Desktop Entry]
