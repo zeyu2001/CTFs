@@ -728,3 +728,75 @@ $ cat out.txt
 {% endcode %}
 
 Sure enough, the flag is in the response!
+
+## Conclusion
+
+In conclusion, I am too lazy to write one so ChatGPT did it for me.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2022-12-05 at 7.34.41 PM.png" alt=""><figcaption></figcaption></figure>
+
+{% code overflow="wrap" %}
+```
+Verse 1:
+In Meow Olympurr, met some native Meows
+They were cautious at first, but warmed up soon
+They shared with me their new website for tourism
+But they were not cy-purr security trained, they needed to learn
+
+Chorus:
+Log a cy-purr security case, find the secret code
+Invoke the mysterious function, it's time to hit the road
+
+Verse 2:
+The young Meows were trying to get two environments to play
+But something was breaking, they needed help that day
+I found a CloudFront page, https://d2p9lw76n0gfo0.cloudfront.net
+Scanned for hidden files, but that didn't get me anywhere yet
+
+Chorus:
+Log a cy-purr security case, find the secret code
+Invoke the mysterious function, it's time to hit the road
+
+Verse 3:
+The 404 error page raised my suspicions, something was amiss
+An HTTP image was loaded on an HTTPS page, that's a no-no
+The CORS-Anywhere proxy caught my eye, http://18.141.147.115:8080
+It added CORS headers to the resource from https://meowolympurr.z23.web.core.windows.net
+
+Chorus:
+Log a cy-purr security case, find the secret code
+Invoke the mysterious function, it's time to hit the road
+
+Verse 4:
+The resource was an Azure Blob Storage URL, time to investigate
+I visited the 404 error page again, this time on the blob storage site
+The same error image was fetched, but with a SAS token in tow
+An HTML comment hinted at using the SAS token to access the website's source code
+
+Chorus:
+Log a cy-purr security case, find the secret code
+Invoke the mysterious function, it's time to hit the road
+
+Verse 5:
+The source code of this function was what I was looking for
+I started by listing the containers available, using the Blob Service REST API
+I specified comp=list, and appended the SAS token to the URL
+This gave me a list of containers, and I found the one I was looking for
+
+Chorus:
+Log a cy-purr security case, find the secret code
+Invoke the mysterious function, it's time to hit the road
+
+Verse 6:
+I accessed the container using the SAS token and the REST API
+This gave me access to the source code of the function, time to get busy
+I looked through the code and found the secret code, I had won
+Invoking the mysterious function with the secret code, mission complete, it's done
+
+Outro:
+I found the secret code, invoked the mysterious function
+Thanks to the native Meows, I conquered this sassy challenge
+Logged a cy-purr security case, and learned a thing or two
+In Meow Olympurr, I am a cybersecurity pro.
+```
+{% endcode %}
