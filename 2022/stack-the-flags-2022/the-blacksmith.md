@@ -191,15 +191,16 @@ The weapons that we are eligible to purchase depends on our customer `tier`. Sin
 
 If any of the items we are attempting to buy exceeds our available `gold`, a 403 Forbidden is returned. The total price of all items is summed up and the loyalty points of the items are stored in a `point_history` list.
 
-<pre class="language-python"><code class="lang-python"><strong>    total_price = 0
-</strong>    point_history = []
+```python
+    total_price = 0
+    point_history = []
     for item in cart:
         if item.price > SHOP["customers"][customer_idx].gold:
             raise HTTPException(status_code=403)
         total_price += item.price
         if item.loyalty_points > 0:
             point_history += [item.loyalty_points]
-</code></pre>
+```
 
 If there are any loyalty points involved, the code attempts to add the `point_history` list to our customer `point_history` record, [EAFP](https://realpython.com/python-lbyl-vs-eafp/#the-easier-to-ask-forgiveness-than-permission-eafp-style)-style.
 
