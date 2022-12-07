@@ -24,6 +24,7 @@
 
 * [STACK the Flags 2022](2022/stack-the-flags-2022/README.md)
   * [Secret of Meow Olympurr](2022/stack-the-flags-2022/secret-of-meow-olympurr.md)
+  * [The Blacksmith](2022/stack-the-flags-2022/the-blacksmith.md)
   * [GutHib Actions](2022/stack-the-flags-2022/guthib-actions.md)
   * [Electrogrid](2022/stack-the-flags-2022/electrogrid.md)
   * [BeautyCare](2022/stack-the-flags-2022/beautycare.md)

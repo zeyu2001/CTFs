@@ -11,6 +11,7 @@ Unfortunately, some challenges were contributed by Hack The Box and writeups for
 | Challenge                                             | Category |
 | ----------------------------------------------------- | -------- |
 | [Secret of Meow Olympurr](secret-of-meow-olympurr.md) | Cloud    |
+| [The Blacksmith](the-blacksmith.md)                   | Web      |
 | [BeautyCare](beautycare.md)                           | Fullpwn  |
 | [Electrogrid](electrogrid.md)                         | Fullpwn  |
 | [GutHib Actions](guthib-actions.md)                   | Misc     |
