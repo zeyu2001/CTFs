@@ -9,4 +9,4 @@ Sidenote: someone registered all the top teams, so I technically beat all of the
 | Challenge                                     | Category | Solves |
 | --------------------------------------------- | -------- | ------ |
 | [Undocumented js-api](undocumented-js-api.md) | Web      | 10     |
-| js-api                                        | Web      | 5      |
+| [js-api](js-api.md)                           | Web      | 5      |
