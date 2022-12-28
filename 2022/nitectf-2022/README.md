@@ -10,3 +10,7 @@ Sidenote: someone registered all the top teams, so I technically beat all of the
 | --------------------------------------------- | -------- | ------ |
 | [Undocumented js-api](undocumented-js-api.md) | Web      | 10     |
 | [js-api](js-api.md)                           | Web      | 5      |
+
+The solutions for both challenges involve creating a GitHub Pages site, so here's my exploit repository :smile:
+
+{% embed url="https://github.com/zeyu2001/nitectf-jsapi" %}
