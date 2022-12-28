@@ -127,7 +127,7 @@ Now, we can head over to the admin dashboard at `/admin/dashboard`. We are prese
 
 From the HTTP response headers, we could also gather that the server was running an Express.js application, allowing us to narrow down the templating engine as [Pug](https://pugjs.org/).
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Using the following payload, we can spawn a reverse shell when previewing the template, allowing us to get a shell as `john`.
 

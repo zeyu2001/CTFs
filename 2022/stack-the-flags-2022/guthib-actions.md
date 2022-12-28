@@ -126,7 +126,7 @@ drwxr-xr-x 2 root root    4096 Dec  5 18:06 localpycs
 
 As explained in the [documentation](https://pyinstaller.org/en/stable/advanced-topics.html?highlight=.pkg#using-pyi-archive-viewer), the `flag.pkg` is a ZlibArchive containing compressed `.pyc` files containing the bundled Python modules.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 We can inspect its contents using `pyi-archive_viewer`, which is installed together with PyInstaller.
 

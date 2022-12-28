@@ -12,19 +12,24 @@ In case you don't know what CTFs are, here's a nice definition:
 
 ## \~# groups
 
-Social Engineering Experts is a small team founded by a group of friends.
+I play CTFs with [Social Engineering Experts](https://ctftime.org/team/151372) and [Water Paddler](https://ctftime.org/team/155019).
+
+Social Engineering Experts is a Singapore-based team founded by a group of friends. We're always looking for active players to join us — check out the recruitment form in our CTFtime profile.
 
 {% embed url="https://ctftime.org/team/154571" %}
-
-Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challenge).
 
 ## \~# ls -la 2022
 
 | CTF Name                                                            | Type                  | Position                         |
 | ------------------------------------------------------------------- | --------------------- | -------------------------------- |
+| niteCTF 2022                                                        | Jeopardy              | 13th                             |
 | [STACK the Flags 2022](2022/stack-the-flags-2022/)                  | Jeopardy              | 3rd                              |
+| LakeCTF Finals                                                      | Jeopardy              | 6th                              |
 | [LakeCTF Qualifiers](2022/lakectf-qualifiers/)                      | Jeopardy              | 7th                              |
+| [TetCTF 2022](2022/tetctf-2022/)                                    | Jeopardy              | 7th                              |
 | [The InfoSecurity Challenge 2022](2022/tisc-2022/)                  | Jeopardy              | N.A. (Challenge Author)          |
+| Midnight Sun CTF Finals                                             | Jeopardy              | 7th                              |
+| Midnight Sun CTF Quals                                              | Jeopardy              | 6th                              |
 | [BalsnCTF 2022](2022/balsnctf-2022/)                                | Jeopardy              | 8th                              |
 | [BSidesTLV 2022 CTF](2022/bsidestlv-2022-ctf/)                      | Jeopardy              | 7th                              |
 | [Grey Cat The Flag 2022 Qualifiers](2022/grey-cat-the-flag-2022.md) | Jeopardy              | <p>3rd (SG)<br>4th (Overall)</p> |
@@ -36,7 +41,6 @@ Join us [here](https://forms.gle/o4mYdmpT6KTRc31M9) (but first, solve a challeng
 | [CTF.SG CTF](2022/ctf.sg-ctf/)                                      | Jeopardy              | 3rd                              |
 | [YaCTF 2022](2022/yactf-2022/)                                      | Jeopardy (Individual) | 13th                             |
 | [DiceCTF 2022](2022/dicectf-2022/)                                  | Jeopardy              | 33rd                             |
-| [TetCTF 2022](2022/tetctf-2022/)                                    | Jeopardy              | 7th                              |
 
 ## \~# ls -la 2021
 

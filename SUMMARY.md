@@ -22,6 +22,8 @@
 
 ## 2022
 
+* [niteCTF 2022](2022/nitectf-2022/README.md)
+  * [Undocumented js-api](2022/nitectf-2022/undocumented-js-api.md)
 * [STACK the Flags 2022](2022/stack-the-flags-2022/README.md)
   * [Secret of Meow Olympurr](2022/stack-the-flags-2022/secret-of-meow-olympurr.md)
   * [The Blacksmith](2022/stack-the-flags-2022/the-blacksmith.md)
