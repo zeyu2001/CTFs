@@ -22,7 +22,7 @@ Social Engineering Experts is a Singapore-based team founded by a group of frien
 
 | CTF Name                                                            | Type                  | Position                         |
 | ------------------------------------------------------------------- | --------------------- | -------------------------------- |
-| niteCTF 2022                                                        | Jeopardy              | 13th                             |
+| [niteCTF 2022](2022/nitectf-2022/)                                  | Jeopardy              | 13th                             |
 | [STACK the Flags 2022](2022/stack-the-flags-2022/)                  | Jeopardy              | 3rd                              |
 | LakeCTF Finals                                                      | Jeopardy              | 6th                              |
 | [LakeCTF Qualifiers](2022/lakectf-qualifiers/)                      | Jeopardy              | 7th                              |
