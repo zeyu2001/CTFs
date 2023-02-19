@@ -20,6 +20,11 @@
   * [Rocket Ship Academy](my-challenges/standcon-ctf-2021/rocket-ship-academy.md)
   * [Space Noise](my-challenges/standcon-ctf-2021/space-noise.md)
 
+## 2023
+
+* [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/README.md)
+  * [Crocodilu](2023/hacktm-ctf-qualifiers/crocodilu.md)
+
 ## 2022
 
 * [niteCTF 2022](2022/nitectf-2022/README.md)
