@@ -14,7 +14,7 @@ description: CSP bypass through unsupported www.youtube.com JSONP endpoint
 
 1. [Gaining access through SQL `LIKE` injection](crocodilu.md#gaining-access)
 2. [Bypassing HTML sanitization through parser differential between BeautifulSoup and browsers](crocodilu.md#bypassing-html-sanitization)
-3. Bypassing strict CSP through unsupported `www.youtube.com` JSONP endpoint
+3. [Bypassing strict CSP through unsupported `www.youtube.com` JSONP endpoint](crocodilu.md#bypassing-html-sanitization)
 
 ### Gaining Access
 
