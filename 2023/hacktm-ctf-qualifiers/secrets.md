@@ -6,6 +6,8 @@ description: XS leak through cross-origin redirects — intended and unintended
 
 ## Overview
 
+> A secure and secret note storage system is a platform or application designed to keep your confidential notes safe from unauthorized access.
+
 The challenge revolved around searching contents of secret notes.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-02-19 at 9.46.57 PM.png" alt=""><figcaption></figcaption></figure>
