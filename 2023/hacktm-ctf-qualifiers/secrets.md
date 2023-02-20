@@ -154,7 +154,6 @@ This can be extended to the following PoC, which brute-forces a character of the
             await new Promise(resolve => setTimeout(resolve, 50))
         }
     })()
-
 </script>
 </html>
 ```
