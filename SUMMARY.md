@@ -25,6 +25,7 @@
 * [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/README.md)
   * [Crocodilu](2023/hacktm-ctf-qualifiers/crocodilu.md)
   * [secrets](2023/hacktm-ctf-qualifiers/secrets.md)
+  * [Hades](2023/hacktm-ctf-qualifiers/hades.md)
 
 ## 2022
 
