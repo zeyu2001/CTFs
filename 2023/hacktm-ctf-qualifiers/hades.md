@@ -1,3 +1,7 @@
+---
+description: jQuery-facilitated XSS
+---
+
 # Hades
 
 ## Overview

