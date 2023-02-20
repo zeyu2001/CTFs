@@ -149,7 +149,7 @@ This can be extended to the following PoC, which brute-forces a character of the
 
         const CHARSET = "abcdefghijklmnopqrstuvwxyz-_0123456789"
 
-        for (let i=0; i<CHARSET.length; i++) {
+        for (let i = 0; i < CHARSET.length; i++) {
             leak(CHARSET[i])
             await new Promise(resolve => setTimeout(resolve, 50))
         }
