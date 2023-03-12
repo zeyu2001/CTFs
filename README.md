@@ -20,11 +20,13 @@ Social Engineering Experts is a Singapore-based team founded by a group of frien
 
 ## \~# ls -la 2023
 
-| CTF Name                 | Type     | Position |
-| ------------------------ | -------- | -------- |
-| Insomni'hack Teaser 2023 | Jeopardy | 11th     |
-| IrisCTF 2023             | Jeopardy | 1st      |
-| TetCTF 2023              | Jeopardy | 4th      |
+| CTF Name                                             | Type     | Position |
+| ---------------------------------------------------- | -------- | -------- |
+| hxp CTF 2022                                         | Jeopardy | 1st      |
+| [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/) | Jeopardy | 6th      |
+| Insomni'hack Teaser                                  | Jeopardy | 11th     |
+| IrisCTF 2023                                         | Jeopardy | 1st      |
+| TetCTF 2023                                          | Jeopardy | 4th      |
 
 ## \~# ls -la 2022
 
