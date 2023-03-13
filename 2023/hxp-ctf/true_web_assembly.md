@@ -41,7 +41,7 @@ The forum is the main feature of AsmBB, and the default build uses a custom mark
 
 Let's take a look at the AsmBB [source](https://asm32.info/fossil/asmbb). [`render2.asm`](https://asm32.info/fossil/asmbb/file?name=source/render2.asm\&ci=4c91cddaec90fb74) contains a "hash table" of commands used by the templating engine, mapped to their routines.
 
-```asm-intel-x86-generic
+```nasm
 PHashTable tableRenderCmd, tpl_func,                      \
         'special:',     RenderTemplate.cmd_special,       \
         'raw:',         RenderTemplate.cmd_raw,           \
