@@ -4,7 +4,7 @@ Nice Christmas CTF with some relatively interesting XS-Leak web challenges.
 
 Sidenote: someone registered all the top teams, so I technically beat all of them.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
 | Challenge                                     | Category | Solves |
 | --------------------------------------------- | -------- | ------ |

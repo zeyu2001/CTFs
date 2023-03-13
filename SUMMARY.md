@@ -22,6 +22,8 @@
 
 ## 2023
 
+* [hxp CTF](2023/hxp-ctf/README.md)
+  * [true\_web\_assembly](2023/hxp-ctf/true\_web\_assembly.md)
 * [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/README.md)
   * [Crocodilu](2023/hacktm-ctf-qualifiers/crocodilu.md)
   * [secrets](2023/hacktm-ctf-qualifiers/secrets.md)
