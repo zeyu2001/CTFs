@@ -20,7 +20,13 @@ Social Engineering Experts is a Singapore-based team founded by a group of frien
 
 ## \~# ls -la 2023
 
-<table><thead><tr><th>CTF Name</th><th>Type</th><th>Position</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="2023/hxp-ctf/">hxp CTF 2022</a></td><td>Jeopardy</td><td><a href="https://emojipedia.org/1st-place-medal/">🥇</a></td><td></td></tr><tr><td><a href="2023/hacktm-ctf-qualifiers/">HackTM CTF Qualifiers</a></td><td>Jeopardy</td><td>6th</td><td></td></tr><tr><td>Insomni'hack Teaser</td><td>Jeopardy</td><td>11th</td><td></td></tr><tr><td>IrisCTF 2023</td><td>Jeopardy</td><td>1st</td><td></td></tr><tr><td>TetCTF 2023</td><td>Jeopardy</td><td>4th</td><td></td></tr></tbody></table>
+| CTF Name                                             | Type     | Position                                      |
+| ---------------------------------------------------- | -------- | --------------------------------------------- |
+| [hxp CTF 2022](2023/hxp-ctf/)                        | Jeopardy | [🥇](https://emojipedia.org/1st-place-medal/) |
+| [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/) | Jeopardy | 6th                                           |
+| Insomni'hack Teaser                                  | Jeopardy | 11th                                          |
+| IrisCTF 2023                                         | Jeopardy | 1st                                           |
+| TetCTF 2023                                          | Jeopardy | 4th                                           |
 
 ## \~# ls -la 2022
 
