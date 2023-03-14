@@ -119,7 +119,7 @@ endl
 
 Since the BBCode parser was a [newer](https://board.asm32.info/the-latest-update-of-this-forum.258/) parser introduced after MiniMag, and isn't enabled by default, we thought this would be the best place to start looking for parser vulnerabilities.
 
-The `TranslateBBCode` routine from [bbcode.asm](https://fresh.flatassembler.net/fossil/repo/fresh/artifact/0457fbe206805cbe) (found in [FreshLib](https://fresh.flatassembler.net/fossil/repo/fresh)) is then used to parse the BBCode content. Here we see a table of supported BBCode tags.
+The `TranslateBBCode` routine from [`bbcode.asm`](https://fresh.flatassembler.net/fossil/repo/fresh/artifact/0457fbe206805cbe) (found in [FreshLib](https://fresh.flatassembler.net/fossil/repo/fresh)) is then used to parse the BBCode content. Here we see a table of supported BBCode tags.
 
 ```nasm
 PHashTable tableBBtags, tpl_func,                      \
@@ -380,7 +380,7 @@ begin
         jmp     .finish
 ```
 
-Looks like our `smtp_exec` option is being passed to `Exec2`. A quick look at [process.asm](https://fresh.flatassembler.net/fossil/repo/fresh/artifact/6e99edc24ea48311) reveals that this spawns a child process with our input. Great!
+Looks like our `smtp_exec` option is being passed to `Exec2`. A quick look at [`process.asm`](https://fresh.flatassembler.net/fossil/repo/fresh/artifact/6e99edc24ea48311) reveals that this spawns a child process with our input. Great!
 
 ```nasm
 body Exec2
