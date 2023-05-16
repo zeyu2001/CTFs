@@ -1,5 +1,12 @@
 # true\_web\_assembly
 
+## Update (May 2023)
+
+This vulnerability was assigned a CVE!
+
+> [**CVE-2023-30334**](https://nvd.nist.gov/vuln/detail/CVE-2023-30334)\
+> AsmBB v2.9.1 was discovered to contain multiple cross-site scripting (XSS) vulnerabilities via the MiniMag.asm and bbcode.asm libraries.
+
 ## Description
 
 > [https://board.asm32.info/asmbb-v2-9-has-been-released.328/](https://board.asm32.info/asmbb-v2-9-has-been-released.328/)
