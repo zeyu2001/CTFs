@@ -1,3 +1,7 @@
+---
+description: From XSS to RCE in AsmBB v2.9.1
+---
+
 # true\_web\_assembly
 
 ## Update (May 2023)
