@@ -22,6 +22,7 @@
 
 ## 2023
 
+* [DEF CON CTF 2023 Qualifiers](2023/def-con-ctf-2023-qualifiers.md)
 * [hxp CTF](2023/hxp-ctf/README.md)
   * [true\_web\_assembly](2023/hxp-ctf/true\_web\_assembly.md)
 * [HackTM CTF Qualifiers](2023/hacktm-ctf-qualifiers/README.md)

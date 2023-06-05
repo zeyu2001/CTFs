@@ -69,7 +69,7 @@ Once we tested that our payload works, we can encode the payload to base 64, and
 
 We obtain a reverse shell, which allows us to read the flag.
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ## References:
 

@@ -108,7 +108,7 @@ await sleep(1000);
 
 Although the WebSockets library used ([flask\_sockets](https://github.com/heroku-python/flask-sockets)) is pretty old, there is no vulnerability in the `ws.origin` provided - afterall, `gevent` is the one providing the necessary information in the WSGI environment.
 
-The `ws.origin` value corresponds to that of the `Origin` request header, which is one of the [forbidden header names ](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden\_header\_name)that cannot be modified progammatically by JavaScript. __ This is a special request header that comprises of only the following three parts of the _current_ webpage URL:
+The `ws.origin` value corresponds to that of the `Origin` request header, which is one of the [forbidden header names ](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden\_header\_name)that cannot be modified progammatically by JavaScript. This is a special request header that comprises of only the following three parts of the _current_ webpage URL:
 
 ```
 <scheme>://<hostname>:<port>
@@ -190,7 +190,7 @@ The list of allowed characters are as follows:
 * `t`
 * `!`
 * `?`
-* &#x20;``&#x20;
+* &#x20;
 * `/`
 * `|`
 * `-`

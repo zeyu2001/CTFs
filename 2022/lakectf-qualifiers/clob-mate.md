@@ -234,7 +234,11 @@ Curiously though, `order.user.username` is an empty string, instead of `undefine
 
 This was strange indeed! The `username` property is in fact part of the anchor tag element object's prototype.
 
+<div align="center">
+
 <figure><img src="../../.gitbook/assets/Screenshot 2022-09-26 at 11.01.46 PM.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 It turns out that the anchor tag's username property actually refers to the username part of the `href` value (see [this](https://www.w3schools.com/jsref/prop\_anchor\_username.asp)). This meant that in order to set `order.user.username` to `pilvar`, all we had to do was to supply a URL starting with `pilvar@` to the `href` attribute.
 
