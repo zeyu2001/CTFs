@@ -7,6 +7,7 @@
 
 ## My Challenges
 
+* [SEETF 2023](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/SEETF-2023)
 * [The InfoSecurity Challenge 2022](https://ctf.zeyu2001.com/2022/tisc-2022/level-5b-palindromes-secret)
 * [SEETF 2022](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/SEETF-2022)
 * [Cyber League Major 1](https://github.com/zeyu2001/My-CTF-Challenges/tree/main/Cyber-League-M1/pigeon-aircraft-takeoff)
