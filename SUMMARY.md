@@ -2,7 +2,7 @@
 
 * [🚩 Zeyu's CTF Writeups](README.md)
 * [Home](https://infosec.zeyu2001.com)
-* [Pentesting](https://pentesting.zeyu2001.com)
+* [OSCP](https://pentesting.zeyu2001.com)
 * [My Vulnerable Website](https://learn.zeyu2001.com)
 
 ## My Challenges
